@@ -15,3 +15,15 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
   if(nav) nav.hidden=true;
   if(btn) btn.setAttribute("aria-expanded","false");
 }));
+(function initVLibras(){
+  if(document.querySelector('[vw]')) return;
+  const root=document.createElement('div');
+  root.setAttribute('vw','');
+  root.className='enabled';
+  root.innerHTML='<div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
+  document.body.appendChild(root);
+  const script=document.createElement('script');
+  script.src='https://vlibras.gov.br/app/vlibras-plugin.js';
+  script.onload=()=>{ if(window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app'); };
+  document.body.appendChild(script);
+})();
