@@ -6,32 +6,37 @@
   const status = document.querySelector('[data-ats-status]');
   const submit = form.querySelector('button[type="submit"]');
   const vagaSelect = form.querySelector('[name="vaga"]');
-  const areaSelect = form.querySelector('[name="area"]');
+  const negocioSelect = form.querySelector('[name="negocio"]');
+  const areaSelect = form.querySelector('[name="areaProfissional"]');
   const cnhSelect = form.querySelector('[name="possuiCnh"]');
   const cnhCategoryWrap = document.querySelector('[data-cnh-category]');
 
-  const VAGA_AREA = {
-    'Consultor Comercial - Empresarial': 'Empresarial',
-    'Consultor Comercial - Educação': 'Educação',
-    'Consultor Comercial - Saúde': 'Saúde',
-    'Consultor Comercial - Inclusão': 'Inclusão',
-    'Banco de Talentos': ''
+  const VAGA_MAP = {
+    'Consultor Comercial - Empresarial': { negocio: 'GEB Empresarial', area: 'Comercial' },
+    'Consultor Comercial - Educação': { negocio: 'GEB Educação', area: 'Comercial' },
+    'Consultor Comercial - Saúde': { negocio: 'GEB Saúde', area: 'Comercial' },
+    'Consultor Comercial - Inclusão': { negocio: 'GEB Inclusão', area: 'Comercial' },
+    'Banco de Talentos': { negocio: '', area: '' }
   };
 
   document.querySelectorAll('[data-apply-job]').forEach(btn => {
     btn.addEventListener('click', () => {
       const vaga = btn.dataset.applyJob || '';
-      const area = btn.dataset.applyArea || VAGA_AREA[vaga] || '';
+      const mapped = VAGA_MAP[vaga] || {};
       vagaSelect.value = vaga;
-      areaSelect.value = area;
+      negocioSelect.value = btn.dataset.applyBusiness || mapped.negocio || '';
+      areaSelect.value = btn.dataset.applyArea || mapped.area || '';
       document.querySelector('#candidatura')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => form.querySelector('[name="nome"]')?.focus(), 450);
     });
   });
 
   vagaSelect.addEventListener('change', () => {
-    const area = VAGA_AREA[vagaSelect.value];
-    if (area !== undefined) areaSelect.value = area;
+    const mapped = VAGA_MAP[vagaSelect.value];
+    if (mapped) {
+      negocioSelect.value = mapped.negocio;
+      areaSelect.value = mapped.area;
+    }
   });
 
   function syncCnh() {
