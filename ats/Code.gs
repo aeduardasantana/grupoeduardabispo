@@ -192,6 +192,22 @@ function generateGebResumePdf_(p, candidateId, folder) {
     ['LinkedIn / Portfólio', clean_(p.linkedin)]
   ]);
 
+  if (clean_(p.resumo)) {
+    const heading = body.appendParagraph('RESUMO PROFISSIONAL');
+    heading.setHeading(DocumentApp.ParagraphHeading.HEADING2);
+    body.appendParagraph(clean_(p.resumo));
+  }
+
+  addSection_(body, 'PERFIL PROFISSIONAL GERAL', [
+    ['Tempo total de experiência', clean_(p.tempoExperiencia)],
+    ['Modelos de trabalho já vivenciados', clean_(p.experienciaModelos)],
+    ['Regimes de contratação já vivenciados', clean_(p.experienciaRegimes)],
+    ['Disponibilidade de período', clean_(p.disponibilidade)],
+    ['Modelos de trabalho de interesse', clean_(p.interesseModelos)],
+    ['Regimes de contratação de interesse', clean_(p.interesseRegimes)],
+    ['Pretensão salarial', clean_(p.pretensaoSalarial)]
+  ]);
+
   addSection_(body, 'FORMAÇÃO PRINCIPAL', [
     ['Escolaridade', clean_(p.escolaridade)],
     ['Curso / Formação', clean_(p.curso)],
@@ -232,10 +248,7 @@ function generateGebResumePdf_(p, candidateId, folder) {
 
   addSection_(body, 'EXPERIÊNCIA PROFISSIONAL - RESUMO', [
     ['Último cargo / função', clean_(p.ultimoCargo)],
-    ['Empresa mais recente', clean_(p.empresaRecente)],
-    ['Tempo total de experiência', clean_(p.tempoExperiencia)],
-    ['Modelos de trabalho já vivenciados', clean_(p.experienciaModelos)],
-    ['Regimes de contratação já vivenciados', clean_(p.experienciaRegimes)]
+    ['Empresa mais recente', clean_(p.empresaRecente)]
   ]);
 
   const experiencias = parseJsonArray_(p.experiencias);
@@ -257,30 +270,11 @@ function generateGebResumePdf_(p, candidateId, folder) {
       const periodo = formatExperiencePeriod_(item);
       if (periodo) body.appendParagraph(periodo);
 
-      const modelos = clean_(item.modelosTrabalho);
-      if (modelos) body.appendParagraph('Modelo de trabalho: ' + modelos);
-
-      const regimes = clean_(item.regimesContratacao);
-      if (regimes) body.appendParagraph('Regime de contratação: ' + regimes);
-
       const atividades = clean_(item.atividades);
       if (atividades) body.appendParagraph(atividades);
 
       body.appendParagraph('');
     });
-  }
-
-  addSection_(body, 'DISPONIBILIDADE E INTERESSE PROFISSIONAL', [
-    ['Disponibilidade de período', clean_(p.disponibilidade)],
-    ['Modelos de trabalho de interesse', clean_(p.interesseModelos)],
-    ['Regimes de contratação de interesse', clean_(p.interesseRegimes)],
-    ['Pretensão salarial', clean_(p.pretensaoSalarial)]
-  ]);
-
-  if (clean_(p.resumo)) {
-    const heading = body.appendParagraph('RESUMO PROFISSIONAL');
-    heading.setHeading(DocumentApp.ParagraphHeading.HEADING2);
-    body.appendParagraph(clean_(p.resumo));
   }
 
   body.appendHorizontalRule();
@@ -470,9 +464,9 @@ function formatPeriodYears_(start, end) {
 }
 
 function formatExperiencePeriod_(item) {
-  const start = clean_(item.inicio);
+  const start = formatDateText_(item.inicio);
   const current = clean_(item.atual) === 'Sim';
-  const end = current ? 'Atual' : clean_(item.fim);
+  const end = current ? 'Atual' : formatDateText_(item.fim);
 
   if (!start && !end) return '';
   if (start && end) return start + ' - ' + end;
