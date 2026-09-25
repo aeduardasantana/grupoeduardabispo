@@ -1,0 +1,188 @@
+(() => {
+  const ATS_ENDPOINT = '';
+  const form = document.querySelector('[data-ats-form]');
+  if (!form) return;
+
+  const status = document.querySelector('[data-ats-status]');
+  const submit = form.querySelector('button[type="submit"]');
+  const vagaSelect = form.querySelector('[name="vaga"]');
+  const areaSelect = form.querySelector('[name="area"]');
+  const cnhSelect = form.querySelector('[name="possuiCnh"]');
+  const cnhCategoryWrap = document.querySelector('[data-cnh-category]');
+
+  const VAGA_AREA = {
+    'Consultor Comercial - Empresarial': 'Empresarial',
+    'Consultor Comercial - Educação': 'Educação',
+    'Consultor Comercial - Saúde': 'Saúde',
+    'Consultor Comercial - Inclusão': 'Inclusão',
+    'Banco de Talentos': ''
+  };
+
+  document.querySelectorAll('[data-apply-job]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const vaga = btn.dataset.applyJob || '';
+      const area = btn.dataset.applyArea || VAGA_AREA[vaga] || '';
+      vagaSelect.value = vaga;
+      areaSelect.value = area;
+      document.querySelector('#candidatura')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => form.querySelector('[name="nome"]')?.focus(), 450);
+    });
+  });
+
+  vagaSelect.addEventListener('change', () => {
+    const area = VAGA_AREA[vagaSelect.value];
+    if (area !== undefined) areaSelect.value = area;
+  });
+
+  function syncCnh() {
+    const has = cnhSelect.value === 'Sim';
+    cnhCategoryWrap.hidden = !has;
+    const field = cnhCategoryWrap.querySelector('select');
+    field.required = has;
+    if (!has) field.value = '';
+  }
+  cnhSelect.addEventListener('change', syncCnh);
+  syncCnh();
+
+  function addRepeatItem(container, type) {
+    const index = container.querySelectorAll('.ats-repeat-item').length + 1;
+    const item = document.createElement('div');
+    item.className = 'ats-repeat-item';
+
+    const templates = {
+      formacao: `
+        <div class="ats-repeat-head"><strong>Formação ${index}</strong><button type="button" class="ats-remove">Remover</button></div>
+        <div class="ats-grid ats-grid-2">
+          <label><span>Nível</span><select data-field="nivel"><option value="">Selecione</option><option>Ensino Fundamental</option><option>Ensino Médio</option><option>Técnico</option><option>Graduação</option><option>Pós-graduação</option><option>Mestrado</option><option>Doutorado</option><option>Outro</option></select></label>
+          <label><span>Curso</span><input data-field="curso" type="text" maxlength="120"></label>
+          <label><span>Instituição</span><input data-field="instituicao" type="text" maxlength="140"></label>
+          <label><span>Situação</span><select data-field="situacao"><option value="">Selecione</option><option>Concluído</option><option>Cursando</option><option>Trancado</option><option>Incompleto</option></select></label>
+          <label><span>Ano de início</span><input data-field="anoInicio" type="number" min="1950" max="2100"></label>
+          <label><span>Ano de conclusão</span><input data-field="anoConclusao" type="number" min="1950" max="2100"></label>
+        </div>`,
+      curso: `
+        <div class="ats-repeat-head"><strong>Curso complementar ${index}</strong><button type="button" class="ats-remove">Remover</button></div>
+        <div class="ats-grid ats-grid-2">
+          <label><span>Curso / certificação</span><input data-field="nome" type="text" maxlength="140"></label>
+          <label><span>Instituição</span><input data-field="instituicao" type="text" maxlength="140"></label>
+          <label><span>Carga horária</span><input data-field="cargaHoraria" type="text" maxlength="50" placeholder="Ex.: 40h"></label>
+          <label><span>Ano</span><input data-field="ano" type="number" min="1950" max="2100"></label>
+        </div>`,
+      experiencia: `
+        <div class="ats-repeat-head"><strong>Experiência ${index}</strong><button type="button" class="ats-remove">Remover</button></div>
+        <div class="ats-grid ats-grid-2">
+          <label><span>Empresa</span><input data-field="empresa" type="text" maxlength="140"></label>
+          <label><span>Cargo / função</span><input data-field="cargo" type="text" maxlength="120"></label>
+          <label><span>Início</span><input data-field="inicio" type="month"></label>
+          <label><span>Fim</span><input data-field="fim" type="month"></label>
+        </div>
+        <label class="ats-check-inline"><input data-field="atual" type="checkbox" value="Sim"><span>Trabalho atualmente nesta empresa</span></label>
+        <label><span>Principais atividades</span><textarea data-field="atividades" rows="3" maxlength="900"></textarea></label>`
+    };
+
+    item.innerHTML = templates[type];
+    item.querySelector('.ats-remove').addEventListener('click', () => item.remove());
+    container.appendChild(item);
+  }
+
+  document.querySelectorAll('[data-add-repeat]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.addRepeat;
+      const container = document.querySelector(`[data-repeat="${type}"]`);
+      addRepeatItem(container, type);
+    });
+  });
+
+  function collectRepeat(type) {
+    return [...document.querySelectorAll(`[data-repeat="${type}"] .ats-repeat-item`)]
+      .map(item => {
+        const obj = {};
+        item.querySelectorAll('[data-field]').forEach(field => {
+          obj[field.dataset.field] = field.type === 'checkbox'
+            ? (field.checked ? 'Sim' : 'Não')
+            : field.value.trim();
+        });
+        return obj;
+      })
+      .filter(obj => Object.values(obj).some(v => v && v !== 'Não'));
+  }
+
+  async function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error('Não foi possível ler o currículo.'));
+      reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function setStatus(message, kind = '') {
+    status.textContent = message;
+    status.className = 'ats-status' + (kind ? ' ' + kind : '');
+    status.hidden = !message;
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    setStatus('');
+
+    if (!form.reportValidity()) return;
+
+    const file = form.querySelector('[name="curriculo"]').files[0];
+    if (!file) {
+      setStatus('Anexe seu currículo em PDF.', 'error');
+      return;
+    }
+    if (file.type !== 'application/pdf') {
+      setStatus('O currículo deve estar em PDF.', 'error');
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setStatus('O PDF deve ter no máximo 5 MB.', 'error');
+      return;
+    }
+
+    if (!ATS_ENDPOINT) {
+      setStatus('O formulário está pronto, mas a integração do ATS ainda precisa da URL pública do Google Apps Script.', 'warning');
+      return;
+    }
+
+    submit.disabled = true;
+    submit.textContent = 'Enviando candidatura...';
+
+    try {
+      const fd = new FormData(form);
+      fd.delete('curriculo');
+      const params = new URLSearchParams();
+
+      for (const [key, value] of fd.entries()) params.append(key, String(value));
+
+      params.set('formacoes', JSON.stringify(collectRepeat('formacao')));
+      params.set('cursos', JSON.stringify(collectRepeat('curso')));
+      params.set('experiencias', JSON.stringify(collectRepeat('experiencia')));
+      params.set('curriculoNome', file.name);
+      params.set('curriculoMime', file.type);
+      params.set('curriculoBase64', await fileToBase64(file));
+      params.set('origem', 'Site institucional - Carreiras');
+      params.set('consentimento', 'sim');
+
+      const response = await fetch(ATS_ENDPOINT, {
+        method: 'POST',
+        body: params
+      });
+      const data = await response.json();
+
+      if (!data.ok) throw new Error(data.message || 'Não foi possível registrar a candidatura.');
+
+      form.reset();
+      document.querySelectorAll('.ats-repeat-list').forEach(el => el.innerHTML = '');
+      syncCnh();
+      setStatus(`Candidatura recebida. Protocolo: ${data.id}`, 'success');
+    } catch (err) {
+      setStatus(err.message || 'Ocorreu um erro ao enviar sua candidatura.', 'error');
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Enviar candidatura';
+    }
+  });
+})();
