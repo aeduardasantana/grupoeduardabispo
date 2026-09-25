@@ -125,6 +125,8 @@ function appendChildRows_(ss, candidateId, p) {
     clean_(item.inicio),
     clean_(item.fim),
     clean_(item.atual),
+    clean_(item.modelosTrabalho),
+    clean_(item.regimesContratacao),
     clean_(item.atividades),
     clean_(item.segmento),
     clean_(item.observacoes)
