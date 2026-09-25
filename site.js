@@ -34,3 +34,25 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
  function apply(){const q=norm(search?.value).trim(),a=area?.value||'',t=type?.value||'';let visible=0;cards.forEach(card=>{const hay=norm(card.dataset.search+' '+card.textContent),show=(!q||q.split(/\s+/).every(term=>hay.includes(term)))&&(!a||card.dataset.area===a)&&(!t||card.dataset.type===t);card.hidden=!show;if(show)visible++;});if(count)count.textContent=visible;if(empty)empty.hidden=visible!==0;}
  [search,area,type].forEach(el=>el&&el.addEventListener(el===search?'input':'change',apply)); clear?.addEventListener('click',()=>{if(search)search.value='';if(area)area.value='';if(type)type.value='';apply();search?.focus();}); apply();
 })();
+(function initCareersMenu(){
+  const normalizeHref = href => (href || '').replace(/\/+$/,'');
+  document.querySelectorAll('.desktop-nav').forEach(nav=>{
+    const link=[...nav.querySelectorAll(':scope > a')].find(a=>/\/carreiras\/?$/.test(normalizeHref(a.getAttribute('href'))));
+    if(!link || link.closest('.nav-dropdown')) return;
+    const base=link.getAttribute('href').replace(/\/?$/,'/');
+    const wrap=document.createElement('div');
+    wrap.className='nav-dropdown';
+    wrap.innerHTML='<a class="nav-dropdown-trigger" href="'+base+'">Trabalhe Conosco <span aria-hidden="true">⌄</span></a><div class="nav-dropdown-menu"><a href="'+base+'">Conheça os negócios</a><a href="'+base+'vagas/">Vagas e oportunidades</a><a href="'+base+'candidatura/">Candidatura / Banco de Talentos</a></div>';
+    link.replaceWith(wrap);
+  });
+  document.querySelectorAll('[data-mobile-nav]').forEach(nav=>{
+    const link=[...nav.querySelectorAll(':scope > a')].find(a=>/\/carreiras\/?$/.test(normalizeHref(a.getAttribute('href'))));
+    if(!link || nav.querySelector('.mobile-careers-links')) return;
+    const base=link.getAttribute('href').replace(/\/?$/,'/');
+    link.textContent='Trabalhe Conosco';
+    const group=document.createElement('div');
+    group.className='mobile-careers-links';
+    group.innerHTML='<a href="'+base+'">Conheça os negócios</a><a href="'+base+'vagas/">Vagas e oportunidades</a><a href="'+base+'candidatura/">Candidatura / Banco de Talentos</a>';
+    link.insertAdjacentElement('afterend',group);
+  });
+})();
