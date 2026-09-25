@@ -126,17 +126,68 @@
         <label><span>Empresa mais recente</span><input name="empresaRecente" type="text" maxlength="140"></label>
         <label><span>Tempo total de experiência</span><select name="tempoExperiencia"><option value="">Selecione</option><option>Sem experiência profissional</option><option>Menos de 1 ano</option><option>1 a 2 anos</option><option>3 a 5 anos</option><option>6 a 10 anos</option><option>Mais de 10 anos</option></select></label>
       </div>
+
+      <div class="ats-profile-block">
+        <h3>Experiência anterior</h3>
+        <p class="ats-help">Marque todas as opções que já fizeram parte da sua trajetória profissional.</p>
+
+        <div class="ats-choice-group">
+          <span>Modelos de trabalho já vivenciados</span>
+          <div class="ats-check-grid" data-global-multi="experienciaModelos">
+            <label><input type="checkbox" value="Presencial"><span>Presencial</span></label>
+            <label><input type="checkbox" value="Híbrido"><span>Híbrido</span></label>
+            <label><input type="checkbox" value="Remoto / Home Office"><span>Remoto / Home Office</span></label>
+          </div>
+        </div>
+
+        <div class="ats-choice-group">
+          <span>Regimes de contratação já vivenciados</span>
+          <div class="ats-check-grid" data-global-multi="experienciaRegimes">
+            <label><input type="checkbox" value="CLT"><span>CLT</span></label>
+            <label><input type="checkbox" value="PJ"><span>PJ</span></label>
+            <label><input type="checkbox" value="Estágio"><span>Estágio</span></label>
+            <label><input type="checkbox" value="Temporário"><span>Temporário</span></label>
+            <label><input type="checkbox" value="Autônomo / Prestador"><span>Autônomo / Prestador</span></label>
+          </div>
+        </div>
+      </div>
+
       <div class="ats-repeat-list" data-repeat="experiencia"></div>
       <button class="button button-outline" type="button" data-add-repeat="experiencia">+ Adicionar experiência</button>
     </fieldset>
 
     <fieldset class="ats-group">
-      <legend>Disponibilidade e perfil</legend>
+      <legend>Disponibilidade e interesse profissional</legend>
       <div class="ats-grid ats-grid-2">
         <label><span>Disponibilidade de período *</span><select name="disponibilidade" required><option value="">Selecione</option><option>Integral</option><option>Matutino</option><option>Vespertino</option><option>Noturno</option><option>Matutino e Vespertino</option><option>Vespertino e Noturno</option><option>Horário flexível / a combinar</option></select></label>
-        <label><span>Modelo de trabalho</span><select name="modeloTrabalho"><option value="">Indiferente / a combinar</option><option>Presencial</option><option>Híbrido</option><option>Remoto</option></select></label>
         <label><span>Pretensão salarial</span><input name="pretensaoSalarial" type="text" maxlength="60" placeholder="Ex.: R$ 2.500 ou a combinar"></label>
       </div>
+
+      <div class="ats-profile-block">
+        <h3>Interesse atual</h3>
+        <p class="ats-help">Marque todas as opções que você aceita ou tem interesse em considerar.</p>
+
+        <div class="ats-choice-group">
+          <span>Modelos de trabalho de interesse</span>
+          <div class="ats-check-grid" data-global-multi="interesseModelos">
+            <label><input type="checkbox" value="Presencial"><span>Presencial</span></label>
+            <label><input type="checkbox" value="Híbrido"><span>Híbrido</span></label>
+            <label><input type="checkbox" value="Remoto / Home Office"><span>Remoto / Home Office</span></label>
+          </div>
+        </div>
+
+        <div class="ats-choice-group">
+          <span>Regimes de contratação de interesse</span>
+          <div class="ats-check-grid" data-global-multi="interesseRegimes">
+            <label><input type="checkbox" value="CLT"><span>CLT</span></label>
+            <label><input type="checkbox" value="PJ"><span>PJ</span></label>
+            <label><input type="checkbox" value="Estágio"><span>Estágio</span></label>
+            <label><input type="checkbox" value="Temporário"><span>Temporário</span></label>
+            <label><input type="checkbox" value="Autônomo / Prestador"><span>Autônomo / Prestador</span></label>
+          </div>
+        </div>
+      </div>
+
       <label><span>Resumo profissional</span><textarea name="resumo" rows="5" maxlength="1500" placeholder="Apresente brevemente sua experiência, competências e área de interesse."></textarea></label>
     </fieldset>
 
