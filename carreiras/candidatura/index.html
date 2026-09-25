@@ -1,0 +1,189 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Candidatura e Banco de Talentos do GEB."><title>Candidatura | GEB</title><link rel="stylesheet" href="../../styles.css"></head><body><header class="site-header"><a class="brand" href="../../index.html" aria-label="GEB — início"><img data-geb-logo alt="GEB"><span class="brand-name">Grupo Eduarda Bispo</span></a><nav class="desktop-nav" aria-label="Navegação principal"><a href="../../o-geb/">O GEB</a><a href="../../areas/">Áreas</a><a href="../../ecossistema/">Ecossistema</a><a href="../../parceiros/">GEB Parcerias</a><a href="../../carreiras/">Trabalhe Conosco</a><a href="../../contato/">Contato</a></nav><button class="menu-button" data-menu-button type="button" aria-expanded="false">Menu</button></header><nav class="mobile-nav" data-mobile-nav hidden><a href="../../o-geb/">O GEB</a><a href="../../areas/">Áreas</a><a href="../../ecossistema/">Ecossistema</a><a href="../../parceiros/">GEB Parcerias</a><a href="../../carreiras/">Trabalhe Conosco</a><a href="../../contato/">Contato</a></nav><main>
+<section class="internal-hero application-hero"><p class="overline">Candidatura</p><h1>Apresente seu perfil profissional ao GEB.</h1><p class="lead">Use o formulário para se candidatar a uma oportunidade específica ou registrar seu currículo no Banco de Talentos.</p><div class="internal-hero-media"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=84" alt="Profissionais em processo de colaboração" loading="eager" decoding="async"></div></section>
+<section class="section ats-section">
+  <div class="ats-intro">
+    <div><span class="section-number">02</span><p class="section-kicker">Candidatura</p></div>
+    <div><h2>Cadastre seu perfil profissional.</h2><p>Preencha seu perfil profissional. O sistema gera automaticamente um Currículo GEB em PDF; um currículo próprio pode ser anexado opcionalmente.</p></div>
+  </div>
+
+  <form class="ats-form" data-ats-form novalidate>
+    <input class="ats-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <fieldset class="ats-group ats-group-job">
+      <legend>Oportunidade de interesse</legend>
+      <p class="ats-help">O <strong>negócio</strong> identifica a frente do GEB. A <strong>área profissional</strong> identifica a função em que você pretende atuar.</p>
+      <div class="ats-grid ats-grid-3">
+        <label><span>Vaga pretendida *</span>
+          <select name="vaga" required>
+            <option value="">Selecione</option>
+            <option>Consultor Comercial - Empresarial</option>
+            <option>Consultor Comercial - Educação</option>
+            <option>Consultor Comercial - Saúde</option>
+            <option>Consultor Comercial - Inclusão</option>
+            <option>Banco de Talentos</option>
+          </select>
+        </label>
+        <label><span>Negócio de interesse *</span>
+          <select name="negocioVisual" data-negocio-select required>
+            <option value="">Selecione</option>
+            <option>GEB Empresarial</option>
+            <option>GEB Educação</option>
+            <option>GEB Saúde</option>
+            <option>GEB Inclusão</option>
+            <option>GEB Tecnologia</option>
+            <option>Institucional / qualquer negócio</option>
+          </select>
+          <input type="hidden" name="negocio">
+          <small class="ats-field-note" data-negocio-note></small>
+        </label>
+        <label><span>Área profissional *</span>
+          <select name="areaProfissionalVisual" data-area-select required>
+            <option value="">Selecione</option>
+            <option>Comercial</option>
+            <option>Administrativo</option>
+            <option>Atendimento / Relacionamento</option>
+            <option>Educação</option>
+            <option>Saúde</option>
+            <option>Inclusão / Libras</option>
+            <option>Tecnologia</option>
+            <option>Operações / Projetos</option>
+            <option>Outra</option>
+          </select>
+          <input type="hidden" name="areaProfissional">
+          <small class="ats-field-note" data-area-note></small>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Dados pessoais e contato</legend>
+      <div class="ats-grid ats-grid-2">
+        <label><span>Nome completo *</span><input name="nome" type="text" maxlength="160" required autocomplete="name"></label>
+        <label><span>Data de nascimento *</span><input name="dataNascimento" type="date" required></label>
+        <label><span>E-mail *</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span>Telefone / WhatsApp *</span><input name="telefone" type="tel" maxlength="30" required autocomplete="tel"></label>
+        <label><span>Cidade *</span><input name="cidade" type="text" maxlength="100" required autocomplete="address-level2"></label>
+        <label><span>UF *</span><select name="uf" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label>
+        <label><span>LinkedIn ou portfólio</span><input name="linkedin" type="url" placeholder="https://"></label>
+        <label><span>CNH *</span><select name="possuiCnh" required><option value="">Selecione</option><option value="Não possuo CNH">Não possuo CNH</option><option value="Sim">Possuo CNH</option></select></label>
+        <label data-cnh-category hidden><span>Categoria da CNH *</span><select name="categoriaCnh"><option value="">Selecione</option><option>A</option><option>B</option><option>AB</option><option>C</option><option>D</option><option>E</option><option>ACC</option></select></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="ats-group ats-summary-group">
+      <legend>Resumo profissional</legend>
+      <p class="ats-help">Apresente brevemente sua experiência, principais competências e área de atuação.</p>
+      <label><span>Resumo profissional</span><textarea name="resumo" rows="5" maxlength="1500" placeholder="Ex.: profissional com experiência em gestão, atendimento, vendas, operações..."></textarea></label>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Formação principal</legend>
+      <div class="ats-grid ats-grid-2">
+        <label><span>Escolaridade *</span><select name="escolaridade" required><option value="">Selecione</option><option>Ensino Fundamental</option><option>Ensino Médio</option><option>Técnico</option><option>Graduação</option><option>Pós-graduação</option><option>Mestrado</option><option>Doutorado</option></select></label>
+        <label><span>Curso / formação</span><input name="curso" type="text" maxlength="140"></label>
+        <label><span>Instituição</span><input name="instituicao" type="text" maxlength="140"></label>
+        <label><span>Situação</span><select name="situacaoFormacao"><option value="">Selecione</option><option>Concluído</option><option>Cursando</option><option>Trancado</option><option>Incompleto</option></select></label>
+      </div>
+      <div class="ats-repeat-list" data-repeat="formacao"></div>
+      <button class="button button-outline" type="button" data-add-repeat="formacao">+ Adicionar outra formação</button>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Cursos complementares</legend>
+      <p class="ats-help">Opcional. Adicione apenas os cursos mais relevantes para sua atuação profissional.</p>
+      <div class="ats-repeat-list" data-repeat="curso"></div>
+      <button class="button button-outline" type="button" data-add-repeat="curso">+ Adicionar curso</button>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Experiência profissional</legend>
+      <div class="ats-grid ats-grid-2">
+        <label><span>Último cargo / função</span><input name="ultimoCargo" type="text" maxlength="120"></label>
+        <label><span>Empresa mais recente</span><input name="empresaRecente" type="text" maxlength="140"></label>
+        <label><span>Tempo total de experiência</span><select name="tempoExperiencia"><option value="">Selecione</option><option>Sem experiência profissional</option><option>Menos de 1 ano</option><option>1 a 2 anos</option><option>3 a 5 anos</option><option>6 a 10 anos</option><option>Mais de 10 anos</option></select></label>
+      </div>
+
+      <div class="ats-profile-block">
+        <h3>Experiência anterior</h3>
+        <p class="ats-help">Marque todas as opções que já fizeram parte da sua trajetória profissional.</p>
+
+        <div class="ats-choice-group">
+          <span>Modelos de trabalho já vivenciados</span>
+          <div class="ats-check-grid" data-global-multi="experienciaModelos">
+            <label><input type="checkbox" value="Presencial"><span>Presencial</span></label>
+            <label><input type="checkbox" value="Híbrido"><span>Híbrido</span></label>
+            <label><input type="checkbox" value="Remoto / Home Office"><span>Remoto / Home Office</span></label>
+          </div>
+        </div>
+
+        <div class="ats-choice-group">
+          <span>Regimes de contratação já vivenciados</span>
+          <div class="ats-check-grid" data-global-multi="experienciaRegimes">
+            <label><input type="checkbox" value="CLT"><span>CLT</span></label>
+            <label><input type="checkbox" value="PJ"><span>PJ</span></label>
+            <label><input type="checkbox" value="Estágio"><span>Estágio</span></label>
+            <label><input type="checkbox" value="Temporário"><span>Temporário</span></label>
+            <label><input type="checkbox" value="Autônomo / Prestador"><span>Autônomo / Prestador</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="ats-repeat-list" data-repeat="experiencia"></div>
+      <button class="button button-outline" type="button" data-add-repeat="experiencia">+ Adicionar experiência</button>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Disponibilidade e interesse profissional</legend>
+      <div class="ats-grid ats-grid-2">
+        <label><span>Disponibilidade de período *</span><select name="disponibilidade" required><option value="">Selecione</option><option>Integral</option><option>Matutino</option><option>Vespertino</option><option>Noturno</option><option>Matutino e Vespertino</option><option>Vespertino e Noturno</option><option>Horário flexível / a combinar</option></select></label>
+        <label><span>Pretensão salarial</span><input name="pretensaoSalarial" type="text" maxlength="60" placeholder="Ex.: R$ 2.500 ou a combinar"></label>
+      </div>
+
+      <div class="ats-profile-block">
+        <h3>Interesse atual</h3>
+        <p class="ats-help">Marque todas as opções que você aceita ou tem interesse em considerar.</p>
+
+        <div class="ats-choice-group">
+          <span>Modelos de trabalho de interesse</span>
+          <div class="ats-check-grid" data-global-multi="interesseModelos">
+            <label><input type="checkbox" value="Presencial"><span>Presencial</span></label>
+            <label><input type="checkbox" value="Híbrido"><span>Híbrido</span></label>
+            <label><input type="checkbox" value="Remoto / Home Office"><span>Remoto / Home Office</span></label>
+          </div>
+        </div>
+
+        <div class="ats-choice-group">
+          <span>Regimes de contratação de interesse</span>
+          <div class="ats-check-grid" data-global-multi="interesseRegimes">
+            <label><input type="checkbox" value="CLT"><span>CLT</span></label>
+            <label><input type="checkbox" value="PJ"><span>PJ</span></label>
+            <label><input type="checkbox" value="Estágio"><span>Estágio</span></label>
+            <label><input type="checkbox" value="Temporário"><span>Temporário</span></label>
+            <label><input type="checkbox" value="Autônomo / Prestador"><span>Autônomo / Prestador</span></label>
+          </div>
+        </div>
+      </div>
+
+      
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Currículo</legend>
+      <p class="ats-help">As informações preenchidas serão transformadas automaticamente em um <strong>Currículo GEB em PDF</strong> e salvas no ATS. Se você já possui um currículo próprio, pode anexá-lo também.</p>
+      <label class="ats-file"><span>Currículo próprio em PDF — opcional</span><input name="curriculo" type="file" accept="application/pdf,.pdf"><small>PDF de até 5 MB.</small></label>
+    </fieldset>
+
+    <fieldset class="ats-group">
+      <legend>Privacidade</legend>
+      <label class="ats-consent"><input type="checkbox" name="consentimentoVisual" required><span>Autorizo o tratamento dos dados informados para recrutamento e seleção do GEB, incluindo armazenamento do currículo e consulta em processos seletivos compatíveis com meu perfil.</span></label>
+    </fieldset>
+
+    <div class="ats-submit-row">
+      <p>O cadastro não representa promessa de contratação ou convocação para processo seletivo.</p>
+      <button class="button button-dark ats-submit" type="submit">Enviar candidatura</button>
+    </div>
+    <div class="ats-status" data-ats-status hidden role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+</main><footer class="site-footer"><div class="footer-brand"><img data-geb-logo alt="GEB"><span>Grupo Eduarda Bispo</span></div><div class="footer-links"><a href="https://grupoeduardabispo.blogspot.com/" target="_blank" rel="noopener">Blog GEB ↗</a><a href="../../carreiras/">Trabalhe Conosco</a><a href="../../contato/">Contato</a></div><p class="footer-note">GEB integra soluções empresariais, educação, saúde, inclusão e tecnologia em uma única marca.</p><p class="copyright">© <span data-year></span> GEB. Todos os direitos reservados.</p></footer><script src="../../site.js"></script><script src="../ats-form.js"></script></body></html>
