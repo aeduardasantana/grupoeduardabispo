@@ -6,8 +6,12 @@
   const status = document.querySelector('[data-ats-status]');
   const submit = form.querySelector('button[type="submit"]');
   const vagaSelect = form.querySelector('[name="vaga"]');
-  const negocioSelect = form.querySelector('[name="negocio"]');
-  const areaSelect = form.querySelector('[name="areaProfissional"]');
+  const negocioVisual = form.querySelector('[name="negocioVisual"]');
+  const negocioHidden = form.querySelector('[name="negocio"]');
+  const areaVisual = form.querySelector('[name="areaProfissionalVisual"]');
+  const areaHidden = form.querySelector('[name="areaProfissional"]');
+  const negocioNote = document.querySelector('[data-negocio-note]');
+  const areaNote = document.querySelector('[data-area-note]');
   const cnhSelect = form.querySelector('[name="possuiCnh"]');
   const cnhCategoryWrap = document.querySelector('[data-cnh-category]');
 
@@ -16,28 +20,61 @@
     'Consultor Comercial - Educação': { negocio: 'GEB Educação', area: 'Comercial' },
     'Consultor Comercial - Saúde': { negocio: 'GEB Saúde', area: 'Comercial' },
     'Consultor Comercial - Inclusão': { negocio: 'GEB Inclusão', area: 'Comercial' },
-    'Banco de Talentos': { negocio: '', area: '' }
+    'Banco de Talentos': null
   };
 
   document.querySelectorAll('[data-apply-job]').forEach(btn => {
     btn.addEventListener('click', () => {
       const vaga = btn.dataset.applyJob || '';
-      const mapped = VAGA_MAP[vaga] || {};
       vagaSelect.value = vaga;
-      negocioSelect.value = btn.dataset.applyBusiness || mapped.negocio || '';
-      areaSelect.value = btn.dataset.applyArea || mapped.area || '';
+      syncOpportunity();
       document.querySelector('#candidatura')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => form.querySelector('[name="nome"]')?.focus(), 450);
     });
   });
 
-  vagaSelect.addEventListener('change', () => {
+  function syncOpportunity() {
     const mapped = VAGA_MAP[vagaSelect.value];
+
     if (mapped) {
-      negocioSelect.value = mapped.negocio;
-      areaSelect.value = mapped.area;
+      negocioVisual.value = mapped.negocio;
+      areaVisual.value = mapped.area;
+      negocioHidden.value = mapped.negocio;
+      areaHidden.value = mapped.area;
+      negocioVisual.disabled = true;
+      areaVisual.disabled = true;
+      negocioNote.textContent = 'Definido automaticamente pela vaga.';
+      areaNote.textContent = 'Definida automaticamente pela vaga.';
+      return;
     }
+
+    negocioVisual.disabled = false;
+    areaVisual.disabled = false;
+
+    if (vagaSelect.value === 'Banco de Talentos') {
+      negocioVisual.value = '';
+      areaVisual.value = '';
+      negocioHidden.value = '';
+      areaHidden.value = '';
+      negocioNote.textContent = 'Escolha o negócio de interesse.';
+      areaNote.textContent = 'Escolha a área profissional de interesse.';
+    } else {
+      negocioHidden.value = negocioVisual.value;
+      areaHidden.value = areaVisual.value;
+      negocioNote.textContent = '';
+      areaNote.textContent = '';
+    }
+  }
+
+  negocioVisual.addEventListener('change', () => {
+    if (!negocioVisual.disabled) negocioHidden.value = negocioVisual.value;
   });
+
+  areaVisual.addEventListener('change', () => {
+    if (!areaVisual.disabled) areaHidden.value = areaVisual.value;
+  });
+
+  vagaSelect.addEventListener('change', syncOpportunity);
 
   function syncCnh() {
     const has = cnhSelect.value === 'Sim';
@@ -48,6 +85,7 @@
   }
   cnhSelect.addEventListener('change', syncCnh);
   syncCnh();
+  syncOpportunity();
 
   function addRepeatItem(container, type) {
     const index = container.querySelectorAll('.ats-repeat-item').length + 1;
@@ -156,17 +194,13 @@
 
     if (!form.reportValidity()) return;
 
-    const file = form.querySelector('[name="curriculo"]').files[0];
-    if (!file) {
-      setStatus('Anexe seu currículo em PDF.', 'error');
+    const file = form.querySelector('[name="curriculo"]').files[0] || null;
+    if (file && file.type !== 'application/pdf') {
+      setStatus('O currículo próprio deve estar em PDF.', 'error');
       return;
     }
-    if (file.type !== 'application/pdf') {
-      setStatus('O currículo deve estar em PDF.', 'error');
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      setStatus('O PDF deve ter no máximo 5 MB.', 'error');
+    if (file && file.size > 5 * 1024 * 1024) {
+      setStatus('O currículo próprio deve ter no máximo 5 MB.', 'error');
       return;
     }
 
@@ -188,9 +222,15 @@
       params.set('formacoes', JSON.stringify(collectRepeat('formacao')));
       params.set('cursos', JSON.stringify(collectRepeat('curso')));
       params.set('experiencias', JSON.stringify(collectRepeat('experiencia')));
-      params.set('curriculoNome', file.name);
-      params.set('curriculoMime', file.type);
-      params.set('curriculoBase64', await fileToBase64(file));
+      if (file) {
+        params.set('curriculoNome', file.name);
+        params.set('curriculoMime', file.type);
+        params.set('curriculoBase64', await fileToBase64(file));
+      } else {
+        params.set('curriculoNome', '');
+        params.set('curriculoMime', '');
+        params.set('curriculoBase64', '');
+      }
       params.set('origem', 'Site institucional - Carreiras');
       params.set('consentimento', 'sim');
 
@@ -205,6 +245,7 @@
       form.reset();
       document.querySelectorAll('.ats-repeat-list').forEach(el => el.innerHTML = '');
       syncCnh();
+      syncOpportunity();
       setStatus(`Candidatura recebida. Protocolo: ${data.id}`, 'success');
     } catch (err) {
       setStatus(err.message || 'Ocorreu um erro ao enviar sua candidatura.', 'error');
