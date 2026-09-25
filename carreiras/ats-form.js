@@ -120,24 +120,6 @@
           <label><span>Fim</span><input data-field="fim" type="month"></label>
         </div>
         <label class="ats-check-inline"><input data-field="atual" type="checkbox" value="Sim"><span>Trabalho atualmente nesta empresa</span></label>
-        <div class="ats-choice-group">
-          <span>Modelo de trabalho vivenciado</span>
-          <div class="ats-check-grid" data-multi-field="modelosTrabalho">
-            <label><input type="checkbox" value="Presencial"><span>Presencial</span></label>
-            <label><input type="checkbox" value="Híbrido"><span>Híbrido</span></label>
-            <label><input type="checkbox" value="Remoto / Home Office"><span>Remoto / Home Office</span></label>
-          </div>
-        </div>
-        <div class="ats-choice-group">
-          <span>Regime de contratação vivenciado</span>
-          <div class="ats-check-grid" data-multi-field="regimesContratacao">
-            <label><input type="checkbox" value="CLT"><span>CLT</span></label>
-            <label><input type="checkbox" value="PJ"><span>PJ</span></label>
-            <label><input type="checkbox" value="Estágio"><span>Estágio</span></label>
-            <label><input type="checkbox" value="Temporário"><span>Temporário</span></label>
-            <label><input type="checkbox" value="Autônomo / Prestador"><span>Autônomo / Prestador</span></label>
-          </div>
-        </div>
         <label><span>Principais atividades</span><textarea data-field="atividades" rows="3" maxlength="900"></textarea></label>`
     };
 
