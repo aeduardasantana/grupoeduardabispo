@@ -613,3 +613,22 @@ function jsonResponse_(obj) {
     .createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
+function authorizeAts_() {
+  const ss = SpreadsheetApp.openById(ATS.SPREADSHEET_ID);
+  ss.getSheets();
+
+  const folder = DriveApp.getFolderById(ATS.CURRICULOS_FOLDER_ID);
+  folder.getName();
+
+  const doc = DocumentApp.create('ATS - AUTORIZAÇÃO TEMPORÁRIA');
+  doc.getBody().appendParagraph('Autorização do GEB ATS.');
+  doc.saveAndClose();
+
+  const file = DriveApp.getFileById(doc.getId());
+  file.setTrashed(true);
+
+  MailApp.getRemainingDailyQuota();
+
+  return 'Autorizações do GEB ATS verificadas.';
+}
