@@ -232,7 +232,19 @@
         method: 'POST',
         body: params
       });
-      const data = await response.json();
+
+      const raw = await response.text();
+      let data;
+
+      try {
+        data = JSON.parse(raw);
+      } catch (_) {
+        const looksHtml = /<!doctype html|<html/i.test(raw);
+        if (looksHtml) {
+          throw new Error('O Google Apps Script devolveu uma página HTML em vez da resposta do ATS. Verifique se a implantação está como Aplicativo da Web, executando como você e acessível por qualquer pessoa.');
+        }
+        throw new Error('Resposta inválida do ATS: ' + raw.slice(0, 180));
+      }
 
       if (!data.ok) throw new Error(data.message || 'Não foi possível registrar a candidatura.');
 
