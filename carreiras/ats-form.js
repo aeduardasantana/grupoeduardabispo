@@ -154,6 +154,14 @@
     });
   });
 
+  function collectGlobalMulti(name) {
+    const group = document.querySelector(`[data-global-multi="${name}"]`);
+    if (!group) return '';
+    return [...group.querySelectorAll('input[type="checkbox"]:checked')]
+      .map(input => input.value)
+      .join('; ');
+  }
+
   function collectRepeat(type) {
     return [...document.querySelectorAll(`[data-repeat="${type}"] .ats-repeat-item`)]
       .map(item => {
@@ -222,6 +230,10 @@
       params.set('formacoes', JSON.stringify(collectRepeat('formacao')));
       params.set('cursos', JSON.stringify(collectRepeat('curso')));
       params.set('experiencias', JSON.stringify(collectRepeat('experiencia')));
+      params.set('experienciaModelos', collectGlobalMulti('experienciaModelos'));
+      params.set('experienciaRegimes', collectGlobalMulti('experienciaRegimes'));
+      params.set('interesseModelos', collectGlobalMulti('interesseModelos'));
+      params.set('interesseRegimes', collectGlobalMulti('interesseRegimes'));
       if (file) {
         params.set('curriculoNome', file.name);
         params.set('curriculoMime', file.type);
