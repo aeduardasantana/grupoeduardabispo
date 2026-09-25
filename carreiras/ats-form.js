@@ -1,5 +1,5 @@
 (() => {
-  const ATS_ENDPOINT = '';
+  const ATS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygU5XWV9PD7IzAlFWHYPlFrPi5AeBwGItB9VSs3QN9DCOuYyqzQepBw7mX2HQ4Ou8c/exec';
   const form = document.querySelector('[data-ats-form]');
   if (!form) return;
 
