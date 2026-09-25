@@ -391,3 +391,10 @@ h1,h2,h3,.statement h2,.contact-section h2,.careers-panel h2,.internal-hero h1,.
     padding:7px;
   }
 }
+
+/* Hero image framing consistency */
+.internal-hero-media{position:relative!important}
+.internal-hero-media img{
+  object-position:center center!important;
+  vertical-align:middle;
+}
