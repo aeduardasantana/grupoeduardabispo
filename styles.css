@@ -201,3 +201,57 @@ h1{
 .ats-consent{display:flex!important;align-items:flex-start!important;gap:12px!important;font-weight:400!important;line-height:1.5}
 .ats-consent input[type="checkbox"]{flex:0 0 auto!important;width:18px!important;height:18px!important;margin:2px 0 0!important}
 .ats-consent span{display:block!important;flex:1}
+
+/* Correção dos checkboxes do ATS */
+.ats-check-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  align-items:center;
+  margin-top:8px;
+}
+.ats-check-grid label,
+.ats-check-inline,
+.ats-consent{
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  font-weight:400!important;
+}
+.ats-check-grid input[type="checkbox"],
+.ats-check-inline input[type="checkbox"],
+.ats-consent input[type="checkbox"]{
+  width:18px!important;
+  height:18px!important;
+  min-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  flex:0 0 18px!important;
+  accent-color:var(--ink);
+}
+.ats-check-grid span,
+.ats-check-inline span,
+.ats-consent span{
+  display:inline!important;
+  margin:0!important;
+  line-height:1.35;
+}
+.ats-profile-block{
+  margin-top:24px;
+  padding:22px;
+  border:1px solid var(--line);
+  background:#faf9f6;
+}
+.ats-profile-block h3{
+  margin:0 0 6px;
+  font-size:18px;
+}
+.ats-choice-group{
+  margin-top:18px;
+}
+.ats-choice-group>span{
+  display:block;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:8px;
+}
