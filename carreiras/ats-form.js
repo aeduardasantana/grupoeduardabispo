@@ -85,7 +85,12 @@
   }
   cnhSelect.addEventListener('change', syncCnh);
   syncCnh();
-  syncOpportunity();
+  const query = new URLSearchParams(window.location.search);
+  const queryVaga = query.get('vaga');
+  if (queryVaga && [...vagaSelect.options].some(option => option.value === queryVaga || option.textContent === queryVaga)) {
+    vagaSelect.value = queryVaga;
+    syncOpportunity();
+  }
 
   function addRepeatItem(container, type) {
     const index = container.querySelectorAll('.ats-repeat-item').length + 1;
