@@ -62,6 +62,8 @@ function doPost(e) {
 
     sheet.appendRow(row);
 
+    appendChildRows_(ss, id, p);
+
     try {
       sendCandidateReceipt_(p, id);
       sendInternalNotice_(p, id, file.url);
@@ -83,6 +85,60 @@ function doPost(e) {
     });
   } finally {
     try { lock.releaseLock(); } catch (_) {}
+  }
+}
+
+function appendChildRows_(ss, candidateId, p) {
+  const formacoes = parseJsonArray_(p.formacoes);
+  const cursos = parseJsonArray_(p.cursos);
+  const experiencias = parseJsonArray_(p.experiencias);
+
+  appendRows_(ss.getSheetByName('FORMACAO'), formacoes.map(item => [
+    candidateId,
+    clean_(item.nivel),
+    clean_(item.curso),
+    clean_(item.instituicao),
+    clean_(item.situacao),
+    clean_(item.anoInicio),
+    clean_(item.anoConclusao),
+    clean_(item.observacoes)
+  ]));
+
+  appendRows_(ss.getSheetByName('CURSOS'), cursos.map(item => [
+    candidateId,
+    clean_(item.nome),
+    clean_(item.instituicao),
+    clean_(item.cargaHoraria),
+    clean_(item.ano),
+    clean_(item.certificado),
+    clean_(item.observacoes)
+  ]));
+
+  appendRows_(ss.getSheetByName('EXPERIENCIAS'), experiencias.map(item => [
+    candidateId,
+    clean_(item.empresa),
+    clean_(item.cargo),
+    clean_(item.inicio),
+    clean_(item.fim),
+    clean_(item.atual),
+    clean_(item.atividades),
+    clean_(item.segmento),
+    clean_(item.observacoes)
+  ]));
+}
+
+function appendRows_(sheet, rows) {
+  if (!sheet || !rows || !rows.length) return;
+  sheet.getRange(sheet.getLastRow() + 1, 1, rows.length, rows[0].length).setValues(rows);
+}
+
+function parseJsonArray_(value) {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) {
+    return [];
   }
 }
 
