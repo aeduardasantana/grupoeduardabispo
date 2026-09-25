@@ -320,3 +320,27 @@ h1,h2,h3,.statement h2,.contact-section h2,.careers-panel h2,.internal-hero h1,.
   .career-path-card,.business-career-grid article{min-height:auto}
   .partnerships-hero .internal-hero-media,.partnerships-hero .internal-hero-media img{min-height:260px;height:280px}
 }
+
+/* Hero scale corrections */
+.areas-hero{grid-template-columns:minmax(0,1.16fr) minmax(300px,.84fr)}
+.areas-hero .internal-hero-media{min-height:300px;max-height:330px;align-self:center}
+.areas-hero .internal-hero-media img{min-height:300px;height:330px}
+
+.contact-hero{grid-template-columns:minmax(0,1.22fr) minmax(280px,.78fr)}
+.contact-hero .internal-hero-media{min-height:270px;max-height:300px;align-self:center}
+.contact-hero .internal-hero-media img{min-height:270px;height:300px;object-position:center}
+
+.jobs-hero{grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr)}
+.jobs-hero .internal-hero-media{min-height:260px;max-height:300px;align-self:center}
+.jobs-hero .internal-hero-media img{min-height:260px;height:300px}
+.jobs-hero .jobs-highlight-strip{margin-top:28px}
+
+@media(max-width:980px){
+  .areas-hero,.contact-hero,.jobs-hero{grid-template-columns:1fr}
+  .areas-hero .internal-hero-media,.contact-hero .internal-hero-media,.jobs-hero .internal-hero-media{max-height:none}
+}
+@media(max-width:620px){
+  .areas-hero .internal-hero-media,.areas-hero .internal-hero-media img{min-height:240px;height:260px}
+  .contact-hero .internal-hero-media,.contact-hero .internal-hero-media img{min-height:220px;height:240px}
+  .jobs-hero .internal-hero-media,.jobs-hero .internal-hero-media img{min-height:220px;height:240px}
+}
