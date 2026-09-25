@@ -175,3 +175,12 @@ h1{
 .ats-status.warning{border-color:#b68a2d;background:#fff8e6}
 .ats-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
 @media(max-width:780px){.ats-intro,.ats-grid-2{grid-template-columns:1fr}.ats-submit-row{align-items:stretch;flex-direction:column}.ats-submit{width:100%}}
+
+.talent-bank-section{border-top:1px solid var(--line)}
+.talent-bank-card{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(32px,6vw,80px);padding:clamp(30px,5vw,58px);background:var(--ink);color:#fff}
+.talent-bank-card h2{margin:14px 0 0;font-size:clamp(32px,3.7vw,52px);line-height:1.04;letter-spacing:-.04em}
+.talent-bank-card p{max-width:760px;color:rgba(255,255,255,.68);line-height:1.6}
+.talent-bank-action{align-self:end;display:grid;gap:12px}
+.talent-bank-action .button-dark{background:#fff;color:var(--ink);border-color:#fff}
+.talent-bank-action small{color:rgba(255,255,255,.58);line-height:1.45}
+@media(max-width:780px){.talent-bank-card{grid-template-columns:1fr}.talent-bank-action{align-self:auto}}
