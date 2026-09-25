@@ -116,14 +116,26 @@
         <div class="ats-grid ats-grid-2">
           <label><span>Empresa</span><input data-field="empresa" type="text" maxlength="140"></label>
           <label><span>Cargo / função</span><input data-field="cargo" type="text" maxlength="120"></label>
-          <label><span>Início</span><input data-field="inicio" type="month"></label>
-          <label><span>Fim</span><input data-field="fim" type="month"></label>
+          <label><span>Início</span><input data-field="inicio" type="date"></label>
+          <label><span>Fim</span><input data-field="fim" type="date"></label>
         </div>
         <label class="ats-check-inline"><input data-field="atual" type="checkbox" value="Sim"><span>Trabalho atualmente nesta empresa</span></label>
         <label><span>Principais atividades</span><textarea data-field="atividades" rows="3" maxlength="900"></textarea></label>`
     };
 
     item.innerHTML = templates[type];
+
+    const currentEmployment = item.querySelector('[data-field="atual"]');
+    const endDate = item.querySelector('[data-field="fim"]');
+    if (currentEmployment && endDate) {
+      const syncCurrentEmployment = () => {
+        endDate.disabled = currentEmployment.checked;
+        if (currentEmployment.checked) endDate.value = '';
+      };
+      currentEmployment.addEventListener('change', syncCurrentEmployment);
+      syncCurrentEmployment();
+    }
+
     item.querySelector('.ats-remove').addEventListener('click', () => item.remove());
     container.appendChild(item);
   }
