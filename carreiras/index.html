@@ -33,7 +33,7 @@
 <section id="candidatura" class="section ats-section">
   <div class="ats-intro">
     <div><span class="section-number">02</span><p class="section-kicker">Candidatura</p></div>
-    <div><h2>Cadastre seu perfil profissional.</h2><p>Preencha os dados principais para triagem e anexe seu currículo em PDF. Formação, cursos e experiências podem ser adicionados em mais de um registro.</p></div>
+    <div><h2>Cadastre seu perfil profissional.</h2><p>Preencha seu perfil profissional. O sistema gera automaticamente um Currículo GEB em PDF; um currículo próprio pode ser anexado opcionalmente.</p></div>
   </div>
 
   <form class="ats-form" data-ats-form novalidate>
@@ -54,7 +54,7 @@
           </select>
         </label>
         <label><span>Negócio de interesse *</span>
-          <select name="negocio" required>
+          <select name="negocioVisual" data-negocio-select required>
             <option value="">Selecione</option>
             <option>GEB Empresarial</option>
             <option>GEB Educação</option>
@@ -63,9 +63,11 @@
             <option>GEB Tecnologia</option>
             <option>Institucional / qualquer negócio</option>
           </select>
+          <input type="hidden" name="negocio">
+          <small class="ats-field-note" data-negocio-note></small>
         </label>
         <label><span>Área profissional *</span>
-          <select name="areaProfissional" required>
+          <select name="areaProfissionalVisual" data-area-select required>
             <option value="">Selecione</option>
             <option>Comercial</option>
             <option>Administrativo</option>
@@ -77,6 +79,8 @@
             <option>Operações / Projetos</option>
             <option>Outra</option>
           </select>
+          <input type="hidden" name="areaProfissional">
+          <small class="ats-field-note" data-area-note></small>
         </label>
       </div>
     </fieldset>
@@ -91,7 +95,7 @@
         <label><span>Cidade *</span><input name="cidade" type="text" maxlength="100" required autocomplete="address-level2"></label>
         <label><span>UF *</span><select name="uf" required><option value="">Selecione</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label>
         <label><span>LinkedIn ou portfólio</span><input name="linkedin" type="url" placeholder="https://"></label>
-        <label><span>Possui CNH? *</span><select name="possuiCnh" required><option value="">Selecione</option><option>Sim</option><option>Não</option></select></label>
+        <label><span>CNH *</span><select name="possuiCnh" required><option value="">Selecione</option><option value="Não possuo CNH">Não possuo CNH</option><option value="Sim">Possuo CNH</option></select></label>
         <label data-cnh-category hidden><span>Categoria da CNH *</span><select name="categoriaCnh"><option value="">Selecione</option><option>A</option><option>B</option><option>AB</option><option>C</option><option>D</option><option>E</option><option>ACC</option></select></label>
       </div>
     </fieldset>
@@ -138,7 +142,8 @@
 
     <fieldset class="ats-group">
       <legend>Currículo</legend>
-      <label class="ats-file"><span>Currículo em PDF *</span><input name="curriculo" type="file" accept="application/pdf,.pdf" required><small>PDF de até 5 MB.</small></label>
+      <p class="ats-help">As informações preenchidas serão transformadas automaticamente em um <strong>Currículo GEB em PDF</strong> e salvas no ATS. Se você já possui um currículo próprio, pode anexá-lo também.</p>
+      <label class="ats-file"><span>Currículo próprio em PDF — opcional</span><input name="curriculo" type="file" accept="application/pdf,.pdf"><small>PDF de até 5 MB.</small></label>
     </fieldset>
 
     <fieldset class="ats-group">
