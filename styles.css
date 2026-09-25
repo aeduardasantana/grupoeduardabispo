@@ -255,3 +255,8 @@ h1{
   font-weight:700;
   margin-bottom:8px;
 }
+
+/* CNH: categoria somente quando possui CNH */
+[data-cnh-category][hidden]{
+  display:none!important;
+}
