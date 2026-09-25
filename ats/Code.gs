@@ -63,9 +63,12 @@ function doPost(e) {
       clean_(p.ultimoCargo),
       clean_(p.empresaRecente),
       clean_(p.tempoExperiencia),
+      clean_(p.experienciaModelos),
+      clean_(p.experienciaRegimes),
       clean_(p.disponibilidade),
+      clean_(p.interesseModelos),
+      clean_(p.interesseRegimes),
       clean_(p.pretensaoSalarial),
-      clean_(p.modeloTrabalho),
       clean_(p.resumo),
       generatedResume.url,
       originalResume.url,
@@ -230,7 +233,9 @@ function generateGebResumePdf_(p, candidateId, folder) {
   addSection_(body, 'EXPERIÊNCIA PROFISSIONAL - RESUMO', [
     ['Último cargo / função', clean_(p.ultimoCargo)],
     ['Empresa mais recente', clean_(p.empresaRecente)],
-    ['Tempo total de experiência', clean_(p.tempoExperiencia)]
+    ['Tempo total de experiência', clean_(p.tempoExperiencia)],
+    ['Modelos de trabalho já vivenciados', clean_(p.experienciaModelos)],
+    ['Regimes de contratação já vivenciados', clean_(p.experienciaRegimes)]
   ]);
 
   const experiencias = parseJsonArray_(p.experiencias);
@@ -265,9 +270,10 @@ function generateGebResumePdf_(p, candidateId, folder) {
     });
   }
 
-  addSection_(body, 'DISPONIBILIDADE E PERFIL', [
-    ['Disponibilidade', clean_(p.disponibilidade)],
-    ['Modelo de trabalho de interesse', clean_(p.modeloTrabalho)],
+  addSection_(body, 'DISPONIBILIDADE E INTERESSE PROFISSIONAL', [
+    ['Disponibilidade de período', clean_(p.disponibilidade)],
+    ['Modelos de trabalho de interesse', clean_(p.interesseModelos)],
+    ['Regimes de contratação de interesse', clean_(p.interesseRegimes)],
     ['Pretensão salarial', clean_(p.pretensaoSalarial)]
   ]);
 
