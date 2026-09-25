@@ -44,7 +44,6 @@ function doPost(e) {
       clean_(p.uf),
       clean_(p.possuiCnh),
       clean_(p.categoriaCnh),
-      clean_(p.validadeCnh),
       clean_(p.linkedin),
       clean_(p.escolaridade),
       clean_(p.curso),
