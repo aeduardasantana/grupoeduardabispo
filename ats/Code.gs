@@ -636,3 +636,7 @@ function authorizeAts_() {
 
   return 'Autorizações do GEB ATS verificadas.';
 }
+
+function authorizeAts() {
+  return authorizeAts_();
+}
