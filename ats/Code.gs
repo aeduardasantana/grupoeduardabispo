@@ -544,6 +544,17 @@ function sendCandidateReceipt_(p, id) {
   });
 }
 
+function getRecruitmentEmail_(negocio) {
+  const map = {
+    'GEB Empresarial': 'grupoeduardabispo+gebempresarial@gmail.com',
+    'GEB Inclusão': 'grupoeduardabispo+gebinclusao@gmail.com',
+    'GEB Saúde': 'grupoeduardabispo+gebsaude@gmail.com',
+    'GEB Educação': 'grupoeduardabispo+gebeducacao@gmail.com'
+  };
+
+  return map[clean_(negocio)] || 'grupoeduardabispo@gmail.com';
+}
+
 function sendInternalNotice_(
   p,
   id,
@@ -563,7 +574,7 @@ function sendInternalNotice_(
   }
 
   MailApp.sendEmail({
-    to: 'contato@grupoeduardabispo.com.br',
+    to: getRecruitmentEmail_(p.negocio),
     subject:
       'ATS - NOVA CANDIDATURA - ' +
       clean_(p.vaga),
