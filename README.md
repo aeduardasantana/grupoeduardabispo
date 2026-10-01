@@ -6,7 +6,7 @@ Site institucional do GEB.
 
 **GEB integra soluções empresariais, educação, saúde, inclusão e tecnologia em uma única marca.**
 
-O site institucional apresenta a marca, suas áreas de atuação, ecossistema, parceiros, carreiras e canais de contato. Conteúdo editorial permanece no Blog GEB e ofertas comerciais são aprofundadas nos ambientes de cada frente.
+O site institucional apresenta a marca, suas áreas de atuação, parcerias, carreiras e canais de contato. Conteúdo editorial permanece no Blog GEB e ofertas comerciais são aprofundadas nos ambientes de cada frente.
 
 ## Princípios
 
