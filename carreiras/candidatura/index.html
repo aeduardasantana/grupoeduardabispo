@@ -14,14 +14,20 @@
       <p class="ats-help">O <strong>negócio</strong> identifica a frente do GEB. A <strong>área profissional</strong> identifica a função em que você pretende atuar.</p>
       <div class="ats-grid ats-grid-3">
         <label><span>Vaga pretendida *</span>
-          <select name="vaga" required>
+          <select name="vagaVisual" data-vaga-select required>
             <option value="">Selecione</option>
-            <option>Consultor Comercial - Empresarial</option>
-            <option>Consultor Comercial - Educação</option>
-            <option>Consultor Comercial - Saúde</option>
-            <option>Consultor Comercial - Inclusão</option>
-            <option>Banco de Talentos</option>
+            <option value="VAG-EMP-COM-001">Consultor Comercial — GEB Empresarial</option>
+            <option value="VAG-EDU-COM-001">Consultor Comercial — GEB Educação</option>
+            <option value="VAG-SAU-COM-001">Consultor Comercial — GEB Saúde</option>
+            <option value="VAG-INC-COM-001">Consultor Comercial — GEB Inclusão</option>
+            <option value="VAG-TEC-COM-001">Consultor Comercial — GEB Tecnologia</option>
+            <option value="VAG-PAR-EXP-001">Consultor de Parcerias e Expansão — GEB Parceiros</option>
+            <option value="VAG-INC-LIB-001">Intérprete de Libras — Banco Nacional</option>
+            <option value="BANCO-GERAL">Banco de Talentos</option>
           </select>
+          <input type="hidden" name="vagaId">
+          <input type="hidden" name="vaga">
+          <small class="ats-field-note" data-vaga-note></small>
         </label>
         <label><span>Negócio de interesse *</span>
           <select name="negocioVisual" data-negocio-select required>
