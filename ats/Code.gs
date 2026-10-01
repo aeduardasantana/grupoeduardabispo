@@ -26,13 +26,14 @@ function doPost(e) {
     const p = e && e.parameter ? e.parameter : {};
     if (p.website) return jsonResponse_({ ok: true });
 
+    const ss = SpreadsheetApp.openById(ATS.SPREADSHEET_ID);
+    resolveVacancyById_(ss, p);
     validateRequired_(p);
     validateConsent_(p);
 
     const id = createCandidateId_();
     const now = new Date();
 
-    const ss = SpreadsheetApp.openById(ATS.SPREADSHEET_ID);
     const sheet = ss.getSheetByName(ATS.SHEET_CANDIDATOS);
     if (!sheet) throw new Error('Aba CANDIDATOS não encontrada.');
 
@@ -75,7 +76,8 @@ function doPost(e) {
       'Recebido',
       'SIM',
       clean_(p.origem || 'Site institucional - Carreiras'),
-      ''
+      '',
+      clean_(p.vagaId)
     ];
 
     sheet.appendRow(row);
@@ -107,6 +109,36 @@ function doPost(e) {
       lock.releaseLock();
     } catch (_) {}
   }
+}
+
+function resolveVacancyById_(ss, p) {
+  const vagaId = clean_(p.vagaId);
+  if (!vagaId) return;
+
+  const sheet = ss.getSheetByName(ATS.SHEET_VAGAS);
+  if (!sheet || sheet.getLastRow() < 2) {
+    throw new Error('Cadastro de vagas indisponível.');
+  }
+
+  const values = sheet.getDataRange().getDisplayValues();
+  const headers = values[0].map(clean_);
+  const idx = name => headers.indexOf(name);
+
+  const idCol = idx('ID');
+  const titleCol = idx('Título da vaga');
+  const businessCol = idx('Negócio GEB');
+  const areaCol = idx('Área profissional');
+
+  if ([idCol, titleCol, businessCol, areaCol].some(i => i < 0)) {
+    throw new Error('Estrutura da aba VAGAS incompatível com a candidatura.');
+  }
+
+  const row = values.slice(1).find(r => clean_(r[idCol]) === vagaId);
+  if (!row) throw new Error('Vaga não encontrada ou inválida.');
+
+  p.vaga = clean_(row[titleCol]);
+  p.negocio = clean_(row[businessCol]);
+  p.areaProfissional = clean_(row[areaCol]);
 }
 
 function validateRequired_(p) {
@@ -587,6 +619,7 @@ function sendInternalNotice_(
       'Vaga: ' +
       htmlEscape_(p.vaga) +
       '<br>' +
+      (clean_(p.vagaId) ? 'Vaga ID: ' + htmlEscape_(p.vagaId) + '<br>' : '') +
       'Negócio: ' +
       htmlEscape_(p.negocio) +
       '<br>' +
