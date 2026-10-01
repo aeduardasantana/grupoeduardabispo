@@ -711,3 +711,35 @@ a{
   .job-public-status{width:100%}
   .job-apply-box .button{width:100%;text-align:center}
 }
+
+/* ATS — indicador de processamento da candidatura */
+.ats-submit{
+  position:relative;
+  overflow:hidden;
+}
+.ats-submit:disabled{
+  cursor:wait;
+  opacity:1;
+  padding-bottom:17px;
+}
+.ats-submit:disabled::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:42%;
+  height:4px;
+  background:var(--gold);
+  animation:ats-submit-progress 1.15s ease-in-out infinite;
+}
+@keyframes ats-submit-progress{
+  0%{transform:translateX(-110%)}
+  50%{transform:translateX(95%)}
+  100%{transform:translateX(270%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .ats-submit:disabled::after{
+    width:100%;
+    animation:none;
+  }
+}
