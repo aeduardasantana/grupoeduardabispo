@@ -5,7 +5,10 @@
 
   const status = document.querySelector('[data-ats-status]');
   const submit = form.querySelector('button[type="submit"]');
-  const vagaSelect = form.querySelector('[name="vaga"]');
+  const vagaSelect = form.querySelector('[name="vagaVisual"]');
+  const vagaIdHidden = form.querySelector('[name="vagaId"]');
+  const vagaHidden = form.querySelector('[name="vaga"]');
+  const vagaNote = document.querySelector('[data-vaga-note]');
   const negocioVisual = form.querySelector('[name="negocioVisual"]');
   const negocioHidden = form.querySelector('[name="negocio"]');
   const areaVisual = form.querySelector('[name="areaProfissionalVisual"]');
@@ -16,51 +19,101 @@
   const cnhCategoryWrap = document.querySelector('[data-cnh-category]');
 
   const VAGA_MAP = {
-    'Consultor Comercial - Empresarial': { negocio: 'GEB Empresarial', area: 'Comercial' },
-    'Consultor Comercial - Educação': { negocio: 'GEB Educação', area: 'Comercial' },
-    'Consultor Comercial - Saúde': { negocio: 'GEB Saúde', area: 'Comercial' },
-    'Consultor Comercial - Inclusão': { negocio: 'GEB Inclusão', area: 'Comercial' },
-    'Banco de Talentos': null
+    'VAG-EMP-COM-001': {
+      titulo: 'Consultor Comercial — GEB Empresarial',
+      negocio: 'GEB Empresarial',
+      area: 'Comercial'
+    },
+    'VAG-EDU-COM-001': {
+      titulo: 'Consultor Comercial — GEB Educação',
+      negocio: 'GEB Educação',
+      area: 'Comercial'
+    },
+    'VAG-SAU-COM-001': {
+      titulo: 'Consultor Comercial — GEB Saúde',
+      negocio: 'GEB Saúde',
+      area: 'Comercial'
+    },
+    'VAG-INC-COM-001': {
+      titulo: 'Consultor Comercial — GEB Inclusão',
+      negocio: 'GEB Inclusão',
+      area: 'Comercial'
+    },
+    'VAG-TEC-COM-001': {
+      titulo: 'Consultor Comercial — GEB Tecnologia',
+      negocio: 'GEB Tecnologia',
+      area: 'Comercial'
+    },
+    'VAG-PAR-EXP-001': {
+      titulo: 'Consultor de Parcerias e Expansão — GEB Parceiros',
+      negocio: 'GEB Parceiros',
+      area: 'Parcerias e Expansão'
+    },
+    'VAG-INC-LIB-001': {
+      titulo: 'Intérprete de Libras — Banco Nacional',
+      negocio: 'GEB Inclusão',
+      area: 'Libras / Acessibilidade'
+    }
   };
 
-  document.querySelectorAll('[data-apply-job]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const vaga = btn.dataset.applyJob || '';
-      vagaSelect.value = vaga;
-      syncOpportunity();
-      document.querySelector('#candidatura')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => form.querySelector('[name="nome"]')?.focus(), 450);
-    });
-  });
+  function unlockOpportunity() {
+    vagaSelect.disabled = false;
+    negocioVisual.disabled = false;
+    areaVisual.disabled = false;
+  }
+
+  function applyVacancy(vagaId, lock = false) {
+    const mapped = VAGA_MAP[vagaId];
+    if (!mapped) return false;
+
+    vagaSelect.value = vagaId;
+    vagaIdHidden.value = vagaId;
+    vagaHidden.value = mapped.titulo;
+    negocioVisual.value = mapped.negocio;
+    negocioHidden.value = mapped.negocio;
+    areaVisual.value = mapped.area;
+    areaHidden.value = mapped.area;
+
+    vagaSelect.disabled = lock;
+    negocioVisual.disabled = lock;
+    areaVisual.disabled = lock;
+
+    vagaNote.textContent = lock ? 'Definida automaticamente pela oportunidade selecionada.' : '';
+    negocioNote.textContent = lock ? 'Definido automaticamente pela vaga.' : 'Definido automaticamente pela vaga.';
+    areaNote.textContent = lock ? 'Definida automaticamente pela vaga.' : 'Definida automaticamente pela vaga.';
+
+    return true;
+  }
 
   function syncOpportunity() {
-    const mapped = VAGA_MAP[vagaSelect.value];
+    const value = vagaSelect.value;
 
-    if (mapped) {
-      negocioVisual.value = mapped.negocio;
-      areaVisual.value = mapped.area;
-      negocioHidden.value = mapped.negocio;
-      areaHidden.value = mapped.area;
+    if (VAGA_MAP[value]) {
+      applyVacancy(value, false);
       negocioVisual.disabled = true;
       areaVisual.disabled = true;
-      negocioNote.textContent = 'Definido automaticamente pela vaga.';
-      areaNote.textContent = 'Definida automaticamente pela vaga.';
       return;
     }
 
-    negocioVisual.disabled = false;
-    areaVisual.disabled = false;
-
-    if (vagaSelect.value === 'Banco de Talentos') {
+    vagaIdHidden.value = '';
+    if (value === 'BANCO-GERAL') {
+      vagaHidden.value = 'Banco de Talentos';
+      negocioVisual.disabled = false;
+      areaVisual.disabled = false;
       negocioVisual.value = '';
       areaVisual.value = '';
       negocioHidden.value = '';
       areaHidden.value = '';
+      vagaNote.textContent = '';
       negocioNote.textContent = 'Escolha o negócio de interesse.';
       areaNote.textContent = 'Escolha a área profissional de interesse.';
     } else {
+      vagaHidden.value = '';
+      negocioVisual.disabled = false;
+      areaVisual.disabled = false;
       negocioHidden.value = negocioVisual.value;
       areaHidden.value = areaVisual.value;
+      vagaNote.textContent = '';
       negocioNote.textContent = '';
       areaNote.textContent = '';
     }
@@ -76,6 +129,29 @@
 
   vagaSelect.addEventListener('change', syncOpportunity);
 
+  const query = new URLSearchParams(window.location.search);
+  const queryVagaId = query.get('vagaId');
+  const queryNegocio = query.get('negocio');
+  const queryArea = query.get('area');
+
+  if (queryVagaId && VAGA_MAP[queryVagaId]) {
+    applyVacancy(queryVagaId, true);
+
+    // Os parâmetros negócio e área são transportados pelo site para rastreabilidade,
+    // mas a definição efetiva vem do mapa canônico pelo ID interno da vaga.
+    if (queryNegocio && queryNegocio !== VAGA_MAP[queryVagaId].negocio) {
+      console.warn('Negócio divergente na URL; valor canônico do ID foi preservado.');
+    }
+    if (queryArea && queryArea !== VAGA_MAP[queryVagaId].area) {
+      console.warn('Área divergente na URL; valor canônico do ID foi preservado.');
+    }
+  } else if (query.get('vaga') === 'Banco de Talentos') {
+    vagaSelect.value = 'BANCO-GERAL';
+    syncOpportunity();
+  } else {
+    syncOpportunity();
+  }
+
   function syncCnh() {
     const has = cnhSelect.value === 'Sim';
     cnhCategoryWrap.hidden = !has;
@@ -85,12 +161,6 @@
   }
   cnhSelect.addEventListener('change', syncCnh);
   syncCnh();
-  const query = new URLSearchParams(window.location.search);
-  const queryVaga = query.get('vaga');
-  if (queryVaga && [...vagaSelect.options].some(option => option.value === queryVaga || option.textContent === queryVaga)) {
-    vagaSelect.value = queryVaga;
-    syncOpportunity();
-  }
 
   function addRepeatItem(container, type) {
     const index = container.querySelectorAll('.ats-repeat-item').length + 1;
