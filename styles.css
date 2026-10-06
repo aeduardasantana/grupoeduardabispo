@@ -1104,3 +1104,217 @@ a{
 @media (prefers-reduced-motion:reduce){
   .site-footer--institutional .footer-nav-group a{transition:none}
 }
+
+
+/* Ecossistema GEB — composição editorial */
+.home-ecosystem-heading{
+  align-items:start;
+  margin-bottom:54px;
+}
+.ecosystem-editorial{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:14px;
+}
+.ecosystem-panel{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:330px;
+  padding:30px;
+  border:1px solid rgba(16,16,16,.18);
+  background:#fff;
+  overflow:hidden;
+}
+.ecosystem-panel--enterprise{grid-column:span 7;min-height:390px;background:#161616;color:#fff}
+.ecosystem-panel--education{grid-column:span 5;min-height:390px;background:#e9dfca}
+.ecosystem-panel--health{grid-column:span 4;background:#fff}
+.ecosystem-panel--inclusion{grid-column:span 4;background:#262421;color:#fff}
+.ecosystem-panel--technology{grid-column:span 4;background:#ece8df}
+.ecosystem-panel--partnerships{grid-column:span 12;min-height:280px;background:#fff;border-top:5px solid var(--gold)}
+.ecosystem-panel-top{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:flex-start;
+}
+.ecosystem-index{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:800;
+}
+.ecosystem-label{
+  max-width:65%;
+  text-align:right;
+  color:var(--muted);
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  line-height:1.4;
+}
+.ecosystem-panel--enterprise .ecosystem-label,
+.ecosystem-panel--inclusion .ecosystem-label{
+  color:rgba(255,255,255,.5);
+}
+.ecosystem-panel-main{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(180px,.75fr);
+  gap:30px;
+  align-items:end;
+  margin:auto 0 28px;
+}
+.ecosystem-panel--health .ecosystem-panel-main,
+.ecosystem-panel--inclusion .ecosystem-panel-main,
+.ecosystem-panel--technology .ecosystem-panel-main{
+  grid-template-columns:1fr;
+  align-items:start;
+  gap:22px;
+}
+.ecosystem-panel--partnerships .ecosystem-panel-main{
+  grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
+}
+.ecosystem-panel h3{
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(32px,3.5vw,54px);
+  line-height:.98;
+  letter-spacing:-.045em;
+  font-weight:700;
+}
+.ecosystem-panel--health h3,
+.ecosystem-panel--inclusion h3,
+.ecosystem-panel--technology h3{
+  font-size:clamp(28px,2.7vw,40px);
+}
+.ecosystem-positioning{
+  max-width:620px;
+  margin:16px 0 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+}
+.ecosystem-panel--enterprise .ecosystem-positioning,
+.ecosystem-panel--inclusion .ecosystem-positioning{
+  color:rgba(255,255,255,.64);
+}
+.ecosystem-examples{
+  display:flex;
+  flex-wrap:wrap;
+  align-content:flex-end;
+  gap:8px;
+}
+.ecosystem-examples span{
+  display:inline-flex;
+  padding:8px 10px;
+  border:1px solid rgba(16,16,16,.18);
+  background:rgba(255,255,255,.55);
+  font-size:10px;
+  font-weight:700;
+  line-height:1.25;
+}
+.ecosystem-panel--enterprise .ecosystem-examples span,
+.ecosystem-panel--inclusion .ecosystem-examples span{
+  border-color:rgba(255,255,255,.22);
+  background:rgba(255,255,255,.07);
+  color:rgba(255,255,255,.82);
+}
+.ecosystem-panel>a{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  padding-top:20px;
+  border-top:1px solid rgba(16,16,16,.18);
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.ecosystem-panel--enterprise>a,
+.ecosystem-panel--inclusion>a{
+  border-color:rgba(255,255,255,.22);
+}
+.ecosystem-panel>a span{
+  font-size:14px;
+}
+.ecosystem-panel:after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  right:-72px;
+  top:-72px;
+  border:1px solid rgba(182,138,45,.22);
+  border-radius:50%;
+  pointer-events:none;
+}
+.ecosystem-panel--partnerships:after{
+  width:260px;
+  height:260px;
+  right:-90px;
+  top:-130px;
+}
+.ecosystem-footnote{
+  display:flex;
+  justify-content:space-between;
+  gap:36px;
+  align-items:center;
+  margin-top:30px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.ecosystem-footnote p{
+  max-width:760px;
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+@media(max-width:980px){
+  .ecosystem-editorial{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ecosystem-panel--enterprise,
+  .ecosystem-panel--education,
+  .ecosystem-panel--health,
+  .ecosystem-panel--inclusion,
+  .ecosystem-panel--technology,
+  .ecosystem-panel--partnerships{
+    grid-column:span 1;
+    min-height:320px;
+  }
+  .ecosystem-panel--partnerships{grid-column:1/-1}
+  .ecosystem-panel-main,
+  .ecosystem-panel--partnerships .ecosystem-panel-main{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+}
+@media(max-width:680px){
+  .home-ecosystem-heading{margin-bottom:36px}
+  .ecosystem-editorial{grid-template-columns:1fr}
+  .ecosystem-panel--enterprise,
+  .ecosystem-panel--education,
+  .ecosystem-panel--health,
+  .ecosystem-panel--inclusion,
+  .ecosystem-panel--technology,
+  .ecosystem-panel--partnerships{
+    grid-column:auto;
+    min-height:0;
+    padding:24px 20px;
+  }
+  .ecosystem-panel-main{
+    margin:54px 0 24px;
+  }
+  .ecosystem-panel-top{
+    display:grid;
+    grid-template-columns:auto 1fr;
+  }
+  .ecosystem-label{
+    max-width:none;
+  }
+  .ecosystem-footnote{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
