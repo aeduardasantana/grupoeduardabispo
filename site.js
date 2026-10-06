@@ -1,4 +1,4 @@
-const LOGO="/assets/geb-institucional-logo.webp";
+const LOGO="/assets/geb-institucional-logo.svg";
 document.querySelectorAll("[data-geb-logo]").forEach(img=>img.src=LOGO);
 document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().getFullYear());
 document.querySelectorAll("[data-menu-button]").forEach(btn=>{
