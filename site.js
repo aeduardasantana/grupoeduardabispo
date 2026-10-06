@@ -56,3 +56,75 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
     link.insertAdjacentElement('afterend',group);
   });
 })();
+
+
+(function initInstitutionalFooter(){
+  const footer=document.querySelector('.site-footer');
+  if(!footer) return;
+
+  footer.classList.add('site-footer--institutional');
+  footer.innerHTML=`
+    <div class="footer-shell">
+      <div class="footer-primary">
+        <div class="footer-identity">
+          <a class="footer-logo" href="/" aria-label="GEB — início">
+            <img src="/assets/geb-institucional-logo.svg" alt="GEB — Grupo Eduarda Bispo">
+          </a>
+          <p>Estrutura institucional que conecta e fortalece frentes especializadas, projetos, conteúdos e oportunidades.</p>
+          <a class="footer-top-link" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Voltar ao topo ↑</a>
+        </div>
+
+        <nav class="footer-nav-group" aria-label="Institucional">
+          <strong>Institucional</strong>
+          <a href="/o-geb/">O GEB</a>
+          <a href="/areas/">Ecossistema</a>
+          <a href="/parceiros/">Parcerias e Expansão</a>
+          <a href="/carreiras/">Carreiras</a>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Frentes do GEB">
+          <strong>Ecossistema</strong>
+          <a href="/empresarial/">GEB Empresarial</a>
+          <a href="/educacao/">GEB Educação</a>
+          <a href="/saude/">GEB Saúde</a>
+          <a href="/inclusao/">GEB Inclusão</a>
+          <a href="/tecnologia/">GEB Tecnologia</a>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Conteúdo e oportunidades">
+          <strong>Conexões</strong>
+          <a href="https://grupoeduardabispo.blogspot.com/" target="_blank" rel="noopener">Blog GEB ↗</a>
+          <a href="/carreiras/vagas/">Vagas e oportunidades</a>
+          <a href="/carreiras/candidatura/">Candidatura</a>
+          <a href="/contato/">Contato</a>
+        </nav>
+      </div>
+
+      <div class="footer-contact-band">
+        <div>
+          <span>Contato institucional</span>
+          <a href="mailto:contato@grupoeduardabispo.com.br">contato@grupoeduardabispo.com.br</a>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <a href="https://wa.me/551121105473" target="_blank" rel="noopener">(11) 2110-5473</a>
+        </div>
+        <div class="footer-contact-note">
+          <span>GEB — Grupo Eduarda Bispo</span>
+          <p>Marca institucional e estrutura de origem das frentes especializadas do ecossistema GEB.</p>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>© <span data-year></span> GEB — Grupo Eduarda Bispo. Todos os direitos reservados.</p>
+        <div>
+          <a href="/contato/">Contato</a>
+          <span aria-hidden="true">•</span>
+          <a href="/carreiras/">Carreiras</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  footer.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+})();
