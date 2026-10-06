@@ -28,7 +28,7 @@ img{max-width:100%}
   border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
 }
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:104px;height:auto;display:block}
+.brand img{width:180px;height:auto;display:block}
 .brand-name{font-size:10px;text-transform:uppercase;letter-spacing:.16em}
 .desktop-nav{justify-self:end;display:flex;gap:24px;font-size:12px;font-weight:700}
 .desktop-nav a:hover,.footer-links a:hover,.contact-links a:hover{opacity:.55}
@@ -100,7 +100,7 @@ h1{
 .body-copy h2{margin:0 0 18px;font-size:clamp(30px,3.4vw,48px);line-height:1.08;letter-spacing:-.035em}
 .pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.pill{border:1px solid var(--ink);padding:9px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 .site-footer{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:48px var(--pad) 30px;background:var(--ink);color:#fff}
-.footer-brand img{width:102px;height:auto;filter:invert(1) brightness(2)}
+.footer-brand img{width:180px;height:auto;filter:invert(1) brightness(2)}
 .footer-brand span{display:block;margin-top:8px;font-size:10px;text-transform:uppercase;letter-spacing:.13em}
 .footer-links{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:18px;font-size:12px}
 .footer-note{max-width:620px;color:rgba(255,255,255,.62);line-height:1.5;font-size:14px}
@@ -117,7 +117,7 @@ h1{
   .ecosystem-grid>div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.22)}
 }
 @media(max-width:620px){
-  .brand-name{display:none}.brand img{width:90px}
+  .brand img{width:150px}
   h1{font-size:clamp(40px,12vw,58px)}
   .hero-media{min-height:330px}
   .segment-strip{grid-template-columns:1fr}
