@@ -669,5 +669,222 @@ window.GEB_TEST_ARTICLES=[
       "BRASIL. Ministério do Trabalho e Emprego. Portaria MTE nº 1.419, de 27 de agosto de 2024. Aprova nova redação do capítulo 1.5 e altera o Anexo I da NR-1. Brasília, DF: MTE, 2024. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/seguranca-e-saude-no-trabalho/sst-portarias/2024/portaria-mte-no-1-419-nr-01-gro-nova-redacao.pdf. Acesso em: 7 out. 2026."
     ],
     "conteudoHTML": "<p>Uma “brincadeira” promovida ou tolerada pela liderança pode ser, juridicamente e humanamente, uma forma de violência psicológica. O caso de uma trabalhadora com TDAH que recebeu um “troféu” por ser considerada “a empregada mais lerda do setor” mostra por que relações interpessoais e práticas de gestão não podem ser tratadas como aspectos informais sem consequência.</p><p>Segundo o Tribunal Regional do Trabalho da 3ª Região, a trabalhadora relatou bullying, sobrecarga e pressão no ambiente de trabalho. A perícia médica reconheceu transtorno ansioso-depressivo multifatorial, com contribuição relevante de estressores ocupacionais e da violência psicológica. A indenização por dano moral foi fixada em R$ 20 mil no julgamento regional.</p><p>O caso é especialmente relevante para a gestão porque a chefia tinha conhecimento dos episódios e não adotou medidas efetivas para interrompê-los. A responsabilização não decorre simplesmente da existência de conflito entre colegas, mas da combinação entre condutas discriminatórias, degradação das relações de trabalho e omissão diante de um ambiente hostil.</p><p>Na gestão de riscos psicossociais, relações socioprofissionais, organização do trabalho e exigências da atividade precisam ser observadas de forma sistemática. A NR-1 determina que o gerenciamento de riscos ocupacionais considere os perigos e riscos relacionados ao trabalho; sua aplicação aos fatores psicossociais não transforma uma AEP em instrumento de diagnóstico clínico, mas reforça a necessidade de avaliar as condições reais de execução do trabalho e implementar controles apropriados.</p><p>Também não é tecnicamente correto afirmar que uma avaliação “elimina o passivo trabalhista”. Prevenção não oferece garantia absoluta contra litígios. O que uma governança consistente pode fazer é reduzir vulnerabilidades: estabelecer regras de convivência, preparar lideranças, criar canais de resposta, documentar intervenções e agir quando surgirem sinais de violência, discriminação ou deterioração das relações.</p><p>Liderança madura não depende de humilhação para cobrar desempenho. Gerenciar pessoas exige método, respeito e responsabilização. Não é fofoca, é benchmarking.</p>"
+  },
+  {
+    "titulo": "Transtornos de ansiedade e síndrome do pânico na jurisprudência: O risco de negligenciar a organização do trabalho",
+    "subtitulo": "SLUG:",
+    "slug": "transtornos-de-ansiedade-e-sindrome-do",
+    "resumo": "A tentativa de desvincular o surgimento de quadros psiquiátricos — como transtornos de ansiedade generalizada e crises de pânico — da rotina de trabalho permanece sendo uma tese recorrente, porém frágil, na defesa corporativa. No cenário regulatório e jurídico atual, em que a saúde mental integra de",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "13/10/2026",
+    "status": "Publicar",
+    "tituloSEO": "Transtornos de ansiedade e síndrome do pânico na jurisprudência: O risco de negligenciar a organização do trabalho",
+    "descricaoSEO": "A tentativa de desvincular o surgimento de quadros psiquiátricos — como transtornos de ansiedade generalizada e crises de pânico — da rotina de trabalho permanece sendo uma tese recorrente, porém frágil, na defesa corporativa. No cenário regulatório e jurídico atual, em que a saúde mental integra de",
+    "generoEditorial": "Análise",
+    "documentId": "1c6BLLyXIfPIACwyHhYSnbpNthIv9yKu3ZZa3oe84lEw",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 18ª REGIÃO. Processo TRT - RO-0010121-58.2014.5.18.0006. Acórdão da 3ª Turma, Goiânia, 17 fev. 2016. Reprodução pesquisável no Diário da Justiça do TRT-18. Disponível em: https://www.escavador.com/diarios/332139/TRT-18/J/2016-03-01/113881280/movimentacao-do-processo-0010121-5820145180006. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A tentativa de desvincular o surgimento de quadros psiquiátricos — como transtornos de ansiedade generalizada e crises de pânico — da rotina de trabalho permanece sendo uma tese recorrente, porém frágil, na defesa corporativa. No cenário regulatório e jurídico atual, em que a saúde mental integra de forma mandatória o gerenciamento de riscos ocupacionais, ignorar o impacto dos fluxos operacionais sobre o psiquismo dos colaboradores gera uma exposição financeira e reputacional de elevada gravidade.</p><p>Decisões trabalhistas mostram que transtornos ansiosos podem ser reconhecidos como relacionados ao trabalho quando o conjunto probatório demonstra nexo causal ou concausal. No processo TRT-18 RO-0010121-58.2014.5.18.0006, por exemplo, a perícia reconheceu nexo concausal entre transtornos psíquicos e condições de teleatendimento, com destaque para a ausência de pausas de recuperação previstas na NR-17.</p><p>O volume de condenações evidencia uma vulnerabilidade estrutural nas organizações que operam sem mapeamento ergonômico e comportamental contínuo. Sob a ótica da Portaria MTE nº 1.419/2024 (NR-1 — Brasil), os fatores Organização do Trabalho e Demandas de Trabalho configuram itens de controle obrigatório no Programa de Gerenciamento de Riscos (PGR).</p><p>Quando a diretoria estabelece rotinas sem a devida mensuração de tempos, pausas e viabilidade operacional, o ambiente de trabalho passa a atuar como agente estressora contínuo. Perante a perícia técnica, a alegação defensiva de que a ansiedade decorre de &quot;fatores externos ou pré-disposição biológica&quot; desmorona caso a empresa não comprove a existência de diagnósticos, AEP e ações preventivas sistematizadas.</p><p>A consolidação jurisprudencial sobre o tema demonstra que o custo de mitigar passivos na Justiça do Trabalho supera amplamente o investimento necessário para estruturar a conformidade preventiva.</p><p>O direcionamento técnico nas organizações exige uma abordagem analítica antecedente. Por meio da Avaliação Ergonômica Preliminar (AEP), a organização pode analisar as condições de trabalho, identificar perigos e avaliar fatores de risco relacionados à organização do trabalho. Conforme orientação do MTE, esse processo é preventivo e não se confunde com diagnóstico clínico individual. As medidas decorrentes da avaliação devem orientar ajustes e controles compatíveis com os riscos encontrados.</p><p>A sustentabilidade de uma operação depende da capacidade de equilibrar desempenho produtivo, segurança técnica e integridade psíquica.</p>"
+  },
+  {
+    "titulo": "Condenação por Burnout e demissão discriminatória: A vulnerabilidade de gerir a organização do trabalho sem método preventivo",
+    "subtitulo": "SLUG:",
+    "slug": "condenacao-por-burnout-e-demissao_01427192472",
+    "resumo": "A tentativa de responder à queda de rendimento ou ao afastamento de um colaborador doente com o desligamento imotivado permanece sendo uma das práticas mais arriscadas na gestão corporativa contemporânea. No cenário regulatório atual, em que a saúde mental integra de forma compulsória o gerenciament",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "30/09/2026",
+    "status": "Publicar",
+    "tituloSEO": "Condenação por Burnout e demissão discriminatória: A vulnerabilidade de gerir a organização do trabalho sem método preventivo",
+    "descricaoSEO": "A tentativa de responder à queda de rendimento ou ao afastamento de um colaborador doente com o desligamento imotivado permanece sendo uma das práticas mais arriscadas na gestão corporativa contemporânea. No cenário regulatório atual, em que a saúde mental integra de forma compulsória o gerenciament",
+    "generoEditorial": "Análise",
+    "documentId": "10cj4gT-Cqj67QbgHOiHleNdh3z0dBpcbj4sJvccUy5w",
+    "referenciasPublicas": [
+      "CONSULTOR JURÍDICO. Empresa é condenada por burnout e demissão discriminatória de empregado. São Paulo, 16 jan. 2026. Processo 0011400-12.2024.5.18.0012. Disponível em: https://conjur.com.br/2026-jan-16/empresa-e-condenada-por-transtorno-mental-e-dispensa/. Acesso em: 7 out. 2026.",
+      "WAGNER ADVOGADOS ASSOCIADOS. Empresa é condenada por burnout e demissão discriminatória de empregado. Santa Maria, 25 jan. 2026. Disponível em: https://wagner.adv.br/empresa-e-condenada-por-burnout-e-demissao-discriminatoria-de-empregado/. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A tentativa de responder à queda de rendimento ou ao afastamento de um colaborador doente com o desligamento imotivado permanece sendo uma das práticas mais arriscadas na gestão corporativa contemporânea. No cenário regulatório atual, em que a saúde mental integra de forma compulsória o gerenciamento de riscos ocupacionais, ignorar as causas estruturais do esgotamento profissional gera uma exposição financeira e reputacional de altíssima severidade.</p><p>A 1ª Turma do TRT-18 manteve parcialmente a condenação de uma empresa após reconhecer que a organização do trabalho contribuiu, em grau moderado, para o agravamento do quadro de saúde mental de um empregado diagnosticado com transtorno de ansiedade generalizada e com registros de esgotamento profissional. O colegiado também manteve o reconhecimento de dispensa discriminatória após afastamentos por transtornos psiquiátricos.</p><p>O acórdão em questão evidencia uma vulnerabilidade comum em empresas que operam sem um acompanhamento ergonômico e organizacional contínuo. Sob o prisma da Portaria MTE nº 1.419/2024 (NR-1 — Brasil), a Organização do Trabalho e as Demandas de Trabalho configuram fatores de risco psicossocial obrigatórios no Programa de Gerenciamento de Riscos (PGR).</p><p>Quando uma empresa estabelece metas e volumes de tarefas sem a devida mensuração de viabilidade humana e operacional, o ambiente de trabalho passa a atuar como vetor do adoecimento psíquico. Perante uma auditoria ou perícia judicial, teses genéricas de que o esgotamento decorre de &quot;fatores individuais ou externos&quot; desmoronam caso a organização não comprove a existência de um histórico de diagnóstico, controle e gestão contínua desses riscos.</p><p>A ocorrência de condenações por Burnout e dispensa discriminatória sinaliza que o custo de remediar passivos trabalhistas ultrapassa largamente o investimento necessário para estruturar a conformidade preventiva.</p><p>O direcionamento técnico nas organizações exige uma abordagem analítica antecedente. A Avaliação Ergonômica Preliminar (AEP) pode apoiar a análise das condições de trabalho e dos fatores de risco psicossociais relacionados ao trabalho. Segundo o MTE, a identificação e a avaliação desses riscos se concentram nas características, exigências e condições do trabalho e não substituem avaliação clínica individual. A governança deve transformar os achados em medidas preventivas e registros consistentes.</p><p>A sustentabilidade de uma operação depende da capacidade de equilibrar desempenho produtivo e integridade organizacional.</p>"
+  },
+  {
+    "titulo": "Trabalhadora de e-commerce indenizada por ansiedade: O preço oculto de crescer sem organizar o trabalho",
+    "subtitulo": "SLUG:",
+    "slug": "trabalhadora-de-e-commerce-indenizada",
+    "resumo": "A glamourização da agilidade no e-commerce frequentemente serve como escudo para esconder operações completamente disfuncionais. Muitas diretorias acreditam que a velocidade exigida pelo mercado digital justifica a ausência de processos claros e a imposição de uma carga mental insustentável. Contudo",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "24/11/2026",
+    "status": "Publicar",
+    "tituloSEO": "Trabalhadora de e-commerce indenizada por ansiedade: O preço oculto de crescer sem organizar o trabalho",
+    "descricaoSEO": "A glamourização da agilidade no e-commerce frequentemente serve como escudo para esconder operações completamente disfuncionais. Muitas diretorias acreditam que a velocidade exigida pelo mercado digital justifica a ausência de processos claros e a imposição de uma carga mental insustentável. Contudo",
+    "generoEditorial": "Análise",
+    "documentId": "1J3lMcQlkUeM6ise52GGvEqEeC9uCobkLTLpBX2jOO7M",
+    "referenciasPublicas": [
+      "CONSULTOR JURÍDICO. Trabalhadora de e-commerce diagnosticada com ansiedade deve ser indenizada. São Paulo, 21 nov. 2025. Processo 0011265-16.2024.5.15.0066. Disponível em: https://conjur.com.br/2025-nov-21/trabalhadora-de-e-commerce-diagnosticada-com-ansiedade-deve-ser-indenizada/. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A glamourização da agilidade no e-commerce frequentemente serve como escudo para esconder operações completamente disfuncionais. Muitas diretorias acreditam que a velocidade exigida pelo mercado digital justifica a ausência de processos claros e a imposição de uma carga mental insustentável. Contudo, quando a desorganização interna se transforma em gatilho para o colapso psicológico da equipe, a Justiça do Trabalho não aceita o &quot;dinamismo do setor&quot; como excludente de responsabilidade.</p><p>No processo 0011265-16.2024.5.15.0066, a perícia identificou transtorno de ansiedade e reconheceu nexo de concausalidade entre o trabalho e o agravamento do quadro mental. A decisão destacou a presença de estressores psicossociais e a baixa possibilidade de controle da trabalhadora sobre as tensões da atividade, sem tratar o trabalho como causa única do adoecimento.</p><p>Decisões como esta escancaram a ausência de governança corporativa na gestão de pessoas. Sob as diretrizes da Portaria MTE nº 1.419/2024 (NR-1 - Brasil), os fatores Organização do Trabalho e Demandas de Trabalho são itens obrigatórios de controle e mitigação dentro do Programa de Gerenciamento de Riscos (PGR).</p><p>Uma operação que exige volume e velocidade sem parametrizar a capacidade humana e sem fornecer previsibilidade de tarefas está em flagrante inconformidade. Em perícias trabalhistas, a narrativa de que o esgotamento é &quot;normal no varejo&quot; desmorona rapidamente se a empresa não apresentar registros técnicos de que atua proativamente para dimensionar e organizar a carga de trabalho.</p><p>O passivo gerado por indenizações trabalhistas demonstra de forma matemática que operar no improviso custa infinitamente mais caro do que estruturar a operação. O crescimento sustentável exige método.</p><p>A Avaliação Ergonômica Preliminar (AEP) pode ajudar a liderança a identificar aspectos da organização do trabalho que precisam de controle ou redesenho. Isso fortalece a prevenção e a documentação da gestão de riscos, mas não constitui garantia de ausência de adoecimento ou de litígio.</p><p>A eficiência de um negócio digital só é real quando a arquitetura do trabalho que o sustenta é humanamente viável.</p>"
+  },
+  {
+    "titulo": "Crises de ansiedade por sobrecarga no varejo: O risco de operar sem dimensionamento de tarefas",
+    "subtitulo": "SLUG:",
+    "slug": "crises-de-ansiedade-por-sobrecarga-no",
+    "resumo": "A tentativa de justificar a sobrecarga contínua e o acúmulo de atribuições como \"características inerentes ao setor varejista\" permanece sendo uma vulnerabilidade crítica na gestão de operações. A tese de que o ritmo acelerado e a pressão por metas justificam a degradação da saúde mental do colabora",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "10/11/2026",
+    "status": "Publicar",
+    "tituloSEO": "Crises de ansiedade por sobrecarga no varejo: O risco de operar sem dimensionamento de tarefas",
+    "descricaoSEO": "A tentativa de justificar a sobrecarga contínua e o acúmulo de atribuições como \"características inerentes ao setor varejista\" permanece sendo uma vulnerabilidade crítica na gestão de operações. A tese de que o ritmo acelerado e a pressão por metas justificam a degradação da saúde mental do colabora",
+    "generoEditorial": "Análise",
+    "documentId": "10d8QYrHwnuTqtWONVYG_OyMDrmSFW_2PZsD3KQZc638",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 12ª REGIÃO. Supermercado deve indenizar fiscal de caixa que desenvolveu crises de ansiedade, decide 3ª Turma. Florianópolis, 20 jun. 2024. Disponível em: https://portal.trt12.jus.br/noticias/supermercado-deve-indenizar-fiscal-de-caixa-que-desenvolveu-crises-de-ansiedade-decide-3a. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A tentativa de justificar a sobrecarga contínua e o acúmulo de atribuições como &quot;características inerentes ao setor varejista&quot; permanece sendo uma vulnerabilidade crítica na gestão de operações. A tese de que o ritmo acelerado e a pressão por metas justificam a degradação da saúde mental do colaborador não encontra sustentação na Justiça do Trabalho quando demonstrado que a organização falhou no dimensionamento das demandas.</p><p>A 3ª Turma do Tribunal Regional do Trabalho da 12ª Região (TRT-12) manteve a sentença que condenou uma rede de supermercados ao pagamento de indenização por danos morais a uma ex-empregada que atuava como fiscal de caixa. O laudo pericial atestou o nexo de causalidade entre as crises de ansiedade desenvolvidas pela trabalhadora e a rotina de trabalho marcada por sobrecarga e cobranças desproporcionais.</p><p>O julgado evidencia a negligência em relação aos fatores psicossociais previstos na Portaria MTE nº 1.419/2024 (NR-1 — Brasil). Os fatores Exigências de Tarefas e Sobrecarga de Trabalho exigem diagnóstico, controle e parametrização contínua no Programa de Gerenciamento de Riscos (PGR).</p><p>Quando a empresa concentra múltiplas responsabilidades em um único posto de trabalho sem avaliar a viabilidade física e cognitiva das tarefas, o ambiente operacional passa a atuar como vetor do adoecimento. Em sede de perícia médica, alegações genéricas de que o estresse decorre de &quot;fatores pessoais&quot; perdem a eficácia se a empresa não comprova a realização de análises ergonômicas e medidas de controle organizacionais.</p><p>A condenação do estabelecimento comercial demonstra que o custo de reparar danos à saúde mental na Justiça supera substancialmente o investimento no mapeamento preventivo dos postos de trabalho.</p><p>A atuação preventiva deve se concentrar nas condições reais de trabalho. Por meio da Avaliação Ergonômica Preliminar (AEP), a organização pode analisar exigências, distribuição de tarefas e aspectos da organização do trabalho, adotando medidas de prevenção compatíveis com os riscos encontrados. Esse processo fortalece a gestão e a documentação preventiva, sem representar garantia absoluta contra adoecimento ou litígios.</p><p>A eficiência operacional de uma empresa depende diretamente da viabilidade humana dos seus processos de trabalho.</p>"
+  },
+  {
+    "titulo": "Assédio moral e transferência de setor por ordem judicial: A vulnerabilidade de gerir relações interpessoais sem governança",
+    "subtitulo": "SLUG:",
+    "slug": "assedio-moral-e-transferencia-de-setor",
+    "resumo": "A omissão diante de condutas abusivas ou comportamentos persecutórios no ambiente corporativo permanece sendo uma das maiores fragilidades na gestão de pessoas. A ilusão de que o porte da organização ou a natureza da instituição blindam a diretoria contra sanções judiciais desmorona perante a Justiç",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "27/10/2026",
+    "status": "Publicar",
+    "tituloSEO": "Assédio moral e transferência de setor por ordem judicial: A vulnerabilidade de gerir relações interpessoais sem governança",
+    "descricaoSEO": "A omissão diante de condutas abusivas ou comportamentos persecutórios no ambiente corporativo permanece sendo uma das maiores fragilidades na gestão de pessoas. A ilusão de que o porte da organização ou a natureza da instituição blindam a diretoria contra sanções judiciais desmorona perante a Justiç",
+    "generoEditorial": "Análise",
+    "documentId": "1xwkWxeva53D0Lp5ASAmJv81hmVPICwRsk3zv-VD2w6s",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 11ª REGIÃO. Justiça do Trabalho condena empresa pública por assédio moral e determina transferência de trabalhadora para outro setor. Manaus, [s. d.]. Disponível em: https://portal.trt11.jus.br/index.php/comunicacao/10854-justica-do-trabalho-condena-empresa-publica-por-assedio-moral-e-determina-transferencia-de-trabalhadora-para-outro-setor. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A omissão diante de condutas abusivas ou comportamentos persecutórios no ambiente corporativo permanece sendo uma das maiores fragilidades na gestão de pessoas. A ilusão de que o porte da organização ou a natureza da instituição blindam a diretoria contra sanções judiciais desmorona perante a Justiça do Trabalho quando demonstrado que o ambiente de trabalho se tornou hostil e degradante.</p><p>A Justiça do Trabalho (TRT-11) condenou uma empresa pública ao pagamento de indenização por danos morais em razão de assédio moral praticado contra uma trabalhadora. Além da reparação financeira, o julgado determinou a transferência compulsória da empregada para outro setor, como medida necessária para resguardar sua integridade psíquica e cessar a exposição ao ambiente nocivo.</p><p>O caso evidencia a ausência de controle sobre os fatores de risco psicossocial previstos na Portaria MTE nº 1.419/2024 (NR-1 — Brasil). O fator Relações Interpessoais exige diagnóstico, monitoramento e intervenções preventivas no Programa de Gerenciamento de Riscos (PGR).</p><p>Quando a gestão tolera atritos crônicos, abuso de poder ou perseguição sem intervir com mecanismos eficazes de mediação e compliance, a organização assume a responsabilidade pelos danos gerados. Diante de perícias e instruções judiciais, a alegação de &quot;rigor gerencial&quot; ou &quot;conflito administrativo&quot; desmorona se restar comprovado o nexo com o adoecimento psíquico do colaborador e a deterioração do clima organizacional.</p><p>A determinação judicial de transferência de setor e o pagamento de reparações demonstram que o custo de mitigar conflitos na Justiça supera em larga escala o investimento em diagnósticos preventivos e no desenvolvimento de lideranças.</p><p>A atuação preventiva exige planejamento e constância. A Avaliação Ergonômica Preliminar (AEP) pode considerar aspectos da organização do trabalho e das relações socioprofissionais quando pertinentes às condições de trabalho. O resultado deve orientar medidas de prevenção e acompanhamento; não se trata de diagnóstico de pessoas nem de garantia contra litígios.</p><p>A sustentabilidade de uma organização mede-se pelo seu compromisso com o respeito, a dignidade e a higidez das relações de trabalho.</p>"
+  },
+  {
+    "titulo": "A anulação do pedido de demissão em quadros de depressão e ansiedade: O risco de ignorar a vulnerabilidade psíquica na organização do trabalho",
+    "subtitulo": "SLUG:",
+    "slug": "a-anulacao-do-pedido-de-demissao-em",
+    "resumo": "A aceitação do pedido de demissão de um colaborador que se encontra em evidente estado de esgotamento ou sofrimento psíquico permanece sendo uma conduta de alto risco para o ambiente corporativo. A tese de que a iniciativa do desligamento exime a organização de obrigações legais desmorona perante a",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "20/10/2026",
+    "status": "Publicar",
+    "tituloSEO": "A anulação do pedido de demissão em quadros de depressão e ansiedade: O risco de ignorar a vulnerabilidade psíquica na organização do trabalho",
+    "descricaoSEO": "A aceitação do pedido de demissão de um colaborador que se encontra em evidente estado de esgotamento ou sofrimento psíquico permanece sendo uma conduta de alto risco para o ambiente corporativo. A tese de que a iniciativa do desligamento exime a organização de obrigações legais desmorona perante a",
+    "generoEditorial": "Análise",
+    "documentId": "1a_HKSXRoRG3ZPsmcLn95AGmy10yhG4blY8wCUK_zjXs",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 2ª REGIÃO. Justiça anula pedido de demissão de trabalhadora que tratava depressão e ansiedade. São Paulo, 23 jun. 2025. Disponível em: https://ww2.trt2.jus.br/noticias/noticias/noticia/justica-anula-pedido-de-demissao-de-trabalhadora-que-tratava-depressao-e-ansiedade. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A aceitação do pedido de demissão de um colaborador que se encontra em evidente estado de esgotamento ou sofrimento psíquico permanece sendo uma conduta de alto risco para o ambiente corporativo. A tese de que a iniciativa do desligamento exime a organização de obrigações legais desmorona perante a Justiça do Trabalho quando demonstrado que a manifestação de vontade estava viciada por condição médica desencadeada ou agravada pelo ambiente laboral.</p><p>A Justiça do Trabalho (TRT-2) declarou a nulidade do pedido de demissão formulado por uma trabalhadora em tratamento para depressão e ansiedade. A decisão reconheceu que a empregada não possuía pleno discernimento para praticar o ato de resilição contratual devido ao seu estado de saúde mental, convertendo o desligamento em dispensa imotivada e deferindo o pagamento das verbas rescisórias integrais, além de indenização por danos morais.</p><p>O caso expõe a omissão no controle dos fatores de risco psicossocial previstos na Portaria MTE nº 1.419/2024 (NR-1 — Brasil). Os fatores Organização do Trabalho e Demandas de Trabalho exigem acompanhamento dinâmico e preventivo no Programa de Gerenciamento de Riscos (PGR).</p><p>Quando a gestão não avalia se o volume de tarefas e a estrutura dos fluxos de trabalho estão comprometendo a higidez psíquica do trabalhador, a empresa atua de forma cega. Diante de perícias judiciais, formalidades burocráticas como cartas de demissão escritas de próprio punho perdem a validade se restar comprovado que o ambiente de trabalho atuou como agente estressante e que a faculdade de decisão da pessoa estava comprometida.</p><p>A anulação judicial de atos de desligamento reforça que o custo financeiro e operacional de remediar litígios trabalhistas supera em larga escala o investimento no diagnóstico contínuo das condições de trabalho.</p><p>A atuação preventiva exige antecedência. A Avaliação Ergonômica Preliminar (AEP) pode apoiar a análise da organização do trabalho, das exigências da atividade e de outros fatores relacionados às condições de trabalho. Os achados devem orientar medidas de prevenção e registros de gestão, sem transformar a AEP em avaliação clínica individual ou em promessa de blindagem jurídica.</p><p>A sustentabilidade de uma organização mede-se pelo seu compromisso com a integridade física e psíquica da sua força de trabalho.</p>"
+  },
+  {
+    "titulo": "Ansiedade generalizada e desorganização: O custo de operar sem previsibilidade e método",
+    "subtitulo": "SLUG:",
+    "slug": "ansiedade-generalizada-e-desorganizacao",
+    "resumo": "A aceitação da desordem operacional como um traço \"normal\" do dinamismo corporativo é um dos maiores equívocos da gestão contemporânea. Muitas lideranças acreditam que a resiliência do colaborador deve suprir as lacunas estruturais da empresa. Contudo, quando a falta de clareza nos processos e a des",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "17/11/2026",
+    "status": "Publicar",
+    "tituloSEO": "Ansiedade generalizada e desorganização: O custo de operar sem previsibilidade e método",
+    "descricaoSEO": "A aceitação da desordem operacional como um traço \"normal\" do dinamismo corporativo é um dos maiores equívocos da gestão contemporânea. Muitas lideranças acreditam que a resiliência do colaborador deve suprir as lacunas estruturais da empresa. Contudo, quando a falta de clareza nos processos e a des",
+    "generoEditorial": "Análise",
+    "documentId": "10V_XiWAYAEI0vkBpDm8kxl4qcGbqsoeAxVIcuwzJyqg",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 18ª REGIÃO. Trabalhador com ansiedade generalizada receberá indenização por danos morais. Goiânia, [s. d.]. Disponível em: https://www.trt18.jus.br/portal/trabalhador-com-ansiedade-generalizada-recebera-indenizacao-por-danos-morais/. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>A aceitação da desordem operacional como um traço &quot;normal&quot; do dinamismo corporativo é um dos maiores equívocos da gestão contemporânea. Muitas lideranças acreditam que a resiliência do colaborador deve suprir as lacunas estruturais da empresa. Contudo, quando a falta de clareza nos processos e a desestruturação do ambiente geram esgotamento, a Justiça do Trabalho não acolhe a tese de que o adoecimento é uma vulnerabilidade puramente individual.</p><p>O Tribunal Regional do Trabalho da 18ª Região (TRT-18) proferiu decisão condenando uma empresa ao pagamento de indenização por danos morais a um trabalhador diagnosticado com Transtorno de Ansiedade Generalizada (TAG). A fundamentação do julgado ancorou-se na comprovação de que as condições ambientais e a profunda desorganização da rotina laboral atuaram como fatores determinantes para o colapso psíquico do profissional.</p><p>Decisões dessa natureza evidenciam uma lacuna severa no gerenciamento de riscos corporativos. Sob os parâmetros da Portaria MTE nº 1.419/2024 (NR-1 - Brasil), a Organização do Trabalho e as Demandas de Trabalho são dimensões psicossociais que exigem controle rigoroso no Programa de Gerenciamento de Riscos (PGR).</p><p>Uma operação que não parametriza funções, não define fluxos claros de comunicação e expõe o trabalhador a um estado crônico de alerta e imprevisibilidade viola diretamente os preceitos ergonômicos e de saúde ocupacional. Em um contencioso trabalhista, a falta de evidências de que a empresa atua de forma preventiva e estruturada para minimizar esses impactos é o caminho mais curto para a condenação financeira.</p><p>O passivo gerado por condenações de danos morais ressalta que atuar na consequência do adoecimento é insustentável. O ambiente corporativo exige previsibilidade e governança técnica.</p><p>A Avaliação Ergonômica Preliminar (AEP) pode ajudar a liderança a reconhecer aspectos da organização do trabalho, exigências e condições que demandam medidas preventivas. A empresa deve designar pessoa ou equipe com conhecimento técnico compatível com a natureza e a complexidade dos riscos. O processo fortalece a prevenção e a documentação, mas não oferece blindagem absoluta contra passivos.</p><p>A sustentabilidade de uma organização é diretamente proporcional ao nível de método aplicado nas suas rotinas de trabalho.</p>"
+  },
+  {
+    "titulo": "Adoecimento mental na operadora de saúde: O preço milionário da desorganização crônica",
+    "subtitulo": "SLUG:",
+    "slug": "adoecimento-mental-na-operadora-de",
+    "resumo": "Sabe aquela gestão que exige produtividade de excelência, mas fornece processos confusos, demandas conflitantes e nenhuma previsibilidade? Muitas diretorias ainda enxergam a desorganização interna como um mero detalhe operacional e esperam que a equipe simplesmente \"dê um jeito\" de absorver o caos.",
+    "categoria": "Empresarial",
+    "categorias": [
+      "Empresarial",
+      "Saúde"
+    ],
+    "tags": [
+      "GÊNERO EDITORIAL:"
+    ],
+    "autorPublico": "Eduarda Bispo",
+    "dataPublicacao": "09/09/2026",
+    "status": "Publicar",
+    "tituloSEO": "Adoecimento mental na operadora de saúde: O preço milionário da desorganização crônica",
+    "descricaoSEO": "Sabe aquela gestão que exige produtividade de excelência, mas fornece processos confusos, demandas conflitantes e nenhuma previsibilidade? Muitas diretorias ainda enxergam a desorganização interna como um mero detalhe operacional e esperam que a equipe simplesmente \"dê um jeito\" de absorver o caos.",
+    "generoEditorial": "Análise",
+    "documentId": "1o6FmUI7bb-vwEURf7OnyAel9bmY7i_UITYg9rvpGJ1Y",
+    "referenciasPublicas": [
+      "TRIBUNAL REGIONAL DO TRABALHO DA 21ª REGIÃO. Empresa de planos de saúde é sentenciada a pagar danos morais por adoecimento mental de trabalhadora. Natal, [s. d.]. Disponível em: https://www.trt21.jus.br/noticias/noticia/empresa-de-planos-de-saude-e-sentenciada-pagar-danos-morais-por-adoecimento-mental. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 1 (NR-1): disposições gerais e gerenciamento de riscos ocupacionais. Brasília, DF: MTE, 2026. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-1. Acesso em: 7 out. 2026.",
+      "BRASIL. Ministério do Trabalho e Emprego. Guia de informações sobre os fatores de riscos psicossociais relacionados ao trabalho. Brasília, DF: MTE, 2025. Disponível em: https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/guia-nr-01-revisado.pdf. Acesso em: 7 out. 2026."
+    ],
+    "conteudoHTML": "<p>Sabe aquela gestão que exige produtividade de excelência, mas fornece processos confusos, demandas conflitantes e nenhuma previsibilidade? Muitas diretorias ainda enxergam a desorganização interna como um mero detalhe operacional e esperam que a equipe simplesmente &quot;dê um jeito&quot; de absorver o caos.</p><p>Se a sua liderança compactua com essa desordem sistêmica, achando que isso testa a resiliência dos colaboradores, recomendo que avisem o setor financeiro para provisionar um belo fundo de reserva. Estão brincando de roleta-russa com o caixa da empresa.</p><p>A Justiça do Trabalho (TRT-21) sentenciou uma empresa de planos de saúde a pagar danos morais pelo adoecimento mental de uma trabalhadora. O tribunal concluiu que o transtorno não surgiu do nada; ele foi desencadeado diretamente pelo ambiente de trabalho e pela rotina imposta pela empresa. O laudo pericial atestou o nexo de causalidade entre as condições ocupacionais e o colapso psíquico da profissional.</p><p>Quando a notificação judicial chega, o primeiro reflexo da gestão amadora é alegar que &quot;ansiedade é comum hoje em dia&quot; ou que a profissional &quot;não aguentou a pressão&quot;. Sob a ótica da NR-1, essa justificativa não se sustenta por um segundo sequer. O erro aqui aponta para dois fatores de risco psicossocial rastreáveis e críticos: Organização do Trabalho e Demandas de Trabalho.</p><p>Uma empresa que não planeja suas demandas, não calibra o volume de tarefas e mantém processos disfuncionais está operando uma máquina de adoecimento. Cobrar resultados em meio ao caos crônico não é estilo de gestão agressivo, é pura falta de governança.</p><p>Tentar mascarar a desestruturação do trabalho varrendo profissionais adoecidos para o INSS não funciona mais. A perícia cruza os dados, avalia o contexto organizacional e a fatura chega implacável. Quando o juiz reconhece que a empresa causou o adoecimento mental, o lucro que a diretoria acreditava estar protegendo se desfaz rapidamente em indenizações por danos morais, custos com tratamentos prolongados e instabilidade jurídica. A desorganização sai infinitamente mais cara do que o planejamento.</p><p>Proteger a margem de lucro de uma empresa não significa reduzir a exigência, mas sim estruturar a operação com viabilidade.</p><p>Na prática de implementação da NR-1, preocupa-me a forma como algumas empresas lidam com o dimensionamento de suas demandas. O MTE esclarece que a NR-1 e a NR-17 não reservam, de modo geral, essa avaliação a uma categoria profissional exclusiva; cabe à organização designar pessoa ou equipe com conhecimento técnico compatível com a natureza e a complexidade dos riscos avaliados. Uma Avaliação Ergonômica Preliminar (AEP) bem estruturada pode identificar condições de trabalho e aspectos da organização que demandem prevenção ou correção. O objetivo é apoiar decisões e controles sobre os riscos encontrados; não existe garantia de “blindagem” contra passivos ou de prevenção absoluta de adoecimentos.</p><p>No fim do dia, gerenciar rotinas e equipes exige método, e não improviso. Como costumo repetir nos corredores: não é fofoca, é benchmarking.</p>"
   }
 ];
