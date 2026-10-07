@@ -16,7 +16,6 @@ const LOGO="/assets/geb-institucional-logo.svg";
       path.startsWith("/inclusao") ||
       path.startsWith("/tecnologia")
     ) return "areas";
-    if(path.startsWith("/impacto")) return "impacto";
     if(path.startsWith("/parceiros")) return "parceiros";
     if(path.startsWith("/carreiras")) return "carreiras";
     if(path.startsWith("/contato")) return "contato";
@@ -32,7 +31,6 @@ const LOGO="/assets/geb-institucional-logo.svg";
     <nav class="desktop-nav" aria-label="Navegação principal">
       <a href="/o-geb/"${active("o-geb")}>O GEB</a>
       <a href="/areas/"${active("areas")}>Atuação</a>
-      <a href="/impacto/"${active("impacto")}>Impacto</a>
       <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
       <div class="nav-dropdown">
         <a class="nav-dropdown-trigger${currentSection==="carreiras"?" is-active":""}" href="/carreiras/"${currentSection==="carreiras"?' aria-current="page"':""}>Carreiras <span aria-hidden="true">⌄</span></a>
@@ -58,7 +56,6 @@ const LOGO="/assets/geb-institucional-logo.svg";
   mobile.innerHTML=`
     <a href="/o-geb/"${active("o-geb")}>O GEB</a>
     <a href="/areas/"${active("areas")}>Atuação</a>
-    <a href="/impacto/"${active("impacto")}>Impacto</a>
     <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
     <a href="/carreiras/"${active("carreiras")}>Carreiras</a>
     <div class="mobile-careers-links">
@@ -128,7 +125,6 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <strong>Institucional</strong>
           <a href="/o-geb/">O GEB</a>
           <a href="/areas/">Atuação</a>
-          <a href="/impacto/">Impacto institucional</a>
           <a href="/parceiros/">Parcerias e Expansão</a>
           <a href="/carreiras/">Carreiras</a>
         </nav>
