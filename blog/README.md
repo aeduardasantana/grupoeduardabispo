@@ -20,7 +20,7 @@ O subdomínio é um atalho e deve redirecionar para a URL canônica em `grupoedu
 - `assets/styles.css`: padrão visual responsivo.
 - `assets/app.js`: listagem, busca e filtros.
 - `assets/article.js`: artigo, componentes, relacionados, canonical, Open Graph e JSON-LD.
-- `assets/test-data.js`: três artigos legados + um artigo v2 de teste.
+- `assets/test-data.js`: espelho de homologação sincronizado com os três Google Docs legados + o artigo v2 real de teste, sem inferir gênero editorial nos legados.
 - `.htaccess`: rotas amigáveis para Locaweb/Apache.
 - `404.html`: estado de página não encontrada.
 
@@ -32,7 +32,10 @@ O subdomínio é um atalho e deve redirecionar para a URL canônica em `grupoedu
 
 No ambiente de teste, `artigo.html?slug=...` funciona diretamente.
 
-## Componentes editoriais validados no fixture v2
+## Componentes editoriais
+Os componentes presentes nos Docs reais são renderizados a partir do conteúdo sincronizado. A massa sintética usada anteriormente foi removida do artigo v2 para não misturar artigo real com conteúdo técnico de teste.
+
+Componentes previstos pelo renderer:
 - DESTAQUE
 - REFLEXAO
 - CARDS
@@ -48,3 +51,9 @@ No Bloco 7, após implantação homologada da API, substituir a fonte de fixture
 Configurar `blog.grupoeduardabispo.com.br` apenas como redirecionamento para `https://grupoeduardabispo.com.br/blog/`.
 
 Não criar implantação pública durante o Bloco 4.
+
+
+## Regra de fidelidade documental
+Os artigos usados em homologação devem reproduzir o conteúdo dos Google Docs de origem. Não resumir, reescrever nem preencher metadados editoriais ausentes apenas para facilitar o teste do front-end.
+
+Para artigos legados, `generoEditorial` permanece vazio até migração formal para o Schema Editorial v2.
