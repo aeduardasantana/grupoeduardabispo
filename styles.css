@@ -1534,3 +1534,52 @@ a{
   .geb-impact__themes span+span:before{display:none}
   .geb-contact-v2__links{display:grid;gap:14px}
 }
+
+/* Ajuste de escala tipográfica — Home e O GEB */
+.geb-home-hero__copy h1{font-size:clamp(46px,5.7vw,78px);line-height:.94;letter-spacing:-.06em}
+.geb-capacity h2,.geb-today h2,.geb-realization h2,.geb-people h2,.geb-knowledge h2,.geb-impact h2,.geb-expansion-v2 h2{
+  font-size:clamp(32px,3.7vw,52px);line-height:1.04;letter-spacing:-.045em
+}
+.geb-realization__examples h3{font-size:clamp(25px,2.5vw,36px)}
+.geb-capacity__flow strong{font-size:clamp(22px,2vw,30px)}
+.geb-today__list strong{font-size:clamp(21px,1.8vw,28px)}
+.geb-impact__themes{font-size:clamp(18px,1.7vw,24px)}
+
+/* O GEB — institucional, não catálogo de frentes */
+.geb-about-hero,.geb-about-thesis,.geb-about-structure,.geb-about-origin,.geb-about-future{
+  padding-top:clamp(68px,7vw,100px);padding-bottom:clamp(68px,7vw,100px)
+}
+.geb-about-hero,.geb-about-thesis,.geb-about-origin,.geb-about-future{
+  display:grid;grid-template-columns:minmax(150px,.32fr) minmax(0,1.68fr);gap:clamp(30px,6vw,98px);align-items:start
+}
+.geb-about-hero h1{margin:0;max-width:880px;font-family:var(--display);font-size:clamp(44px,5vw,70px);line-height:.98;letter-spacing:-.055em}
+.geb-about-hero>div>p,.geb-about-thesis>div:last-child p,.geb-about-origin>div>p,.geb-about-future>div>p{
+  max-width:680px;margin:20px 0 0;color:var(--muted);font-size:15px;line-height:1.75
+}
+.geb-about-thesis{background:#f3efe7}
+.geb-about-thesis h2,.geb-about-origin h2,.geb-about-future h2{
+  margin:0;max-width:820px;font-family:var(--display);font-size:clamp(32px,3.7vw,52px);line-height:1.04;letter-spacing:-.045em
+}
+.geb-about-structure{background:#1d211e;color:#fff}
+.geb-about-structure .section-kicker{color:rgba(255,255,255,.62)}
+.geb-about-structure__list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:42px}
+.geb-about-structure__list>div{padding:18px 26px 18px 0}
+.geb-about-structure__list>div+div{padding-left:26px;border-left:1px solid rgba(255,255,255,.18)}
+.geb-about-structure__list strong{display:block;font-family:var(--display);font-size:clamp(22px,2vw,30px)}
+.geb-about-structure__list span{display:block;margin-top:8px;color:rgba(255,255,255,.62);font-size:13px;line-height:1.5}
+.geb-about-origin{background:#fff}
+.geb-about-future{background:#ece4d7}
+.geb-about-future a{display:inline-block;margin-top:20px;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:800px){
+  .geb-about-hero,.geb-about-thesis,.geb-about-origin,.geb-about-future{grid-template-columns:1fr;gap:24px}
+  .geb-about-structure__list{grid-template-columns:1fr 1fr}
+  .geb-about-structure__list>div+div{border-left:0}
+  .geb-about-structure__list>div:nth-child(even){border-left:1px solid rgba(255,255,255,.18)}
+}
+@media(max-width:560px){
+  .geb-home-hero__copy h1{font-size:clamp(42px,13vw,58px)}
+  .geb-about-structure__list{grid-template-columns:1fr}
+  .geb-about-structure__list>div,.geb-about-structure__list>div+div,.geb-about-structure__list>div:nth-child(even){
+    padding:16px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.14)
+  }
+}
