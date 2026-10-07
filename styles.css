@@ -1640,3 +1640,52 @@ a{
 .mobile-nav>a.is-active{
   font-weight:700;
 }
+
+/* Hero GEB — identidade própria, sem fotografia genérica */
+.geb-home-hero__identity{
+  position:relative;min-height:470px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:clamp(28px,4vw,48px);
+  background:#202521;color:#fff
+}
+.geb-home-hero__identity-watermark{
+  position:absolute;right:-8%;bottom:-4%;
+  width:min(92%,760px);opacity:.055;filter:invert(1);
+  pointer-events:none
+}
+.geb-home-hero__identity-top{
+  position:relative;z-index:1;display:flex;justify-content:space-between;
+  align-items:flex-start;gap:24px
+}
+.geb-home-hero__identity-top img{
+  width:clamp(120px,12vw,190px);filter:invert(1);opacity:.94
+}
+.geb-home-hero__identity-top span{
+  max-width:160px;text-align:right;color:rgba(255,255,255,.62);
+  font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.14em
+}
+.geb-home-hero__identity-core{
+  position:relative;z-index:1;align-self:flex-end;width:min(76%,520px)
+}
+.geb-home-hero__identity-core p{
+  margin:0;font-family:var(--display);
+  font-size:clamp(30px,3.4vw,48px);line-height:1.05;letter-spacing:-.045em
+}
+.geb-home-hero__identity-axis{
+  position:relative;z-index:1;display:flex;flex-wrap:wrap;
+  gap:10px 22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);
+  color:#d7c9a7;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em
+}
+.geb-home-hero__identity-axis span+span:before{
+  content:"·";margin-right:22px;color:var(--gold)
+}
+@media(max-width:900px){
+  .geb-home-hero__identity{min-height:390px}
+}
+@media(max-width:620px){
+  .geb-home-hero__identity{min-height:330px;padding:26px 22px}
+  .geb-home-hero__identity-top img{width:128px}
+  .geb-home-hero__identity-core{width:100%;align-self:auto}
+  .geb-home-hero__identity-axis{gap:8px 14px}
+  .geb-home-hero__identity-axis span+span:before{margin-right:14px}
+}
