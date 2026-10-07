@@ -6,10 +6,10 @@ on:
 jobs:
   deploy:
     name: Deploy homologação
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: FTP Deploy Locaweb — Homologação Blog
         uses: locaweb/ftp-deploy@1.0.0
