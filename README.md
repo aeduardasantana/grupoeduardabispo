@@ -16,3 +16,10 @@ O site institucional apresenta a marca, suas áreas de atuação, parcerias, car
 - Produtos específicos não precisam aparecer no institucional.
 - Compass Rose Systems representa a frente de Tecnologia.
 - Blog, páginas comerciais e ambientes especializados permanecem separados do institucional.
+
+
+## URLs oficiais
+
+- Home institucional do GEB: https://grupoeduardabispo.com.br/
+- Entrega corporativa / GEB Empresarial: http://gebempresarial.grupoeduardabispo.com.br/
+- Não utilizar como destino institucional: `lp.grupoeduardabispo.com.br` ou `grupoeduardabispo.lovable.app`.
