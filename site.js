@@ -68,7 +68,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
       <div class="footer-primary">
         <div class="footer-identity">
           <a class="footer-logo" href="/" aria-label="GEB — início">
-            <img src="/assets/geb-institucional-logo.svg" alt="GEB — Grupo Eduarda Bispo">
+            <img src="/assets/geb-institucional-logo.svg" alt="GEB | Grupo Eduarda Bispo">
           </a>
           <p>Estrutura institucional que conecta e fortalece frentes especializadas, projetos, conteúdos e oportunidades.</p>
           <a class="footer-top-link" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Voltar ao topo ↑</a>
@@ -110,13 +110,13 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="https://wa.me/551121105473" target="_blank" rel="noopener">(11) 2110-5473</a>
         </div>
         <div class="footer-contact-note">
-          <span>GEB — Grupo Eduarda Bispo</span>
+          <span>GEB | Grupo Eduarda Bispo</span>
           <p>Marca institucional e estrutura de origem das frentes especializadas do ecossistema GEB.</p>
         </div>
       </div>
 
       <div class="footer-legal">
-        <p>© <span data-year></span> GEB — Grupo Eduarda Bispo. Todos os direitos reservados.</p>
+        <p>© <span data-year></span> GEB | Grupo Eduarda Bispo. Todos os direitos reservados.</p>
         <div>
           <a href="/contato/">Contato</a>
           <span aria-hidden="true">•</span>
