@@ -22,3 +22,7 @@ h1,h2,h3{line-height:1.12;margin-top:0}h1{font-size:clamp(2.5rem,6vw,5.4rem);let
 .article-external-link{display:inline-flex;align-items:center;gap:.45rem;font-family:Inter,Arial,sans-serif;font-weight:700;text-decoration:none;border:1px solid var(--text);padding:.72rem 1rem;background:var(--surface);transition:transform .15s ease,background .15s ease,color .15s ease}
 .article-external-link::after{content:"↗";font-size:.95em}
 .article-external-link:hover,.article-external-link:focus{background:var(--text);color:#fff;transform:translateY(-1px)}
+
+.category-link{text-decoration:none}.category-link:hover,.category-link:focus{text-decoration:underline}
+.article-body ul,.article-body ol{margin:0 0 1.4rem;padding-left:1.5rem}.article-body li{margin:.35rem 0}.article-body blockquote{margin:1.8rem 0;padding:1rem 1.2rem;border-left:4px solid var(--text);background:var(--soft)}.article-body img{max-width:100%;height:auto;display:block;margin:1.5rem auto}.article-body a{overflow-wrap:anywhere}
+.article-references{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}.article-references h2{font-size:1.65rem;margin-bottom:1.3rem}.reference-item{font-family:Inter,Arial,sans-serif;font-size:.9rem;line-height:1.55;color:var(--muted);padding:.9rem 0;margin:0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.reference-item a{font-weight:700;color:var(--text)}
