@@ -1,6 +1,77 @@
 const LOGO="/assets/geb-institucional-logo.svg";
+
+(function initInstitutionalHeader(){
+  const header=document.querySelector(".site-header");
+  if(!header) return;
+
+  const path=(window.location.pathname || "/").replace(/index\.html$/,"");
+
+  const currentSection=(()=>{
+    if(path.startsWith("/o-geb")) return "o-geb";
+    if(
+      path.startsWith("/areas") ||
+      path.startsWith("/empresarial") ||
+      path.startsWith("/educacao") ||
+      path.startsWith("/saude") ||
+      path.startsWith("/inclusao") ||
+      path.startsWith("/tecnologia")
+    ) return "areas";
+    if(path.startsWith("/impacto")) return "impacto";
+    if(path.startsWith("/parceiros")) return "parceiros";
+    if(path.startsWith("/carreiras")) return "carreiras";
+    if(path.startsWith("/contato")) return "contato";
+    return "";
+  })();
+
+  const active=id=>currentSection===id?' aria-current="page" class="is-active"':'';
+
+  header.innerHTML=`
+    <a class="brand" href="/" aria-label="GEB, início">
+      <img src="${LOGO}" alt="GEB | Grupo Eduarda Bispo">
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="/o-geb/"${active("o-geb")}>O GEB</a>
+      <a href="/areas/"${active("areas")}>Atuação</a>
+      <a href="/impacto/"${active("impacto")}>Impacto</a>
+      <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-trigger${currentSection==="carreiras"?" is-active":""}" href="/carreiras/"${currentSection==="carreiras"?' aria-current="page"':""}>Carreiras <span aria-hidden="true">⌄</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="/carreiras/">Carreiras no GEB</a>
+          <a href="/carreiras/vagas/">Vagas e oportunidades</a>
+          <a href="/carreiras/candidatura/">Candidatura / Banco de Talentos</a>
+        </div>
+      </div>
+      <a href="/contato/"${active("contato")}>Contato</a>
+    </nav>
+    <button class="menu-button" data-menu-button type="button" aria-expanded="false">Menu</button>
+  `;
+
+  let mobile=document.querySelector("[data-mobile-nav]");
+  if(!mobile){
+    mobile=document.createElement("nav");
+    mobile.className="mobile-nav";
+    mobile.setAttribute("data-mobile-nav","");
+    mobile.hidden=true;
+    header.insertAdjacentElement("afterend",mobile);
+  }
+  mobile.innerHTML=`
+    <a href="/o-geb/"${active("o-geb")}>O GEB</a>
+    <a href="/areas/"${active("areas")}>Atuação</a>
+    <a href="/impacto/"${active("impacto")}>Impacto</a>
+    <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
+    <a href="/carreiras/"${active("carreiras")}>Carreiras</a>
+    <div class="mobile-careers-links">
+      <a href="/carreiras/vagas/">Vagas e oportunidades</a>
+      <a href="/carreiras/candidatura/">Candidatura / Banco de Talentos</a>
+    </div>
+    <a href="/contato/"${active("contato")}>Contato</a>
+  `;
+})();
+
 document.querySelectorAll("[data-geb-logo]").forEach(img=>img.src=LOGO);
 document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().getFullYear());
+
 document.querySelectorAll("[data-menu-button]").forEach(btn=>{
   btn.addEventListener("click",()=>{
     const nav=document.querySelector("[data-mobile-nav]");
@@ -15,6 +86,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
   if(nav) nav.hidden=true;
   if(btn) btn.setAttribute("aria-expanded","false");
 }));
+
 (function initVLibras(){
   if(document.querySelector('[vw]')) return;
   const root=document.createElement('div');
@@ -27,6 +99,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
   script.onload=()=>{ if(window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app'); };
   document.body.appendChild(script);
 })();
+
 (function initJobsPortal(){
  const list=document.querySelector('[data-jobs-list]'); if(!list) return;
  const cards=[...list.querySelectorAll('[data-job]')], search=document.querySelector('[data-job-search]'), area=document.querySelector('[data-job-area]'), type=document.querySelector('[data-job-type]'), count=document.querySelector('[data-jobs-count]'), empty=document.querySelector('[data-jobs-empty]'), clear=document.querySelector('[data-jobs-clear]');
@@ -34,29 +107,6 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
  function apply(){const q=norm(search?.value).trim(),a=area?.value||'',t=type?.value||'';let visible=0;cards.forEach(card=>{const hay=norm(card.dataset.search+' '+card.textContent),show=(!q||q.split(/\s+/).every(term=>hay.includes(term)))&&(!a||card.dataset.area===a)&&(!t||card.dataset.type===t);card.hidden=!show;if(show)visible++;});if(count)count.textContent=visible;if(empty)empty.hidden=visible!==0;}
  [search,area,type].forEach(el=>el&&el.addEventListener(el===search?'input':'change',apply)); clear?.addEventListener('click',()=>{if(search)search.value='';if(area)area.value='';if(type)type.value='';apply();search?.focus();}); apply();
 })();
-(function initCareersMenu(){
-  const normalizeHref = href => (href || '').replace(/\/+$/,'');
-  document.querySelectorAll('.desktop-nav').forEach(nav=>{
-    const link=[...nav.querySelectorAll(':scope > a')].find(a=>/\/carreiras\/?$/.test(normalizeHref(a.getAttribute('href'))));
-    if(!link || link.closest('.nav-dropdown')) return;
-    const base=link.getAttribute('href').replace(/\/?$/,'/');
-    const wrap=document.createElement('div');
-    wrap.className='nav-dropdown';
-    wrap.innerHTML='<a class="nav-dropdown-trigger" href="'+base+'">Carreiras <span aria-hidden="true">⌄</span></a><div class="nav-dropdown-menu"><a href="'+base+'">Conheça o ecossistema</a><a href="'+base+'vagas/">Vagas e oportunidades</a><a href="'+base+'candidatura/">Candidatura / Banco de Talentos</a></div>';
-    link.replaceWith(wrap);
-  });
-  document.querySelectorAll('[data-mobile-nav]').forEach(nav=>{
-    const link=[...nav.querySelectorAll(':scope > a')].find(a=>/\/carreiras\/?$/.test(normalizeHref(a.getAttribute('href'))));
-    if(!link || nav.querySelector('.mobile-careers-links')) return;
-    const base=link.getAttribute('href').replace(/\/?$/,'/');
-    link.textContent='Carreiras';
-    const group=document.createElement('div');
-    group.className='mobile-careers-links';
-    group.innerHTML='<a href="'+base+'">Conheça o ecossistema</a><a href="'+base+'vagas/">Vagas e oportunidades</a><a href="'+base+'candidatura/">Candidatura / Banco de Talentos</a>';
-    link.insertAdjacentElement('afterend',group);
-  });
-})();
-
 
 (function initInstitutionalFooter(){
   const footer=document.querySelector('.site-footer');
@@ -70,7 +120,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a class="footer-logo" href="/" aria-label="GEB, início">
             <img src="/assets/geb-institucional-logo.svg" alt="GEB | Grupo Eduarda Bispo">
           </a>
-          <p>Estrutura institucional que conecta e fortalece frentes especializadas, projetos, conteúdos e oportunidades.</p>
+          <p>Estrutura institucional para desenvolver negócios, pessoas, conhecimento e novas possibilidades.</p>
           <a class="footer-top-link" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Voltar ao topo ↑</a>
         </div>
 
@@ -78,11 +128,12 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <strong>Institucional</strong>
           <a href="/o-geb/">O GEB</a>
           <a href="/areas/">Atuação</a>
-          <a href="/impacto/">Impacto institucional</a>\n          <a href="/parceiros/">Parcerias e Expansão</a>
+          <a href="/impacto/">Impacto institucional</a>
+          <a href="/parceiros/">Parcerias e Expansão</a>
           <a href="/carreiras/">Carreiras</a>
         </nav>
 
-        <nav class="footer-nav-group" aria-label="Frentes do GEB">
+        <nav class="footer-nav-group" aria-label="Atuação atual do GEB">
           <strong>Atuação atual</strong>
           <a href="/empresarial/">GEB Empresarial</a>
           <a href="/educacao/">GEB Educação</a>
@@ -91,7 +142,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/tecnologia/">GEB Tecnologia</a>
         </nav>
 
-        <nav class="footer-nav-group" aria-label="Conteúdo e oportunidades">
+        <nav class="footer-nav-group" aria-label="Conexões">
           <strong>Conexões</strong>
           <a href="/carreiras/vagas/">Vagas e oportunidades</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
@@ -110,7 +161,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
         </div>
         <div class="footer-contact-note">
           <span>GEB | Grupo Eduarda Bispo</span>
-          <p>Estrutura institucional que conecta frentes especializadas.</p>
+          <p>Estrutura institucional preparada para evoluir com novas frentes, relações e oportunidades.</p>
         </div>
       </div>
 
