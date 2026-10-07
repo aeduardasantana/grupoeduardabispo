@@ -77,13 +77,13 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
         <nav class="footer-nav-group" aria-label="Institucional">
           <strong>Institucional</strong>
           <a href="/o-geb/">O GEB</a>
-          <a href="/areas/">Ecossistema</a>
-          <a href="/parceiros/">Parcerias e Expansão</a>
+          <a href="/areas/">Atuação</a>
+          <a href="/impacto/">Impacto institucional</a>\n          <a href="/parceiros/">Parcerias e Expansão</a>
           <a href="/carreiras/">Carreiras</a>
         </nav>
 
         <nav class="footer-nav-group" aria-label="Frentes do GEB">
-          <strong>Ecossistema</strong>
+          <strong>Atuação atual</strong>
           <a href="/empresarial/">GEB Empresarial</a>
           <a href="/educacao/">GEB Educação</a>
           <a href="/saude/">GEB Saúde</a>
