@@ -93,7 +93,6 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
 
         <nav class="footer-nav-group" aria-label="Conteúdo e oportunidades">
           <strong>Conexões</strong>
-          <a href="https://grupoeduardabispo.blogspot.com/" target="_blank" rel="noopener">Blog GEB ↗</a>
           <a href="/carreiras/vagas/">Vagas e oportunidades</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
