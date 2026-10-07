@@ -1628,3 +1628,15 @@ a{
     padding:20px 0;border-left:0
   }
 }
+
+/* Cabeçalho institucional global */
+.desktop-nav>a.is-active,
+.desktop-nav .nav-dropdown-trigger.is-active{
+  color:var(--ink);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:7px;
+}
+.mobile-nav>a.is-active{
+  font-weight:700;
+}
