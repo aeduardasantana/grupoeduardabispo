@@ -1,7 +1,12 @@
 # Blog GEB — Front-end v2
 
-## URL final definida
+## URL canônica final
+https://grupoeduardabispo.com.br/blog/
+
+## Atalho de acesso
 https://blog.grupoeduardabispo.com.br/
+
+O subdomínio é um atalho e deve redirecionar para a URL canônica em `grupoeduardabispo.com.br/blog/`. Ele não deve manter uma segunda versão indexável dos mesmos artigos.
 
 ## Estado atual
 - Front-end em ambiente de teste.
@@ -19,11 +24,11 @@ https://blog.grupoeduardabispo.com.br/
 - `.htaccess`: rotas amigáveis para Locaweb/Apache.
 - `404.html`: estado de página não encontrada.
 
-## Rotas planejadas
-- `/`
-- `/artigo/{slug}/`
-- `/categoria/{categoria}/`
-- `/tag/{tag}/`
+## Rotas canônicas planejadas
+- `/blog/`
+- `/blog/artigo/{slug}/`
+- `/blog/categoria/{categoria}/`
+- `/blog/tag/{tag}/`
 
 No ambiente de teste, `artigo.html?slug=...` funciona diretamente.
 
@@ -38,6 +43,8 @@ No ambiente de teste, `artigo.html?slug=...` funciona diretamente.
 - ASSINATURA
 
 ## Próximo passo técnico
-No Bloco 7, após implantação homologada da API, substituir a fonte de fixtures pelo endpoint público e publicar a pasta `blog/` como raiz do subdomínio `blog.grupoeduardabispo.com.br`.
+No Bloco 7, após implantação homologada da API, substituir a fonte de fixtures pelo endpoint público e publicar a pasta `blog/` dentro do domínio principal `grupoeduardabispo.com.br`.
+
+Configurar `blog.grupoeduardabispo.com.br` apenas como redirecionamento para `https://grupoeduardabispo.com.br/blog/`.
 
 Não criar implantação pública durante o Bloco 4.
