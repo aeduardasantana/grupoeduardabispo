@@ -67,7 +67,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
     <div class="footer-shell">
       <div class="footer-primary">
         <div class="footer-identity">
-          <a class="footer-logo" href="/" aria-label="GEB — início">
+          <a class="footer-logo" href="/" aria-label="GEB, início">
             <img src="/assets/geb-institucional-logo.svg" alt="GEB | Grupo Eduarda Bispo">
           </a>
           <p>Estrutura institucional que conecta e fortalece frentes especializadas, projetos, conteúdos e oportunidades.</p>
@@ -111,7 +111,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
         </div>
         <div class="footer-contact-note">
           <span>GEB | Grupo Eduarda Bispo</span>
-          <p>Marca institucional e estrutura de origem das frentes especializadas do ecossistema GEB.</p>
+          <p>Estrutura institucional que conecta frentes especializadas.</p>
         </div>
       </div>
 
