@@ -26,3 +26,105 @@ h1,h2,h3{line-height:1.12;margin-top:0}h1{font-size:clamp(2.5rem,6vw,5.4rem);let
 .category-link{text-decoration:none}.category-link:hover,.category-link:focus{text-decoration:underline}
 .article-body ul,.article-body ol{margin:0 0 1.4rem;padding-left:1.5rem}.article-body li{margin:.35rem 0}.article-body blockquote{margin:1.8rem 0;padding:1rem 1.2rem;border-left:4px solid var(--text);background:var(--soft)}.article-body img{max-width:100%;height:auto;display:block;margin:1.5rem auto}.article-body a{overflow-wrap:anywhere}
 .article-references{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}.article-references h2{font-size:1.65rem;margin-bottom:1.3rem}.reference-item{font-family:Inter,Arial,sans-serif;font-size:.9rem;line-height:1.55;color:var(--muted);padding:.9rem 0;margin:0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.reference-item a{font-weight:700;color:var(--text)}
+
+
+/* Ajuste visual — homologação 07/10/2026 */
+.hero{
+  padding:2.75rem 0 2rem;
+}
+.hero-grid{
+  grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);
+  gap:2.5rem;
+  align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.35rem,4.6vw,4.25rem);
+  max-width:880px;
+  margin-bottom:.85rem;
+}
+.hero-copy{
+  margin:0;
+  font-size:1.05rem;
+}
+.search-panel{
+  padding:1rem;
+}
+.section{
+  padding:2rem 0 4rem;
+}
+.section-heading{
+  margin-bottom:1.2rem;
+}
+
+/* Cards uniformes: evita que conteúdo longo force colunas desiguais */
+.article-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.15rem;
+  align-items:stretch;
+}
+.article-card{
+  min-width:0;
+  min-height:300px;
+  height:100%;
+  padding:1.25rem;
+  overflow:hidden;
+}
+.article-card h3{
+  font-size:1.22rem;
+  line-height:1.2;
+  margin:.35rem 0 .7rem;
+  overflow-wrap:anywhere;
+}
+.article-card p{
+  margin:.35rem 0 .85rem;
+  overflow-wrap:anywhere;
+}
+.article-card .eyebrow{
+  min-height:1.1rem;
+}
+.article-card .tag-list{
+  margin-top:.65rem;
+}
+.article-card .card-meta{
+  padding-top:1rem;
+}
+
+/* Cabeçalho dos artigos mais compacto */
+.article-shell{
+  padding:2.4rem 0;
+}
+.article-header{
+  padding-bottom:1.6rem;
+}
+.article-header h1{
+  font-size:clamp(2.1rem,4vw,3.6rem);
+  margin-bottom:.85rem;
+}
+.article-subtitle{
+  font-size:1.12rem;
+  margin:.15rem 0 .8rem;
+}
+.article-meta{
+  margin-top:.45rem;
+}
+.article-header .tag-list{
+  margin-top:.75rem;
+}
+.article-body{
+  padding-top:1.8rem;
+}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:1.4rem}
+  .search-panel{max-width:640px}
+  .article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .hero{padding:2rem 0 1.5rem}
+  .hero h1{font-size:clamp(2rem,10vw,2.75rem)}
+  .section{padding:1.5rem 0 3rem}
+  .article-grid{grid-template-columns:1fr}
+  .article-card{min-height:0}
+  .article-shell{padding:1.8rem 0}
+  .article-header h1{font-size:clamp(1.9rem,9vw,2.7rem)}
+}
