@@ -19,6 +19,6 @@ jobs:
           password: ${{ secrets.PASS }}
           localDir: "./"
           remoteDir: "./public_html/"
-          # Inclui arquivos ocultos, especialmente .htaccess (tratamento HTTP 404).
-          # Não publica arquivos internos do GitHub nem o CNAME legado.
-          options: '--all --exclude-glob .github/** --exclude-glob CNAME'
+          # O lftp mirror já pode transferir arquivos ocultos, incluindo .htaccess.
+          # Exclui metadados do repositório e arquivo CNAME da publicação.
+          options: '--exclude-glob .github/** --exclude-glob CNAME'
