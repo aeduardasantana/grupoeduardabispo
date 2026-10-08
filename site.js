@@ -143,6 +143,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/carreiras/vagas/">Vagas e oportunidades</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
+          <a href="/mapa-do-site/">Mapa do site</a>
         </nav>
       </div>
 
@@ -167,6 +168,8 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/contato/">Contato</a>
           <span aria-hidden="true">•</span>
           <a href="/carreiras/">Carreiras</a>
+          <span aria-hidden="true">•</span>
+          <a href="/mapa-do-site/">Mapa do site</a>
         </div>
       </div>
     </div>
