@@ -144,7 +144,6 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
           <a href="http://homolog.grupoeduardabispo.com.br/" target="_blank" rel="noopener">Blog GEB | Grupo Eduarda Bispo</a>
-          <a href="/mapa-do-site/">Mapa do site</a>
         </nav>
       </div>
 
@@ -164,14 +163,9 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
       </div>
 
       <div class="footer-legal">
-        <p>Desenvolvido por <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener noreferrer">Compass Rose Systems · GEB Tecnologia</a></p>
         <p>© <span data-year></span> GEB | Grupo Eduarda Bispo. Todos os direitos reservados.</p>
         <div>
-          <a href="/contato/">Contato</a>
-          <span aria-hidden="true">•</span>
-          <a href="/carreiras/">Carreiras</a>
-          <span aria-hidden="true">•</span>
-          <a href="/mapa-do-site/">Mapa do site</a>
+          <span>Desenvolvido por <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener noreferrer">Compass Rose Systems · GEB Tecnologia</a></span>
         </div>
       </div>
     </div>
