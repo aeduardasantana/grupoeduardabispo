@@ -167,3 +167,169 @@ h1,h2,h3{line-height:1.12;margin-top:0}h1{font-size:clamp(2.5rem,6vw,5.4rem);let
   .article-header h1{font-size:clamp(1.8rem,8vw,2.35rem)}
   .article-body{font-size:1rem}
 }
+
+
+/* Rodapé Blog GEB — inspirado no padrão institucional */
+.blog-footer{
+  margin-top:0;
+  background:#0d0d0d;
+  color:#fff;
+  border-top:5px solid #b68a2d;
+}
+.blog-footer__shell{
+  padding-top:clamp(46px,5.5vw,72px);
+  padding-bottom:24px;
+}
+.blog-footer__primary{
+  display:grid;
+  grid-template-columns:minmax(300px,1.45fr) repeat(3,minmax(145px,.62fr));
+  gap:clamp(30px,4.5vw,64px);
+  align-items:start;
+}
+.blog-footer__identity{
+  max-width:420px;
+}
+.blog-footer__brand{
+  display:inline-flex;
+  align-items:center;
+  gap:.8rem;
+  margin-bottom:24px;
+  color:#fff;
+  text-decoration:none;
+}
+.blog-footer__mark{
+  display:inline-grid;
+  place-items:center;
+  min-width:74px;
+  height:52px;
+  padding:0 .8rem;
+  background:#fff;
+  color:#111;
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.blog-footer__brand-text{
+  font-size:1.3rem;
+  font-weight:700;
+}
+.blog-footer__identity>p{
+  max-width:390px;
+  margin:0;
+  color:rgba(255,255,255,.62);
+  font-size:.9rem;
+  line-height:1.7;
+}
+.blog-footer__top-link{
+  display:inline-flex;
+  margin-top:24px;
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(255,255,255,.42);
+  color:#fff;
+  font-size:.72rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  text-decoration:none;
+}
+.blog-footer__group{
+  display:grid;
+  align-content:start;
+  gap:11px;
+}
+.blog-footer__group strong{
+  margin-bottom:8px;
+  color:#c89b32;
+  font-size:.68rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.blog-footer__group a{
+  width:max-content;
+  max-width:100%;
+  color:rgba(255,255,255,.8);
+  font-size:.86rem;
+  line-height:1.4;
+  text-decoration:none;
+  transition:color .18s ease,transform .18s ease;
+}
+.blog-footer__group a:hover,
+.blog-footer__group a:focus{
+  color:#fff;
+  transform:translateX(3px);
+}
+.blog-footer__contact{
+  display:grid;
+  grid-template-columns:1fr 1fr 1.35fr;
+  margin-top:clamp(40px,5vw,62px);
+  border-top:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.blog-footer__contact>div{
+  min-height:118px;
+  padding:22px 26px 22px 0;
+}
+.blog-footer__contact>div+div{
+  padding-left:26px;
+  border-left:1px solid rgba(255,255,255,.18);
+}
+.blog-footer__contact span{
+  display:block;
+  margin-bottom:10px;
+  color:rgba(255,255,255,.48);
+  font-size:.62rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.blog-footer__contact a{
+  color:#fff;
+  font-size:clamp(.95rem,1.15vw,1.12rem);
+  font-weight:650;
+  letter-spacing:-.01em;
+  text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.blog-footer__note p{
+  max-width:430px;
+  margin:0;
+  color:rgba(255,255,255,.6);
+  font-size:.78rem;
+  line-height:1.65;
+}
+.blog-footer__legal{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  padding-top:22px;
+  color:rgba(255,255,255,.44);
+  font-size:.68rem;
+}
+.blog-footer__legal p{margin:0}
+.blog-footer__legal strong{color:rgba(255,255,255,.76)}
+
+@media(max-width:1020px){
+  .blog-footer__primary{grid-template-columns:1.3fr repeat(2,1fr)}
+  .blog-footer__primary .blog-footer__group:last-child{grid-column:2}
+}
+@media(max-width:780px){
+  .blog-footer__primary{grid-template-columns:1fr 1fr}
+  .blog-footer__identity{grid-column:1/-1;max-width:620px}
+  .blog-footer__primary .blog-footer__group:last-child{grid-column:auto}
+  .blog-footer__contact{grid-template-columns:1fr}
+  .blog-footer__contact>div,
+  .blog-footer__contact>div+div{
+    min-height:auto;
+    padding:20px 0;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.14);
+  }
+  .blog-footer__contact>div:first-child{border-top:0}
+}
+@media(max-width:560px){
+  .blog-footer__primary{grid-template-columns:1fr;gap:30px}
+  .blog-footer__identity{grid-column:auto}
+  .blog-footer__legal{flex-direction:column;align-items:flex-start;gap:10px}
+}
