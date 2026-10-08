@@ -19,3 +19,6 @@ jobs:
           password: ${{ secrets.PASS }}
           localDir: "./"
           remoteDir: "./public_html/"
+          # Inclui arquivos ocultos, especialmente .htaccess (tratamento HTTP 404).
+          # Não publica arquivos internos do GitHub nem o CNAME legado.
+          options: '--all --exclude-glob .github/** --exclude-glob CNAME'
