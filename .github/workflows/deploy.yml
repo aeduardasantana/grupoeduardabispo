@@ -21,4 +21,4 @@ jobs:
           remoteDir: "./public_html/"
           # O lftp mirror já pode transferir arquivos ocultos, incluindo .htaccess.
           # Exclui metadados do repositório e arquivo CNAME da publicação.
-          options: '--exclude-glob .github/** --exclude-glob CNAME'
+          options: '--exclude-glob .git/** --exclude-glob .github/** --exclude-glob CNAME --exclude-glob README.md --exclude-glob blog --exclude-glob blog/** --exclude-glob homolog --exclude-glob homolog/**'
