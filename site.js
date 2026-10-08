@@ -131,11 +131,11 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
 
         <nav class="footer-nav-group" aria-label="Atuação atual do GEB">
           <strong>Atuação atual</strong>
-          <a href="/empresarial/">GEB Empresarial</a>
-          <a href="/educacao/">GEB Educação</a>
-          <a href="/saude/">GEB Saúde</a>
+          <a href="http://gebempresarial.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Empresarial</a>
+          <a href="https://gebeducacao.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Educação</a>
+          <a href="https://gebsaude.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Saúde</a>
           <a href="/inclusao/">GEB Inclusão</a>
-          <a href="/tecnologia/">GEB Tecnologia</a>
+          <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Tecnologia</a>
         </nav>
 
         <nav class="footer-nav-group" aria-label="Conexões">
@@ -143,6 +143,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/carreiras/vagas/">Vagas e oportunidades</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
+          <a href="http://homolog.grupoeduardabispo.com.br/" target="_blank" rel="noopener">Blog GEB | Grupo Eduarda Bispo</a>
           <a href="/mapa-do-site/">Mapa do site</a>
         </nav>
       </div>
