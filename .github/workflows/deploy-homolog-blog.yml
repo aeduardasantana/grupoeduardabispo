@@ -2,11 +2,6 @@ name: Deploy homologação Blog GEB
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'blog/**'
 
 jobs:
   deploy:
