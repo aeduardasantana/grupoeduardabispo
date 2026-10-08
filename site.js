@@ -164,6 +164,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
       </div>
 
       <div class="footer-legal">
+        <p>Desenvolvido por <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener noreferrer">Compass Rose Systems · GEB Tecnologia</a></p>
         <p>© <span data-year></span> GEB | Grupo Eduarda Bispo. Todos os direitos reservados.</p>
         <div>
           <a href="/contato/">Contato</a>
