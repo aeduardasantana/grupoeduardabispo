@@ -57,6 +57,7 @@ const LOGO="/assets/geb-institucional-logo.svg";
   }
   mobile.innerHTML=`
     <a href="/o-geb/"${active("o-geb")}>O GEB</a>
+    <a href="/esg/"${active("esg")}>ESG</a>
     <a href="/areas/"${active("areas")}>Atuação</a>
     <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
     <a href="/carreiras/"${active("carreiras")}>Carreiras</a>
