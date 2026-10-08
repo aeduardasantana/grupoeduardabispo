@@ -8,6 +8,7 @@ const LOGO="/assets/geb-institucional-logo.svg";
 
   const currentSection=(()=>{
     if(path.startsWith("/o-geb")) return "o-geb";
+    if(path.startsWith("/esg")) return "esg";
     if(
       path.startsWith("/areas") ||
       path.startsWith("/empresarial") ||
@@ -30,6 +31,7 @@ const LOGO="/assets/geb-institucional-logo.svg";
     </a>
     <nav class="desktop-nav" aria-label="Navegação principal">
       <a href="/o-geb/"${active("o-geb")}>O GEB</a>
+      <a href="/esg/"${active("esg")}>ESG</a>
       <a href="/areas/"${active("areas")}>Atuação</a>
       <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
       <div class="nav-dropdown">
@@ -124,6 +126,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
         <nav class="footer-nav-group" aria-label="Institucional">
           <strong>Institucional</strong>
           <a href="/o-geb/">O GEB</a>
+          <a href="/esg/">ESG</a>
           <a href="/areas/">Atuação</a>
           <a href="/parceiros/">Parcerias e Expansão</a>
           <a href="/carreiras/">Carreiras</a>
