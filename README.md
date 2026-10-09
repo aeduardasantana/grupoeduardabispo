@@ -22,4 +22,5 @@ O site institucional apresenta a marca, suas áreas de atuação, parcerias, car
 
 - Home institucional do GEB: https://grupoeduardabispo.com.br/
 - Entrega corporativa / GEB Empresarial: http://gebempresarial.grupoeduardabispo.com.br/
-- Não utilizar como destino institucional: `lp.grupoeduardabispo.com.br` ou `grupoeduardabispo.lovable.app`.
+- Blog oficial do GEB: https://blog.grupoeduardabispo.com.br/
+- Não utilizar ambientes legados como destinos institucionais.
