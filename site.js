@@ -147,7 +147,7 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
           <a href="/carreiras/vagas/">Vagas e oportunidades</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
-          <a href="https://grupoeduardabispo.com.br/blog/" target="_blank" rel="noopener">Blog GEB | Grupo Eduarda Bispo</a>
+          <a href="https://blog.grupoeduardabispo.com.br/" target="_blank" rel="noopener">Blog GEB | Grupo Eduarda Bispo</a>
         </nav>
       </div>
 
