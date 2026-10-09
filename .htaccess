@@ -1,1 +1,14 @@
+RewriteEngine On
+
+# Redirecionamento do subdominio institucional legado, se este host chegar a esta hospedagem.
+RewriteCond %{HTTP_HOST} ^lp\.grupoeduardabispo\.com\.br$ [NC]
+RewriteRule ^ https://grupoeduardabispo.com.br%{REQUEST_URI} [R=301,L]
+
+# Blog: unico endereco oficial no subdominio dedicado.
+RewriteCond %{HTTP_HOST} ^(www\.)?grupoeduardabispo\.com\.br$ [NC]
+RewriteRule ^blog/?$ https://blog.grupoeduardabispo.com.br/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?grupoeduardabispo\.com\.br$ [NC]
+RewriteRule ^blog/(.+)$ https://blog.grupoeduardabispo.com.br/$1 [R=301,L]
+
 ErrorDocument 404 /404.html
