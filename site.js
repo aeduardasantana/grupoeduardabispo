@@ -177,3 +177,33 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
 
   footer.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 })();
+
+
+/* Blog GEB Institucional: faixa nas páginas públicas, fora dos fluxos de candidatura. */
+(function(){
+  "use strict";
+  const path=location.pathname.replace(/\/index\.html$/,"/").replace(/\/+$/,"/")||"/";
+  if(path==="/404.html"||path.startsWith("/carreiras/candidatura/")||document.getElementById("geb-blog-institucional"))return;
+  const footer=document.querySelector("footer");
+  if(!footer)return;
+  const style=document.createElement("link");style.rel="stylesheet";style.href="/assets/blog-strip.css?v=20261015";document.head.append(style);
+  const section=document.createElement("section");section.className="geb-blog-institucional";section.id="geb-blog-institucional";section.setAttribute("aria-labelledby","geb-blog-institucional-title");
+  const wrap=document.createElement("div");wrap.className="geb-blog-institucional__wrap";
+  const head=document.createElement("div");head.className="geb-blog-institucional__head";
+  const intro=document.createElement("div");
+  const kicker=document.createElement("span");kicker.className="geb-blog-institucional__kicker";kicker.textContent="BLOG GEB · INSTITUCIONAL";
+  const title=document.createElement("h2");title.id="geb-blog-institucional-title";title.className="geb-blog-institucional__title";title.textContent="Ideias que conectam nossas frentes";
+  const lead=document.createElement("p");lead.className="geb-blog-institucional__lead";lead.textContent="Leia os três artigos mais recentes sobre o GEB, sua atuação e o desenvolvimento de novas possibilidades.";
+  intro.append(kicker,title,lead);
+  const all=document.createElement("a");all.className="geb-blog-institucional__all";all.href="https://blog.grupoeduardabispo.com.br/?categoria=Institucional";all.textContent="Ver todos os artigos institucionais →";
+  head.append(intro,all);
+  const frame=document.createElement("iframe");frame.className="geb-blog-institucional__frame";frame.title="Três artigos recentes da categoria Institucional no Blog GEB";frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Institucional&limite=3";frame.loading="lazy";frame.referrerPolicy="strict-origin-when-cross-origin";
+  wrap.append(head,frame);section.append(wrap);footer.before(section);
+  window.addEventListener("message",event=>{
+    if(event.origin!=="https://blog.grupoeduardabispo.com.br"||event.source!==frame.contentWindow)return;
+    const data=event.data;
+    if(!data||data.type!=="geb-blog-embed-height")return;
+    const h=Number(data.height);
+    if(Number.isFinite(h)&&h>=100&&h<=2500){const px=Math.ceil(h)+"px";if(frame.style.height!==px)frame.style.height=px;}
+  });
+})();
