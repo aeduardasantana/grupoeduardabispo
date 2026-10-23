@@ -44,3 +44,9 @@ O diretório institucional e as páginas de Empresarial, Educação, Saúde, Inc
 ### Narrativa institucional — Bloco 05
 
 As páginas de [O GEB](/o-geb/), ESG e Parcerias e Expansão seguem a arquitetura documentada em [`.github/docs/INSTITUCIONAL-UX-BLOCO-05.md`](.github/docs/INSTITUCIONAL-UX-BLOCO-05.md). O layout está em `assets/institutional05.css`. Para verificar a integridade das páginas antes da publicação, execute `node .github/scripts/check-institutional05.mjs`. As condições comerciais atualizadas ficam no GEB Parcerias e nos ambientes especializados.
+
+## Trabalhe conosco — recrutamento do GEB
+
+A rota `/carreiras/` identifica a **área de recrutamento e seleção do próprio GEB**, e **não** uma nova frente institucional, uma marca chamada “GEB Carreiras” ou um portal de emprego de terceiros. Os perfis listados em `/carreiras/vagas/` se destinam a possibilidades de atuação nas frentes e projetos do próprio GEB; `/carreiras/candidatura/` é o formulário do ATS, com Banco de Talentos para processos seletivos compatíveis.
+
+Na apresentação pública, usar **Trabalhe conosco** como o nome da seção, inclusive no cabeçalho, rodapé e página inicial. Manter as URLs e os campos de dados do ATS para preservar as integrações existentes. O teste de regressão é `node .github/scripts/check-trabalhe-conosco.mjs`.
