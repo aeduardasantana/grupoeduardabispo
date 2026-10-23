@@ -314,6 +314,7 @@ h1,h2,h3,.statement h2,.contact-section h2,.careers-panel h2,.internal-hero h1,.
 .business-career-grid article{min-height:260px;padding:28px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:rgba(255,255,255,.38)}
 .business-career-grid h3{margin:34px 0 12px;font-size:24px;letter-spacing:-.025em}
 .business-career-grid p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+@media(max-width:620px){
   .career-path-card,.business-career-grid article{min-height:auto}
   .partnerships-hero .internal-hero-media,.partnerships-hero .internal-hero-media img{min-height:260px;height:280px}
 }
