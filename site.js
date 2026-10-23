@@ -224,7 +224,11 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
   const all=document.createElement("a");all.className="geb-blog-institucional__all";all.href="https://blog.grupoeduardabispo.com.br/?categoria=Institucional";all.textContent="Ver todos os artigos institucionais →";
   head.append(intro,all);
   const frame=document.createElement("iframe");frame.className="geb-blog-institucional__frame";frame.title="Três artigos recentes da categoria Institucional no Blog GEB";frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Institucional&limite=3";frame.loading="lazy";frame.referrerPolicy="strict-origin-when-cross-origin";
-  wrap.append(head,frame);section.append(wrap);footer.before(section);
+  wrap.append(head,frame);section.append(wrap);
+  // Na home, os artigos surgem antes do contato; nas demais páginas, antes do rodapé.
+  const homeAnchor=document.querySelector("[data-geb-blog-anchor]");
+  if(homeAnchor) homeAnchor.replaceWith(section);
+  else footer.before(section);
   window.addEventListener("message",event=>{
     if(event.origin!=="https://blog.grupoeduardabispo.com.br"||event.source!==frame.contentWindow)return;
     const data=event.data;
