@@ -40,3 +40,7 @@ A nova experiência institucional da home, os seis caminhos de atuação, o layo
 ### Áreas de atuação — Bloco 04
 
 O diretório institucional e as páginas de Empresarial, Educação, Saúde, Inclusão e Tecnologia utilizam a fundação visual compartilhada de [`.github/docs/AREAS-UX-BLOCO-04.md`](.github/docs/AREAS-UX-BLOCO-04.md), com o CSS escopado `assets/areas04.css` e o teste estático `node .github/scripts/check-areas04.mjs`. Os destinos comerciais ficam nos subdomínios especializados; produção e visualização real requerem homologação separada.
+
+### Narrativa institucional — Bloco 05
+
+As páginas de [O GEB](/o-geb/), ESG e Parcerias e Expansão seguem a arquitetura documentada em [`.github/docs/INSTITUCIONAL-UX-BLOCO-05.md`](.github/docs/INSTITUCIONAL-UX-BLOCO-05.md). O layout está em `assets/institutional05.css`. Para verificar a integridade das páginas antes da publicação, execute `node .github/scripts/check-institutional05.mjs`. As condições comerciais atualizadas ficam no GEB Parcerias e nos ambientes especializados.
