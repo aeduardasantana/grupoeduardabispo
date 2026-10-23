@@ -23,11 +23,11 @@ const LOGO="/assets/geb-institucional-logo.svg";
     '<a href="/areas/"'+active("areas","/areas/")+'>Áreas de atuação</a>',
     '<a href="/parceiros/"'+active("parceiros","/parceiros/")+'>Parcerias e Expansão</a>',
     '<div class="nav-dropdown" data-careers-dropdown>',
-    '<a href="/carreiras/" class="nav-dropdown-main'+(careerCurrent?' is-active':'')+'"'+(careerCurrent?' aria-current="'+(path==="/carreiras/"?'page':'location')+'"':'')+'>Carreiras</a>',
-    '<button type="button" class="nav-dropdown-toggle" data-careers-toggle aria-expanded="false" aria-controls="geb-careers-subnav" aria-label="Mostrar opções de Carreiras"><span aria-hidden="true">⌄</span></button>',
+    '<a href="/carreiras/" class="nav-dropdown-main'+(careerCurrent?' is-active':'')+'"'+(careerCurrent?' aria-current="'+(path==="/carreiras/"?'page':'location')+'"':'')+'>Trabalhe conosco</a>',
+    '<button type="button" class="nav-dropdown-toggle" data-careers-toggle aria-expanded="false" aria-controls="geb-careers-subnav" aria-label="Mostrar opções de Trabalhe conosco"><span aria-hidden="true">⌄</span></button>',
     '<div class="nav-dropdown-menu" id="geb-careers-subnav" data-careers-subnav hidden>',
-    '<a href="/carreiras/">Carreiras no GEB</a>',
-    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas e oportunidades</a>',
+    '<a href="/carreiras/">Sobre trabalhar no GEB</a>',
+    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas do GEB</a>',
     '<a href="/carreiras/candidatura/"'+(path==="/carreiras/candidatura/"?' aria-current="page"':'')+'>Candidatura / Banco de Talentos</a>',
     '</div></div>',
     '<a href="/contato/"'+active("contato","/contato/")+'>Contato</a>',
@@ -48,9 +48,9 @@ const LOGO="/assets/geb-institucional-logo.svg";
     '<a href="/o-geb/"'+active("o-geb","/o-geb/")+'>O GEB</a>',
     '<a href="/areas/"'+active("areas","/areas/")+'>Áreas de atuação</a>',
     '<a href="/parceiros/"'+active("parceiros","/parceiros/")+'>Parcerias e Expansão</a>',
-    '<a href="/carreiras/"'+active("carreiras","/carreiras/")+'>Carreiras</a>',
+    '<a href="/carreiras/"'+active("carreiras","/carreiras/")+'>Trabalhe conosco</a>',
     '<div class="mobile-careers-links">',
-    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas e oportunidades</a>',
+    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas do GEB</a>',
     '<a href="/carreiras/candidatura/"'+(path==="/carreiras/candidatura/"?' aria-current="page"':'')+'>Candidatura / Banco de Talentos</a>',
     '</div>',
     '<a href="/contato/"'+active("contato","/contato/")+'>Contato</a>'
@@ -63,7 +63,7 @@ const LOGO="/assets/geb-institucional-logo.svg";
     careerMenu.hidden=!open;
     career.dataset.open=String(!!open);
     careerButton.setAttribute("aria-expanded",String(!!open));
-    careerButton.setAttribute("aria-label",open?"Ocultar opções de Carreiras":"Mostrar opções de Carreiras");
+    careerButton.setAttribute("aria-label",open?"Ocultar opções de Trabalhe conosco":"Mostrar opções de Trabalhe conosco");
   }
   function showMobile(open,returnFocus=false){
     mobile.hidden=!open;
@@ -156,7 +156,7 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
           <a href="/esg/">ESG</a>
           <a href="/areas/">Áreas de atuação</a>
           <a href="/parceiros/">Parcerias e Expansão</a>
-          <a href="/carreiras/">Carreiras</a>
+          <a href="/carreiras/">Trabalhe conosco</a>
         </nav>
 
         <nav class="footer-nav-group" aria-label="Áreas de atuação do GEB">
@@ -170,7 +170,7 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
 
         <nav class="footer-nav-group" aria-label="Conexões">
           <strong>Conexões</strong>
-          <a href="/carreiras/vagas/">Vagas e oportunidades</a>
+          <a href="/carreiras/vagas/">Vagas do GEB</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
           <a href="https://blog.grupoeduardabispo.com.br/" target="_blank" rel="noopener">Blog GEB | Grupo Eduarda Bispo</a>
