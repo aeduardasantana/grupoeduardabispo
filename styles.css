@@ -8,6 +8,13 @@
   --muted:#68635d;
   --max:1380px;
   --pad:clamp(22px,4.5vw,68px);
+  /* Tipografia, superfícies e elevação — fonte única de tokens */
+  --display:"Inter Tight","Inter",Arial,sans-serif;
+  --text:"Inter",Arial,sans-serif;
+  --surface:#fff;
+  --surface-soft:#eee9df;
+  --shadow:0 24px 70px rgba(16,16,16,.08);
+  --focus-color:#856a37;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -264,7 +271,7 @@ h1{
 
 
 /* Professional visual system 2026 */
-:root{--display:"Inter Tight","Inter",Arial,sans-serif;--text:"Inter",Arial,sans-serif;--surface:#fff;--surface-soft:#eee9df;--shadow:0 24px 70px rgba(16,16,16,.08)}
+/* Tokens globais consolidados no primeiro :root (Bloco 01). */
 body{font-family:var(--text);font-feature-settings:"kern" 1,"liga" 1}
 h1,h2,h3,.statement h2,.contact-section h2,.careers-panel h2,.internal-hero h1,.body-copy h2{font-family:var(--display)}
 .site-header{box-shadow:0 1px 0 rgba(16,16,16,.03)}
