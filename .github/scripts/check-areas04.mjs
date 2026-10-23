@@ -33,7 +33,7 @@ for(const route of routeNames){
  test((html.match(/<main\b/gi)||[]).length===1,filename+": main único");
  test(/class="skip-link"/.test(html)&&/id="geb-main"/.test(html),filename+": navegação acessível");
  test(/href="\.\.\/assets\/areas04\.css\?v=20261023-areas04"/.test(html),filename+": CSS escopado");
- test(/src="\.\.\/site\.js\?v=20261023-nav02"/.test(html),filename+": menu e blog compartilhados");
+ test(/src="\.\.\/site\.js\?v=20261023-trabalhe"/.test(html),filename+": menu e blog compartilhados");
  test(html.includes('rel="canonical" href="https://grupoeduardabispo.com.br/'+route+'/'),filename+": URL canônica");
  test(html.includes('aria-label="Você está em"')&&html.includes('href="/"'),filename+": retorno a home");
  test(html.includes('href="/areas/"')||route==="areas",filename+": retorno ao diretório");
