@@ -27,7 +27,7 @@ check(balanced(globalCss),"CSS global tem chaves equilibradas");
 check((globalCss.match(/:root\s*\{/g)||[]).length===1,"Design tokens permanecem em :root único");
 check(/href="assets\/home03\.css\?v=20261023-home03"/.test(html),"Home carrega stylesheet próprio");
 check(/href="styles\.css\?v=20261023-home03"/.test(html),"Home carrega CSS global");
-check(/src="site\.js\?v=20261023-home03"/.test(html),"Home carrega JS compartilhado");
+check(/src="site\.js\?v=20261023-trabalhe"/.test(html),"Home carrega JS compartilhado");
 check((html.match(/<h1\b/g)||[]).length===1,"Há um único H1");
 check((html.match(/<h2\b/g)||[]).length===4,"Há quatro H2 editoriais permanentes");
 check((html.match(/class="geb-home3-area"/g)||[]).length===6,"Seis cartões de atuação");
