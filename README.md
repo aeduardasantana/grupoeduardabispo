@@ -36,3 +36,7 @@ O padrão de cabeçalho, menus, rodapé, navegação acessível e URLs canônica
 ### Página inicial — Bloco 03
 
 A nova experiência institucional da home, os seis caminhos de atuação, o layout responsivo e a integração automática do Blog GEB estão descritos em [`.github/docs/HOME-UX-BLOCO-03.md`](.github/docs/HOME-UX-BLOCO-03.md). O CSS isolado está em `assets/home03.css` e a conferência estática pode ser repetida com `node .github/scripts/check-home03.mjs`. A validação visual e a implantação no domínio ainda dependem de homologação.
+
+### Áreas de atuação — Bloco 04
+
+O diretório institucional e as páginas de Empresarial, Educação, Saúde, Inclusão e Tecnologia utilizam a fundação visual compartilhada de [`.github/docs/AREAS-UX-BLOCO-04.md`](.github/docs/AREAS-UX-BLOCO-04.md), com o CSS escopado `assets/areas04.css` e o teste estático `node .github/scripts/check-areas04.mjs`. Os destinos comerciais ficam nos subdomínios especializados; produção e visualização real requerem homologação separada.
