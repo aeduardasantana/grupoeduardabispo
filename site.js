@@ -89,7 +89,8 @@ const LOGO="/assets/geb-institucional-logo.svg";
   document.addEventListener("keydown",event=>{
     if(event.key==="Tab"&&!mobile.hidden){
       const first=button;
-      const last=mobile.querySelector("a:last-child")||button;
+      const links=mobile.querySelectorAll("a");
+      const last=links[links.length-1]||button;
       if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
       else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
       return;
