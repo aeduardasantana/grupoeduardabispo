@@ -1,5 +1,7 @@
 GEB Institucional — acionamento pontual de deploy
 Data: 2026-10-23
-Escopo: publicação dos Blocos 01 a 04 no site grupoeduardabispo.com.br
+Escopo: Bloco 05 — /o-geb/, /esg/ e /parceiros/
+Commit source: branch main após documentação e testes
+Validação: node .github/scripts/check-institutional05.mjs
 Workflow: .github/workflows/deploy.yml
-O arquivo .github/deploy-now.txt foi excluído do FTP e só dispara deploy quando explicitamente alterado.
+Nota: este arquivo existe apenas para o gatilho controlado por paths no GitHub Actions.
