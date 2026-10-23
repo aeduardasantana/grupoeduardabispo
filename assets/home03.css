@@ -1,0 +1,133 @@
+/*
+ * GEB Institucional · Home Bloco 03 · 23/10/2026
+ * Sistema visual isolado da home. Usa os tokens já definidos em styles.css.
+ * Sem imagens externas, ofertas mutáveis ou dependência de dados manuais.
+ */
+.geb-home3{color:var(--ink);overflow:clip}
+.geb-home3-container,.geb-home3-shell{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.geb-home3 *{box-sizing:border-box}
+.geb-home3-eyebrow{display:flex;align-items:center;gap:12px;margin:0;font:700 11px/1.45 var(--text);letter-spacing:.14em;text-transform:uppercase;color:#76674e}
+.geb-home3-eyebrow__line{display:inline-block;flex:0 0 27px;height:2px;background:var(--gold)}
+.geb-home3 :is(a,button):focus-visible,.geb-home3-blog-fallback:focus-visible{outline:3px solid var(--focus-color);outline-offset:4px}
+.geb-home3 h1,.geb-home3 h2,.geb-home3 h3{font-family:var(--display);font-weight:700}
+
+/* Abertura editorial e identidade da marca */
+.geb-home3-hero{background:var(--paper);border-bottom:1px solid var(--line);padding-block:clamp(50px,6vw,86px) clamp(72px,8vw,116px)}
+.geb-home3-shell{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:clamp(36px,5.4vw,82px);align-items:center}
+.geb-home3-hero__copy{min-width:0;padding-block:12px}
+.geb-home3-hero h1{max-width:800px;margin:clamp(24px,2.6vw,40px) 0 0;font-size:clamp(48px,5.65vw,85px);line-height:.99;letter-spacing:-.064em}
+.geb-home3-hero__lead{max-width:590px;margin:clamp(24px,2.8vw,38px) 0 0;font-size:clamp(17px,1.43vw,20px);line-height:1.65;color:#514e48}
+.geb-home3-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:34px}
+.geb-home3-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:52px;max-width:100%;padding:14px 20px;font-size:13px;font-weight:700;line-height:1.3;letter-spacing:-.015em;border:1px solid currentColor;text-decoration:none;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.geb-home3-button:hover{transform:translateY(-2px)}
+.geb-home3-button--dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.geb-home3-button--dark:hover{background:#323b35;border-color:#323b35}
+.geb-home3-button--plain{border-color:#bcb6aa;background:transparent;color:var(--ink)}
+.geb-home3-button--plain:hover{background:#e8e2d7}
+.geb-home3-hero__art{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-width:0;min-height:490px;isolation:isolate;overflow:hidden;padding:clamp(23px,2.8vw,42px);background:linear-gradient(145deg,#27342e 0%,#16211c 64%,#111914 100%);color:#faf8f0;border:1px solid rgba(20,29,23,.42);box-shadow:0 26px 68px rgba(16,16,16,.12)}
+.geb-home3-hero__art:before{content:"";position:absolute;z-index:-1;pointer-events:none;width:77%;aspect-ratio:1;border:1px solid rgba(214,185,120,.26);border-radius:50%;right:-21%;top:10%;box-shadow:0 0 0 34px rgba(214,185,120,.035),0 0 0 68px rgba(214,185,120,.035),0 0 0 102px rgba(214,185,120,.024)}
+.geb-home3-hero__art:after{content:"";position:absolute;z-index:-1;pointer-events:none;width:74%;height:74%;right:-7%;bottom:-26%;border-left:1px solid rgba(255,255,255,.11);transform:rotate(38deg)}
+.geb-home3-hero__art-top,.geb-home3-hero__art-bottom{display:flex;justify-content:space-between;align-items:start;gap:20px;font:600 10px/1.5 var(--text);letter-spacing:.13em;text-transform:uppercase;color:#dbd0b1}
+.geb-home3-hero__art-bottom{align-items:end;padding-top:20px;border-top:1px solid rgba(255,255,255,.23)}
+.geb-home3-hero__art-bottom span:last-child{max-width:200px;text-align:right}
+.geb-home3-hero__monogram{align-self:center;letter-spacing:-.095em;white-space:nowrap;font:700 clamp(88px,9vw,142px)/.95 var(--display);color:#f4eee1;text-shadow:0 4px 24px rgba(0,0,0,.12)}
+.geb-home3-hero__mark{color:#d5ad64}
+
+/* Uma grade única das seis frentes */
+.geb-home3-areas{background:#f8f6f0;padding-block:clamp(74px,8.4vw,128px)}
+.geb-home3-section-head{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(240px,.72fr);gap:clamp(32px,6vw,84px);align-items:end;margin-bottom:clamp(36px,4.2vw,62px)}
+.geb-home3-section-head h2,.geb-home3-connections__heading h2{max-width:760px;margin:22px 0 0;font-size:clamp(37px,4.1vw,61px);line-height:1.08;letter-spacing:-.052em}
+.geb-home3-section-head__aside p{margin:0;color:#5b5750;font-size:15px;line-height:1.75}
+.geb-home3-inline-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;width:fit-content;max-width:100%;min-height:44px;margin-top:16px;padding:6px 0;font-size:13px;font-weight:700;line-height:1.5;border-bottom:1px solid currentColor;text-decoration:none;transition:gap .2s}
+.geb-home3-inline-link:hover{gap:30px}
+.geb-home3-areas__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.geb-home3-area{display:flex;flex-direction:column;min-width:0;min-height:285px;padding:clamp(25px,2.4vw,36px);background:#fff;border:1px solid #d9d4ca;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s,border-color .2s}
+.geb-home3-area:hover{transform:translateY(-4px);border-color:#af9b76;box-shadow:0 20px 48px rgba(16,16,16,.075)}
+.geb-home3-area__top{display:flex;justify-content:space-between;gap:16px;font-size:10px;font-weight:700;line-height:1.4;letter-spacing:.12em;color:#806b45}
+.geb-home3-area__top span:last-child{font-size:21px;line-height:1;color:#ae8947}
+.geb-home3-area h3{font-size:clamp(24px,2.2vw,33px);line-height:1.12;letter-spacing:-.038em;margin:clamp(38px,4vw,62px) 0 0}
+.geb-home3-area p{max-width:330px;min-height:44px;margin:12px 0 22px;color:#5a5650;font-size:14px;line-height:1.65}
+.geb-home3-area__action{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:auto;padding-top:14px;border-top:1px solid #ded8ce;font-size:12px;font-weight:700}
+
+/* Proposta institucional */
+.geb-home3-structure{padding-block:clamp(78px,8.1vw,120px);background:#222c26;color:#f7f5ed}
+.geb-home3-structure__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.84fr);gap:clamp(58px,10vw,148px);align-items:start}
+.geb-home3-structure .geb-home3-eyebrow{color:#d7c6a0}
+.geb-home3-structure h2{max-width:630px;font-size:clamp(40px,4.6vw,70px);line-height:1.05;letter-spacing:-.058em;margin:26px 0 0}
+.geb-home3-structure__copy>p:not(.geb-home3-eyebrow){max-width:590px;margin:24px 0 0;color:#d1d7ce;font-size:16px;line-height:1.85}
+.geb-home3-inline-link--light{color:#f7f5ed;border-color:#b7c5b8;margin-top:30px}
+.geb-home3-principle{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:25px 0;border-top:1px solid rgba(255,255,255,.24)}
+.geb-home3-principle:last-child{border-bottom:1px solid rgba(255,255,255,.24)}
+.geb-home3-principle>span{font-size:11px;font-weight:700;color:#d6b477}
+.geb-home3-principle h3{font-size:22px;letter-spacing:-.025em;margin:0}
+.geb-home3-principle p{max-width:350px;font-size:14px;line-height:1.7;color:#c8d1c5;margin:9px 0 0}
+
+/* Caminhos distintos: carreiras e parcerias */
+.geb-home3-connections{background:#eee9df;padding-block:clamp(75px,7vw,112px)}
+.geb-home3-connections__heading{max-width:800px;margin-bottom:clamp(34px,4vw,54px)}
+.geb-home3-connections__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.geb-home3-connection{display:flex;flex-direction:column;min-width:0;min-height:360px;padding:clamp(30px,4vw,58px);border:1px solid #d6d0c5}
+.geb-home3-connection--career{background:#fff}
+.geb-home3-connection--partners{background:#ded8cc}
+.geb-home3-connection__label{display:flex;justify-content:space-between;align-items:start;gap:16px;color:#786344;font-size:11px;font-weight:700;letter-spacing:.13em}
+.geb-home3-connection h3{max-width:470px;margin:clamp(34px,4vw,58px) 0 0;font-size:clamp(30px,3.2vw,48px);line-height:1.11;letter-spacing:-.044em}
+.geb-home3-connection p{max-width:470px;margin:17px 0 20px;font-size:15px;line-height:1.73;color:#58554e}
+.geb-home3-connection .geb-home3-inline-link{margin-top:auto}
+
+/* Link acessível sem JS; com JS, faixa editorial dinâmica ocupa esta posição */
+.geb-home3-blog-fallback{display:block;width:100%;padding:24px var(--pad);background:#f7f4ed;color:var(--ink);font-size:14px;font-weight:700;text-align:center;text-decoration:underline;text-underline-offset:5px;border-top:1px solid var(--line)}
+
+/* Última seção: contato institucional, sem cadastro/atualização manual */
+.geb-home3-contact{padding-block:clamp(74px,7.6vw,115px);background:#141b18;color:#fff}
+.geb-home3-contact__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(290px,.9fr);gap:clamp(48px,6.5vw,96px);align-items:center}
+.geb-home3-contact .geb-home3-eyebrow{color:#d3b980}
+.geb-home3-contact h2{font-size:clamp(38px,4.2vw,64px);line-height:1.08;letter-spacing:-.05em;max-width:750px;margin:24px 0 0}
+.geb-home3-contact__action p{max-width:430px;color:#ccd0c9;font-size:16px;line-height:1.78;margin:0}
+.geb-home3-contact .geb-home3-actions{margin-top:30px}
+.geb-home3-button--light{background:#eee7d9;color:#151c18;border-color:#eee7d9}
+.geb-home3-button--light:hover{background:#fff;color:#151c18;border-color:#fff}
+.geb-home3-button--outline{color:#fff;background:transparent;border-color:#929f92}
+.geb-home3-button--outline:hover{background:#303c33;border-color:#c0c9b8}
+
+/* Responsividade: 3→2→1 cartões, layout editorial sem larguras rígidas */
+@media(max-width:1100px){
+  .geb-home3-shell{grid-template-columns:minmax(0,1fr) minmax(300px,.83fr);gap:36px}
+  .geb-home3-hero h1{font-size:clamp(46px,5.15vw,64px)}
+  .geb-home3-hero__art{min-height:420px}
+  .geb-home3-area{padding:25px}
+  .geb-home3-area h3{font-size:26px}
+}
+@media(max-width:860px){
+  .geb-home3-shell,.geb-home3-section-head,.geb-home3-structure__grid,.geb-home3-contact__grid{grid-template-columns:1fr}
+  .geb-home3-hero{padding-block:58px 78px}
+  .geb-home3-hero h1{max-width:780px;font-size:clamp(48px,8.1vw,72px)}
+  .geb-home3-hero__art{min-height:340px}
+  .geb-home3-hero__monogram{font-size:clamp(100px,16vw,140px)}
+  .geb-home3-areas__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .geb-home3-structure__grid{gap:45px}
+  .geb-home3-contact__grid{gap:24px}
+  .geb-home3-section-head{gap:22px}
+}
+@media(max-width:580px){
+  .geb-home3-hero{padding-block:40px 62px}
+  .geb-home3-hero h1{font-size:clamp(40px,10.7vw,56px);letter-spacing:-.056em}
+  .geb-home3-hero__lead{font-size:17px}
+  .geb-home3-hero__art{min-height:290px;padding:23px}
+  .geb-home3-hero__monogram{font-size:clamp(78px,21vw,118px)}
+  .geb-home3-hero__art-top,.geb-home3-hero__art-bottom{font-size:9px}
+  .geb-home3-hero__art-bottom span:last-child{max-width:125px}
+  .geb-home3-actions{align-items:stretch;flex-direction:column}
+  .geb-home3-button{width:100%}
+  .geb-home3-areas__grid,.geb-home3-connections__grid{grid-template-columns:1fr}
+  .geb-home3-area{min-height:255px}
+  .geb-home3-area h3{font-size:29px;margin-top:34px}
+  .geb-home3-section-head h2,.geb-home3-connections__heading h2{font-size:clamp(35px,9vw,48px)}
+  .geb-home3-structure h2{font-size:clamp(36px,9.6vw,50px)}
+  .geb-home3-connection{min-height:315px}
+  .geb-home3-connection h3{font-size:clamp(29px,8.2vw,42px)}
+  .geb-home3-contact h2{font-size:clamp(35px,9vw,50px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .geb-home3-button,.geb-home3-area,.geb-home3-inline-link{transition:none!important}
+  .geb-home3-button:hover,.geb-home3-area:hover{transform:none}
+}
