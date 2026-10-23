@@ -1935,7 +1935,7 @@ a{
 }
 .site-header .nav-dropdown-main{display:flex;align-items:center;padding:28px 0}
 .site-header .nav-dropdown-toggle{
-  appearance:none;display:inline-grid;place-items:center;min-height:44px;min-width:32px;
+  appearance:none;display:inline-grid;place-items:center;min-height:44px;min-width:44px;
   background:transparent;color:var(--ink);border:0;cursor:pointer;font:inherit;padding:0 4px
 }
 .site-header .nav-dropdown-toggle span{display:block;font-size:18px;line-height:1;transition:transform .2s ease}
