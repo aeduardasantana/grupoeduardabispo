@@ -22,7 +22,7 @@ for(const file of files){
  assert((html.match(/<footer\b/gi)||[]).length===1,file+": footer único");
  assert(html.includes('id="geb-main"')&&html.includes('class="skip-link"'),file+": navegação acessível");
  assert(html.includes('href="../assets/institutional05.css?v=20261023-b05"'),file+": CSS escopado");
- assert(html.includes('src="../site.js?v=20261023-nav02"'),file+": JS compartilhado");
+ assert(html.includes('src="../site.js?v=20261023-trabalhe"'),file+": JS compartilhado");
  assert(html.includes('rel="canonical" href="https://grupoeduardabispo.com.br/'+rootPath+'"'),file+": canônico");
  assert(html.includes('href="/areas/"')&&html.includes('href="/contato/"'),file+": acesso institucional");
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
