@@ -32,3 +32,7 @@ A fundação visual, os limites de escopo e o plano de validação dos Blocos 01
 ### Navegação Global — Bloco 02
 
 O padrão de cabeçalho, menus, rodapé, navegação acessível e URLs canônicas está documentado em [`.github/docs/NAVEGACAO-UX-BLOCO-02.md`](.github/docs/NAVEGACAO-UX-BLOCO-02.md). Para repetir a verificação estática das 16 páginas, execute `node .github/scripts/check-navigation.mjs` na raiz do repositório. O resultado da implantação pública exige homologação separada.
+
+### Página inicial — Bloco 03
+
+A nova experiência institucional da home, os seis caminhos de atuação, o layout responsivo e a integração automática do Blog GEB estão descritos em [`.github/docs/HOME-UX-BLOCO-03.md`](.github/docs/HOME-UX-BLOCO-03.md). O CSS isolado está em `assets/home03.css` e a conferência estática pode ser repetida com `node .github/scripts/check-home03.mjs`. A validação visual e a implantação no domínio ainda dependem de homologação.
