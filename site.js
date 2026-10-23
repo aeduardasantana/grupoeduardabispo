@@ -1,91 +1,110 @@
 const LOGO="/assets/geb-institucional-logo.svg";
 
+/* Componente de navegação única do GEB Institucional — Bloco 02. */
 (function initInstitutionalHeader(){
   const header=document.querySelector(".site-header");
-  if(!header) return;
-
-  const path=(window.location.pathname || "/").replace(/index\.html$/,"");
-
-  const currentSection=(()=>{
-    if(path.startsWith("/o-geb")) return "o-geb";
-    if(path.startsWith("/esg")) return "esg";
-    if(
-      path.startsWith("/areas") ||
-      path.startsWith("/empresarial") ||
-      path.startsWith("/educacao") ||
-      path.startsWith("/saude") ||
-      path.startsWith("/inclusao") ||
-      path.startsWith("/tecnologia")
-    ) return "areas";
-    if(path.startsWith("/parceiros")) return "parceiros";
-    if(path.startsWith("/carreiras")) return "carreiras";
-    if(path.startsWith("/contato")) return "contato";
+  if(!header)return;
+  const path=(location.pathname||"/").replace(/index\.html$/,"");
+  const section=()=>{
+    if(path.startsWith("/o-geb")||path.startsWith("/esg"))return "o-geb";
+    if(["/areas","/empresarial","/educacao","/saude","/inclusao","/tecnologia"].some(p=>path.startsWith(p)))return "areas";
+    if(path.startsWith("/parceiros"))return "parceiros";
+    if(path.startsWith("/carreiras"))return "carreiras";
+    if(path.startsWith("/contato"))return "contato";
     return "";
-  })();
-
-  const active=id=>currentSection===id?' aria-current="page" class="is-active"':'';
-
-  header.innerHTML=`
-    <a class="brand" href="/" aria-label="GEB, início">
-      <img src="${LOGO}" alt="GEB | Grupo Eduarda Bispo">
-    </a>
-    <nav class="desktop-nav" aria-label="Navegação principal">
-      <a href="/o-geb/"${active("o-geb")}>O GEB</a>
-      <a href="/esg/"${active("esg")}>ESG</a>
-      <a href="/areas/"${active("areas")}>Atuação</a>
-      <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
-      <div class="nav-dropdown">
-        <a class="nav-dropdown-trigger${currentSection==="carreiras"?" is-active":""}" href="/carreiras/"${currentSection==="carreiras"?' aria-current="page"':""}>Carreiras <span aria-hidden="true">⌄</span></a>
-        <div class="nav-dropdown-menu">
-          <a href="/carreiras/">Carreiras no GEB</a>
-          <a href="/carreiras/vagas/">Vagas e oportunidades</a>
-          <a href="/carreiras/candidatura/">Candidatura / Banco de Talentos</a>
-        </div>
-      </div>
-      <a href="/contato/"${active("contato")}>Contato</a>
-    </nav>
-    <button class="menu-button" data-menu-button type="button" aria-expanded="false">Menu</button>
-  `;
-
+  };
+  const current=section();
+  const active=(id,target)=>current===id?' class="is-active" aria-current="'+(path===target?"page":"location")+'"':"";
+  const careerCurrent=current==="carreiras";
+  header.innerHTML=[
+    '<a class="brand" href="/" aria-label="GEB, página inicial"><img src="'+LOGO+'" alt="GEB | Grupo Eduarda Bispo"></a>',
+    '<nav class="desktop-nav" aria-label="Navegação principal">',
+    '<a href="/o-geb/"'+active("o-geb","/o-geb/")+'>O GEB</a>',
+    '<a href="/areas/"'+active("areas","/areas/")+'>Áreas de atuação</a>',
+    '<a href="/parceiros/"'+active("parceiros","/parceiros/")+'>Parcerias e Expansão</a>',
+    '<div class="nav-dropdown" data-careers-dropdown>',
+    '<a href="/carreiras/" class="nav-dropdown-main'+(careerCurrent?' is-active':'')+'"'+(careerCurrent?' aria-current="'+(path==="/carreiras/"?'page':'location')+'"':'')+'>Carreiras</a>',
+    '<button type="button" class="nav-dropdown-toggle" data-careers-toggle aria-expanded="false" aria-controls="geb-careers-subnav" aria-label="Mostrar opções de Carreiras"><span aria-hidden="true">⌄</span></button>',
+    '<div class="nav-dropdown-menu" id="geb-careers-subnav" data-careers-subnav hidden>',
+    '<a href="/carreiras/">Carreiras no GEB</a>',
+    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas e oportunidades</a>',
+    '<a href="/carreiras/candidatura/"'+(path==="/carreiras/candidatura/"?' aria-current="page"':'')+'>Candidatura / Banco de Talentos</a>',
+    '</div></div>',
+    '<a href="/contato/"'+active("contato","/contato/")+'>Contato</a>',
+    '</nav>',
+    '<button class="menu-button" data-menu-button type="button" aria-controls="geb-mobile-nav" aria-expanded="false" aria-label="Abrir menu principal">Menu</button>'
+  ].join("");
   let mobile=document.querySelector("[data-mobile-nav]");
   if(!mobile){
     mobile=document.createElement("nav");
     mobile.className="mobile-nav";
     mobile.setAttribute("data-mobile-nav","");
-    mobile.hidden=true;
     header.insertAdjacentElement("afterend",mobile);
   }
-  mobile.innerHTML=`
-    <a href="/o-geb/"${active("o-geb")}>O GEB</a>
-    <a href="/esg/"${active("esg")}>ESG</a>
-    <a href="/areas/"${active("areas")}>Atuação</a>
-    <a href="/parceiros/"${active("parceiros")}>Parcerias e Expansão</a>
-    <a href="/carreiras/"${active("carreiras")}>Carreiras</a>
-    <div class="mobile-careers-links">
-      <a href="/carreiras/vagas/">Vagas e oportunidades</a>
-      <a href="/carreiras/candidatura/">Candidatura / Banco de Talentos</a>
-    </div>
-    <a href="/contato/"${active("contato")}>Contato</a>
-  `;
+  mobile.id="geb-mobile-nav";
+  mobile.setAttribute("aria-label","Navegação móvel");
+  mobile.hidden=true;
+  mobile.innerHTML=[
+    '<a href="/o-geb/"'+active("o-geb","/o-geb/")+'>O GEB</a>',
+    '<a href="/areas/"'+active("areas","/areas/")+'>Áreas de atuação</a>',
+    '<a href="/parceiros/"'+active("parceiros","/parceiros/")+'>Parcerias e Expansão</a>',
+    '<a href="/carreiras/"'+active("carreiras","/carreiras/")+'>Carreiras</a>',
+    '<div class="mobile-careers-links">',
+    '<a href="/carreiras/vagas/"'+(path==="/carreiras/vagas/"?' aria-current="page"':'')+'>Vagas e oportunidades</a>',
+    '<a href="/carreiras/candidatura/"'+(path==="/carreiras/candidatura/"?' aria-current="page"':'')+'>Candidatura / Banco de Talentos</a>',
+    '</div>',
+    '<a href="/contato/"'+active("contato","/contato/")+'>Contato</a>'
+  ].join("");
+  const button=header.querySelector("[data-menu-button]");
+  const career=header.querySelector("[data-careers-dropdown]");
+  const careerButton=header.querySelector("[data-careers-toggle]");
+  const careerMenu=header.querySelector("[data-careers-subnav]");
+  function showCareer(open){
+    careerMenu.hidden=!open;
+    career.dataset.open=String(!!open);
+    careerButton.setAttribute("aria-expanded",String(!!open));
+    careerButton.setAttribute("aria-label",open?"Ocultar opções de Carreiras":"Mostrar opções de Carreiras");
+  }
+  function showMobile(open,returnFocus=false){
+    mobile.hidden=!open;
+    document.body.classList.toggle("geb-mobile-menu-open",!!open);
+    button.setAttribute("aria-expanded",String(!!open));
+    button.setAttribute("aria-label",open?"Fechar menu principal":"Abrir menu principal");
+    button.textContent=open?"Fechar":"Menu";
+    if(open)mobile.querySelector("a")?.focus();
+    else if(returnFocus)button.focus();
+  }
+  careerButton.addEventListener("click",()=>showCareer(careerMenu.hidden));
+  career.addEventListener("pointerenter",()=>{
+    if(window.matchMedia("(hover: hover) and (pointer: fine)").matches)showCareer(true);
+  });
+  career.addEventListener("pointerleave",()=>{
+    if(!career.contains(document.activeElement))showCareer(false);
+  });
+  career.addEventListener("focusin",()=>showCareer(true));
+  career.addEventListener("focusout",event=>{
+    if(!career.contains(event.relatedTarget))showCareer(false);
+  });
+  button.addEventListener("click",()=>showMobile(mobile.hidden));
+  mobile.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>showMobile(false)));
+  document.addEventListener("keydown",event=>{
+    if(event.key!=="Escape")return;
+    if(!mobile.hidden){event.preventDefault();showMobile(false,true);}
+    else if(!careerMenu.hidden){event.preventDefault();showCareer(false);careerButton.focus();}
+  });
+  document.addEventListener("pointerdown",event=>{
+    if(!career.contains(event.target))showCareer(false);
+    if(!mobile.hidden&&!mobile.contains(event.target)&&!button.contains(event.target))showMobile(false);
+  });
+  window.addEventListener("resize",()=>{
+    if(window.innerWidth>980&&!mobile.hidden)showMobile(false);
+  });
+  showCareer(false);
+  showMobile(false);
 })();
 
 document.querySelectorAll("[data-geb-logo]").forEach(img=>img.src=LOGO);
 document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().getFullYear());
-
-document.querySelectorAll("[data-menu-button]").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const nav=document.querySelector("[data-mobile-nav]");
-    const open=btn.getAttribute("aria-expanded")==="true";
-    btn.setAttribute("aria-expanded",String(!open));
-    if(nav) nav.hidden=open;
-  });
-});
-document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("click",()=>{
-  const nav=document.querySelector("[data-mobile-nav]");
-  const btn=document.querySelector("[data-menu-button]");
-  if(nav) nav.hidden=true;
-  if(btn) btn.setAttribute("aria-expanded","false");
-}));
 
 (function initVLibras(){
   if(document.querySelector('[vw]')) return;
@@ -121,25 +140,25 @@ document.querySelectorAll("[data-mobile-nav] a").forEach(a=>a.addEventListener("
             <img src="/assets/geb-institucional-logo.svg" alt="GEB | Grupo Eduarda Bispo">
           </a>
           <p>Estrutura institucional para desenvolver negócios, pessoas, conhecimento e novas possibilidades.</p>
-          <a class="footer-top-link" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Voltar ao topo ↑</a>
+          <a class="footer-top-link" href="#geb-main">Voltar ao topo ↑</a>
         </div>
 
         <nav class="footer-nav-group" aria-label="Institucional">
           <strong>Institucional</strong>
           <a href="/o-geb/">O GEB</a>
           <a href="/esg/">ESG</a>
-          <a href="/areas/">Atuação</a>
+          <a href="/areas/">Áreas de atuação</a>
           <a href="/parceiros/">Parcerias e Expansão</a>
           <a href="/carreiras/">Carreiras</a>
         </nav>
 
-        <nav class="footer-nav-group" aria-label="Atuação atual do GEB">
-          <strong>Atuação atual</strong>
-          <a href="http://gebempresarial.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Empresarial</a>
-          <a href="https://gebeducacao.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Educação</a>
-          <a href="https://gebsaude.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Saúde</a>
+        <nav class="footer-nav-group" aria-label="Áreas de atuação do GEB">
+          <strong>Áreas de atuação</strong>
+          <a href="/empresarial/">GEB Empresarial</a>
+          <a href="/educacao/">GEB Educação</a>
+          <a href="/saude/">GEB Saúde</a>
           <a href="/inclusao/">GEB Inclusão</a>
-          <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener">GEB Tecnologia</a>
+          <a href="/tecnologia/">GEB Tecnologia</a>
         </nav>
 
         <nav class="footer-nav-group" aria-label="Conexões">
