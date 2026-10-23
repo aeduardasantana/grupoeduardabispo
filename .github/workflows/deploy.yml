@@ -2,6 +2,11 @@ name: Deploy produção via FTP
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/deploy-now.txt'
 
 jobs:
   deploy:
@@ -9,6 +14,8 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
+      - uses: actions/checkout@v5
+
       - name: Pre-deploy SEO audit
         env:
           SITE_DIR: "."
@@ -43,8 +50,6 @@ jobs:
           if errors: sys.exit(1)
           print("Pre-deploy SEO checks passed")
           PY
-      - uses: actions/checkout@v5
-
       - name: FTP Deploy Locaweb — Produção
         uses: locaweb/ftp-deploy@1.0.0
         with:
