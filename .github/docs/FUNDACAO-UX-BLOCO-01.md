@@ -94,3 +94,15 @@ A identidade já aplicada utiliza composição editorial, preto e cinzas escuros
 A conferência automatizável está em `.github/scripts/check-foundation.mjs`; execute na raiz do repositório com `node .github/scripts/check-foundation.mjs` em ambiente com Node.js, sem instalar dependências. A revisão posterior deve comparar o resultado do código com a versão efetivamente hospedada.
 
 **Observação:** alterações foram feitas diretamente na branch padrão do GitHub, mas o workflow de publicação é manual. Commit não é evidência de site publicado.
+
+
+## 8. Evidência de verificação após as alterações
+
+Conferência realizada diretamente sobre os arquivos atualizados no GitHub, por leitura remota e checagens estáticas equivalentes às regras do verificador:
+
+- **16/16 rotas verificadas**: presença de `header`, `main`, `footer` e exatamente um `h1`; todas referenciam `site.js`.
+- **28/28 verificações adicionais aprovadas**: um bloco global `:root`, 14 tokens únicos, um bloco JSON-LD válido com WebSite e Organization canônicos, presença dos módulos de navegação, rodapé, acessibilidade, vagas e blog em `site.js`, documentação, README e workflow manual.
+- **Arquivos de negócio não alterados**: `carreiras/ats-form.js` e fluxo de deploy permaneceram intactos. O SHA do arquivo ATS conferido é `d4f551b572f0f54dbd041a2116744f2bab793715`.
+- **Escopo do diff antes desta atualização documental:** `styles.css`, `index.html`, `README.md`, `.github/docs/FUNDACAO-UX-BLOCO-01.md` e `.github/scripts/check-foundation.mjs`. Nenhuma página especializada ou arquivo do ATS foi modificado.
+
+**Limite da evidência:** o script Node versionado não foi executado em um clone local; sua lógica de verificação foi aplicada à leitura dos arquivos GitHub. Não foi realizado teste visual de navegador, teste de formulário com backend, auditoria Lighthouse ou confirmação de deploy. Essas verificações permanecem para os próximos blocos e para homologação final.
