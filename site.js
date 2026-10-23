@@ -81,13 +81,19 @@ const LOGO="/assets/geb-institucional-logo.svg";
   career.addEventListener("pointerleave",()=>{
     if(!career.contains(document.activeElement))showCareer(false);
   });
-  career.addEventListener("focusin",()=>showCareer(true));
   career.addEventListener("focusout",event=>{
     if(!career.contains(event.relatedTarget))showCareer(false);
   });
   button.addEventListener("click",()=>showMobile(mobile.hidden));
   mobile.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>showMobile(false)));
   document.addEventListener("keydown",event=>{
+    if(event.key==="Tab"&&!mobile.hidden){
+      const first=button;
+      const last=mobile.querySelector("a:last-child")||button;
+      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      return;
+    }
     if(event.key!=="Escape")return;
     if(!mobile.hidden){event.preventDefault();showMobile(false,true);}
     else if(!careerMenu.hidden){event.preventDefault();showCareer(false);careerButton.focus();}
