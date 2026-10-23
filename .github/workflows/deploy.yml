@@ -53,6 +53,9 @@ jobs:
       - name: Validar narrativa institucional — Bloco 05
         run: node .github/scripts/check-institutional05.mjs
 
+      - name: Validar Trabalhe conosco — recrutamento do GEB
+        run: node .github/scripts/check-trabalhe-conosco.mjs
+
       - name: FTP Deploy Locaweb — Produção
         uses: locaweb/ftp-deploy@1.0.0
         with:
