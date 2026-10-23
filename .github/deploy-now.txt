@@ -1,7 +1,6 @@
-GEB Institucional — acionamento pontual de deploy
+GEB Institucional — acionamento pontual
 Data: 2026-10-23
-Escopo: Bloco 05 — /o-geb/, /esg/ e /parceiros/
-Commit source: branch main após documentação e testes
-Validação: node .github/scripts/check-institutional05.mjs
-Workflow: .github/workflows/deploy.yml
-Nota: este arquivo existe apenas para o gatilho controlado por paths no GitHub Actions.
+Escopo: correcao institucional de Trabalhe conosco como recrutamento proprio do GEB.
+Paginas: home, /carreiras/, /carreiras/vagas/, /carreiras/candidatura/, navegação global.
+Verificacao: node .github/scripts/check-trabalhe-conosco.mjs
+Repositorio: aeduardasantana/grupoeduardabispo
