@@ -36,9 +36,9 @@ for(const page of pages){
  check((h.match(/<h1(?:\s|>)/gi)||[]).length===1,page+": um H1");
  check((h.match(/class="skip-link"/g)||[]).length===1,page+": link de salto");
  check((h.match(/id="geb-mobile-nav"/g)||[]).length===1,page+": nav mobile única");
- check(/site\.js\?v=20261023-nav02/.test(h)&&/styles\.css\?v=20261023-nav02/.test(h),page+": versão dos recursos");
+ check(/site\.js\?v=20261023-trabalhe/.test(h)&&/styles\.css\?v=20261023-trabalhe/.test(h),page+": versão dos recursos");
  const header=h.slice(h.indexOf(tag),h.indexOf("</header>")+9);
- check(["O GEB","Áreas de atuação","Parcerias e Expansão","Carreiras","Contato"].every(n=>header.includes(">"+n+"<")),page+": navegação principal");
+ check(["O GEB","Áreas de atuação","Parcerias e Expansão","Trabalhe conosco","Contato"].every(n=>header.includes(">"+n+"<")),page+": navegação principal");
  check(!header.includes('href="/esg/"'),page+": ESG secundário");
  const links=[...h.matchAll(/href=["']([^"']+)["']/gi)].map(m=>m[1]);
  for(const href of links){
