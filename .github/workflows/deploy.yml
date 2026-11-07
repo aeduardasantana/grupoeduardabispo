@@ -56,6 +56,8 @@ jobs:
       - name: Validar Trabalhe conosco — recrutamento do GEB
         run: node .github/scripts/check-trabalhe-conosco.mjs
 
+      - name: Preparar Google Analytics com consentimento
+        run: python3 scripts/injetar-ga4.py
       - name: FTP Deploy Locaweb — Produção
         uses: locaweb/ftp-deploy@1.0.0
         with:

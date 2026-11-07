@@ -4,3 +4,5 @@ Escopo: correcao institucional de Trabalhe conosco como recrutamento proprio do 
 Paginas: home, /carreiras/, /carreiras/vagas/, /carreiras/candidatura/, navegação global.
 Verificacao: node .github/scripts/check-trabalhe-conosco.mjs
 Repositorio: aeduardasantana/grupoeduardabispo
+
+Publicar instalacao consentida do Google Analytics — 07/11/2026.
