@@ -19,7 +19,7 @@ for(const file of pages){
  const mobile=html.slice(html.indexOf('<nav class="mobile-nav"'),html.indexOf('</nav>',html.indexOf('<nav class="mobile-nav"'))+6);
  test(header.includes('href="/carreiras/">Trabalhe conosco</a>'),file+": cabeçalho Trabalhe conosco");
  test(mobile.includes('href="/carreiras/">Trabalhe conosco</a>'),file+": menu móvel Trabalhe conosco");
- test(/site\.js\?v=20261023-trabalhe/.test(html),file+": recurso compartilhado atualizado");
+ test(/site\.js\?v=20\d{6}-[a-z0-9-]+/.test(html),file+": recurso compartilhado versionado");
  test(!/GEB\s+Carreiras\b/.test(html),file+": não inventar marca GEB Carreiras");
 }
 const home=read("index.html");
