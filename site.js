@@ -219,11 +219,13 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
   const intro=document.createElement("div");
   const kicker=document.createElement("span");kicker.className="geb-blog-institucional__kicker";kicker.textContent="BLOG GEB · INSTITUCIONAL";
   const title=document.createElement("h2");title.id="geb-blog-institucional-title";title.className="geb-blog-institucional__title";title.textContent="Ideias que conectam nossas frentes";
-  const lead=document.createElement("p");lead.className="geb-blog-institucional__lead";lead.textContent="Leia os três artigos mais recentes sobre o GEB, sua atuação e o desenvolvimento de novas possibilidades.";
+  const lead=document.createElement("p");lead.className="geb-blog-institucional__lead";lead.textContent="Artigos institucionais e análises do Gestão em Pauta sobre decisões, projetos e acontecimentos que afetam negócios e pessoas.";
   intro.append(kicker,title,lead);
   const all=document.createElement("a");all.className="geb-blog-institucional__all";all.href="https://blog.grupoeduardabispo.com.br/?categoria=Institucional";all.textContent="Ver todos os artigos institucionais →";
-  head.append(intro,all);
-  const frame=document.createElement("iframe");frame.className="geb-blog-institucional__frame";frame.title="Três artigos recentes da categoria Institucional no Blog GEB";frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Institucional&limite=3";frame.loading="lazy";frame.referrerPolicy="strict-origin-when-cross-origin";
+  const series=document.createElement("a");series.className="geb-blog-institucional__all";series.href="https://blog.grupoeduardabispo.com.br/?tag=Gest%C3%A3o%20em%20Pauta";series.textContent="Gestão em Pauta · Notícias →";
+  const links=document.createElement("div");links.className="geb-blog-institucional__links";links.append(all,series);
+  head.append(intro,links);
+  const frame=document.createElement("iframe");frame.className="geb-blog-institucional__frame";frame.title="Três artigos recentes da categoria Institucional no Blog GEB";frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Institucional&limite=3&v=20261112-gestao-pauta";frame.loading="lazy";frame.referrerPolicy="strict-origin-when-cross-origin";
   wrap.append(head,frame);section.append(wrap);
   // Na home, os artigos surgem antes do contato; nas demais páginas, antes do rodapé.
   const homeAnchor=document.querySelector("[data-geb-blog-anchor]");

@@ -6,3 +6,5 @@ Verificacao: node .github/scripts/check-trabalhe-conosco.mjs
 Repositorio: aeduardasantana/grupoeduardabispo
 
 Publicar instalacao consentida do Google Analytics — 07/11/2026.
+
+2026-11-12 — Atualizar site institucional: seção do Blog GEB reconhece Gestão em Pauta como conteúdo institucional, oferece acesso à série Notícias e atualiza embed de artigos. Não alterar o subdiretório blog; ele é publicado por workflow independente.
