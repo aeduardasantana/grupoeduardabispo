@@ -170,6 +170,7 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
 
         <nav class="footer-nav-group" aria-label="Conexões">
           <strong>Conexões</strong>
+          <a href="/valoriza/">GEB Valoriza</a>
           <a href="/carreiras/vagas/">Vagas do GEB</a>
           <a href="/carreiras/candidatura/">Candidatura</a>
           <a href="/contato/">Contato</a>
@@ -209,7 +210,7 @@ document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().g
 (function(){
   "use strict";
   const path=location.pathname.replace(/\/index\.html$/,"/").replace(/\/+$/,"/")||"/";
-  if(path==="/404.html"||path.startsWith("/carreiras/candidatura/")||document.getElementById("geb-blog-institucional"))return;
+  if(path==="/404.html"||path.startsWith("/carreiras/candidatura/")||path.startsWith("/valoriza/")||document.getElementById("geb-blog-institucional"))return;
   const footer=document.querySelector("footer");
   if(!footer)return;
   const style=document.createElement("link");style.rel="stylesheet";style.href="/assets/blog-strip.css?v=20261015";document.head.append(style);

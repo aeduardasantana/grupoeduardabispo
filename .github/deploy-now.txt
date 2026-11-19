@@ -9,3 +9,4 @@ Publicar instalacao consentida do Google Analytics — 07/11/2026.
 
 2026-11-12 — Atualizar site institucional: seção do Blog GEB reconhece Gestão em Pauta como conteúdo institucional, oferece acesso à série Notícias e atualiza embed de artigos. Não alterar o subdiretório blog; ele é publicado por workflow independente.
 2026-11-12 — Reexecutar deploy institucional: teste de recrutamento continua verificando recurso compartilhado versionado e não fica preso ao identificador histórico de 23/10; preservadas as 89 verificações.
+2026-11-18 — Publicar página institucional /valoriza/ (GEB Valoriza), identidade, candidatura por formulário, seis meses, até 20 posts mensais e regra de 35 dias. Sem mudanças nos outros programas.
