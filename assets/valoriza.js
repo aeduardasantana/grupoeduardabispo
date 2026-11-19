@@ -62,7 +62,7 @@
     url,
     '',
     'Compartilhe com quem merece essa oportunidade! A candidatura passa por seleção.'
-  ].join('\\n');
+  ].join('\n');
   const feedback=(button,content)=>{
     const box=button.closest('.vz-share, .vz-share-end');
     const status=box?.querySelector('[data-vz-share-feedback]');
