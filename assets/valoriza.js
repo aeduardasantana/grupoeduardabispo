@@ -44,3 +44,63 @@
     }
   });
 })();
+
+
+/* Compartilhamento opcional do GEB Valoriza — sem coleta de dados pessoais. */
+(()=>{
+  'use strict';
+  const url='https://grupoeduardabispo.com.br/valoriza/';
+  const title='GEB Valoriza — sua história merece ser vista';
+  const message=[
+    'Olha o que encontrei!',
+    '',
+    'Você conhece alguém que trabalha todos os dias para fazer seu negócio acontecer e merece ter sua história reconhecida?',
+    '',
+    'O GEB Valoriza vai selecionar empresas brasileiras para receber 6 meses de apoio à presença digital, patrocinados pelo GEB e executados pelo GEB Tecnologia: edição de artes estáticas e agendamento de até 20 publicações por mês.',
+    '',
+    'Conheça o programa e conte a história do negócio:',
+    url,
+    '',
+    'Compartilhe com quem merece essa oportunidade! A candidatura passa por seleção.'
+  ].join('\\n');
+  const feedback=(button,content)=>{
+    const box=button.closest('.vz-share, .vz-share-end');
+    const status=box?.querySelector('[data-vz-share-feedback]');
+    if(status){status.textContent=content;status.hidden=false;}
+  };
+  const fallbackCopy=(value)=>{
+    const field=document.createElement('textarea');
+    field.value=value;
+    field.setAttribute('readonly','');
+    field.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px;';
+    document.body.append(field);
+    field.focus();field.select();
+    let copied=false;
+    try{copied=document.execCommand('copy');}catch(_){copied=false;}
+    field.remove();
+    return copied;
+  };
+  for(const button of document.querySelectorAll('[data-vz-share-copy]')){
+    button.addEventListener('click',async()=>{
+      let copied=false;
+      if(navigator.clipboard?.writeText){
+        try{await navigator.clipboard.writeText(message);copied=true;}catch(_){copied=false;}
+      }
+      if(!copied)copied=fallbackCopy(message);
+      feedback(button,copied?'Convite copiado! Cole a mensagem no aplicativo que preferir.':'Não foi possível copiar automaticamente. Copie o endereço desta página para compartilhar.');
+    });
+  }
+  if(typeof navigator.share==='function'){
+    for(const button of document.querySelectorAll('[data-vz-share-native]')){
+      button.hidden=false;
+      button.addEventListener('click',async()=>{
+        try{
+          await navigator.share({title,text:message.replace(url,'').trim(),url});
+          feedback(button,'O compartilhamento foi aberto.');
+        }catch(error){
+          if(error?.name!=='AbortError')feedback(button,'Não foi possível abrir o compartilhamento. Use o botão para copiar o convite.');
+        }
+      });
+    }
+  }
+})();
